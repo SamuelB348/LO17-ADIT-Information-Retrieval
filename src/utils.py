@@ -4,7 +4,8 @@ Fonctions utilitaires
 
 import os
 import zipfile
-from typing import Union
+import re
+from typing import List
 from bs4 import BeautifulSoup
 
 
@@ -34,3 +35,14 @@ def open_file(file_name: str) -> BeautifulSoup:
     """
     with open(file_name, "r", encoding="utf-8") as html_doc:
         return BeautifulSoup(html_doc, "html.parser")
+
+
+def tokenize(text: str) -> List[str]:
+    """
+    Renvoie la liste des mots séparés par des délimiteurs non alphabétiques
+    et convertis en minuscules.
+
+    :param text: Le texte à tokeniser.
+    :return: La liste des tokens extraits du texte.
+    """
+    return re.findall(r"\b\w+\b", text.lower())

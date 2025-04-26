@@ -2,20 +2,8 @@
 Fichier permettant de découper le corpus (les titres et les textes) en tokens.
 """
 
-import re
-from typing import List
 from lxml import etree
-
-
-def tokenize(text: str) -> List[str]:
-    """
-    Renvoie la liste des mots séparés par des délimiteurs non alphabétiques
-    et convertis en minuscules.
-
-    :param text: Le texte à tokeniser.
-    :return: La liste des tokens extraits du texte.
-    """
-    return re.findall(r"\b\w+\b", text.lower())
+from utils import tokenize
 
 
 def segmente_corpus(input_corpus: str, output_file: str) -> None:
