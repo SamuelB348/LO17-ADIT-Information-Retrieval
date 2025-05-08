@@ -57,7 +57,7 @@ style.configure("TButton", font=("Helvetica", 14), padding=6)
 search_button = ttk.Button(search_frame, text="Rechercher", command=trier_resultats, style="TButton")
 search_button.grid(row=0, column=2, padx=10)
 
-icon = PhotoImage(file='icon.png')
+icon = PhotoImage(file='../icon.png')
 root.iconphoto(False, icon)
 
 frame_resultats = ttk.Frame(root, style="TFrame")
