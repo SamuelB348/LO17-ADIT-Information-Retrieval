@@ -4,13 +4,13 @@ Fonctions pour créer un index inversé du corpus lemmatisé.
 
 import xml.etree.ElementTree as ET
 from collections import defaultdict
-from typing import List, Dict
+from typing import List, Dict, Any
 from utils import parse_xml
 
 
 def create_inverted_index(
     root: ET.Element, tags: List[str]
-) -> Dict[str, Dict[str, Dict[str, int]]]:
+) -> dict[str, dict[str, dict[str, int]]]:
     """
     Crée un index inversé sous forme de dictionnaire à partir d'un corpus XML.
 
@@ -19,7 +19,9 @@ def create_inverted_index(
     :return: Dictionnaire ayant la structure lemme → {doc_id → {tag → fréquence}}.
     """
 
-    inverted_index = defaultdict(lambda: defaultdict(lambda: defaultdict(int)))
+    inverted_index: dict[str, dict[str, dict[str, int]]] = defaultdict(
+        lambda: defaultdict(lambda: defaultdict(int))
+    )
 
     for article in root.findall("article"):
         doc_id = article.findtext("fichier", default="inconnu")
@@ -55,7 +57,7 @@ def create_inverted_index(
 
 
 def save_inverted_index_txt(
-    inverted_index: Dict[str, Dict[str, Dict[str, int]]], output_file: str
+    inverted_index: dict[str, dict[str, dict[str, int]]], output_file: str
 ):
     """
     Sauvegarde un index inverse dans un fichier texte trié alphabétiquement

@@ -68,7 +68,7 @@ def create_lemma_spacy(input_file: str, output_file: str) -> None:
     # Ouverture du fichier de sortie pour y écrire les lemmes
     with open(output_file, "w", encoding="utf-8") as file:
         for doc in words:
-            file.write(f"{doc.text} → {doc.lemma_}\n")
+            file.write(f"{doc.text}→{doc.lemma_}\n")
 
 
 def create_lemma_stemmer(input_file: str, output_file: str) -> None:
@@ -90,7 +90,7 @@ def create_lemma_stemmer(input_file: str, output_file: str) -> None:
     # Ouverture du fichier de sortie pour y écrire les lemmes
     with open(output_file, "w", encoding="utf-8") as file:
         for word in words:
-            file.write(f"{word} → {stemmer.stem(word)} \n")
+            file.write(f"{word}→{stemmer.stem(word)}\n")
 
 
 def compute_stats_lemma(algo: str, input_file: str) -> None:
