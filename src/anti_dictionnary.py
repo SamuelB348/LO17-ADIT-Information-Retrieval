@@ -4,9 +4,9 @@ Fichier permettant la constitution d'un anti-dictionnaire et le nettoyage du cor
 
 import math
 from typing import List
-import xml.etree.ElementTree as ET
-from xml.dom import minidom
 import pandas as pd
+from xml.dom import minidom
+import xml.etree.ElementTree as ET
 from lxml import etree
 from segmente import tokenize
 from substitue import substitute_texte
@@ -137,28 +137,30 @@ def create_clean_xml_corpus(
     """
     # Charge le fichier XML d'entrée et crée une copie
     tree = etree.parse(input_corpus)
-    tree_copy = tree
-    with open(output_corpus, "w", encoding="utf-8") as file:
-        for article in tree_copy.xpath("/corpus/article"):
-            # Tokenise le titre et applique les substitutions
-            titre = tokenize(article.find("titre").text)
-            titre = substitute_texte(titre, subs_file)
-            article.find("titre").text = "".join(titre)
 
-            # Tokenise le texte et applique les substitutions
-            texte = tokenize(article.find("texte").text)
-            texte = substitute_texte(texte, subs_file)
-            article.find("texte").text = "".join(texte)
+    for article in tree.xpath("/corpus/article"):
+        # Tokenise le titre et applique les substitutions
+        titre = tokenize(article.find("titre").text)
+        titre = substitute_texte(titre, subs_file)
+        article.find("titre").text = "".join(titre)
 
-        # Convertit et écrit le XML dans le fichier de sortie
-        xml_str = ET.tostring(tree_copy.getroot(), encoding="unicode")
-        xml_str = minidom.parseString(xml_str).toprettyxml(indent="  ")
-        file.write(xml_str)
+        # Tokenise le texte et applique les substitutions
+        texte = tokenize(article.find("texte").text)
+        texte = substitute_texte(texte, subs_file)
+        article.find("texte").text = "".join(texte)
+
+    # Enregistre le fichier XML
+    tree.write(
+        output_corpus,
+        pretty_print=True,
+        xml_declaration=True,
+        encoding="UTF-8"
+    )
 
 
 if __name__ == "__main__":
-    tf_determination("../words_segmentation.txt", "../TF_output.txt")
-    idf_determination("../TF_output.txt", "../idf_output.txt")
-    compute_tf_idf("../TF_output.txt", "../idf_output.txt", "../tfidf_output.txt")
-    create_stop_words("../tfidf_output.txt", "../subs.txt", 0.0006)
-    create_clean_xml_corpus("../corpus.xml", "../subs.txt", "../corpus_clean.xml")
+    # tf_determination("../words_segmentation.txt", "../TF_output.txt")
+    # idf_determination("../TF_output.txt", "../idf_output.txt")
+    # compute_tf_idf("../TF_output.txt", "../idf_output.txt", "../tfidf_output.txt")
+    # create_stop_words("../tfidf_output.txt", "../subs.txt", 0.0006)
+    create_clean_xml_corpus("../corpus.xml", "../subs.txt", "../corpus_wo_stopwords.xml")

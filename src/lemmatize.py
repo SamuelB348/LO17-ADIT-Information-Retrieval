@@ -2,7 +2,6 @@
 Fonctions pour lemmatiser le corpus selon différentes approches.
 """
 
-import re
 import spacy
 import pandas as pd
 from nltk.stem.snowball import FrenchStemmer
@@ -22,28 +21,26 @@ def extract_words_from_xml(input_xml_file: str, output_file: str) -> None:
     """
     tree = etree.parse(input_xml_file)
 
-    with open(output_file, "w", encoding="utf-8") as file:
-        # Initialisation d'un dataframe vide pour stocker les mots extraits
-        df_words_sorted = pd.DataFrame(columns=["word"])
+    # Initialisation d'un dataframe vide pour stocker les mots extraits
+    df_words_sorted = pd.DataFrame(columns=["word"])
 
-        for article in tree.xpath("/corpus/article"):
-            # On tokenise le titre et le texte de l'article
-            titre = tokenize(article.find("titre").text)
-            texte = tokenize(article.find("texte").text)
+    for article in tree.xpath("/corpus/article"):
+        # On tokenise le titre et le texte de l'article
+        titre = tokenize(article.find("titre").text)
+        texte = tokenize(article.find("texte").text)
 
-            liste = titre + texte
+        liste = titre + texte
 
-            # Création d'un dataframe temporaire pour ajouter ces mots à la liste principale
-            df_liste = pd.DataFrame(liste, columns=["word"])
-            df_words_sorted = pd.concat([df_words_sorted, df_liste], ignore_index=True)
+        # Création d'un dataframe temporaire pour ajouter ces mots à la liste principale
+        df_liste = pd.DataFrame(liste, columns=["word"])
+        df_words_sorted = pd.concat([df_words_sorted, df_liste], ignore_index=True)
 
-        # Suppression des doublons et trie des mots par ordre alphabétique
-        df_words_sorted = df_words_sorted.drop_duplicates()
-        df_words_sorted.sort_values(by="word", inplace=True)
+    # Suppression des doublons et trie des mots par ordre alphabétique
+    df_words_sorted = df_words_sorted.drop_duplicates()
+    df_words_sorted.sort_values(by="word", inplace=True)
 
-        # Écriture dans le fichier de sortie
-        df_words_sorted.to_csv(file, index=False, header=False)
-        file.write("\n")
+    # Écriture dans le fichier de sortie
+    df_words_sorted.to_csv(output_file, index=False, header=False)
 
 
 def create_lemma_spacy(input_file: str, output_file: str) -> None:
@@ -59,21 +56,19 @@ def create_lemma_spacy(input_file: str, output_file: str) -> None:
     nlp = spacy.load("fr_core_news_sm")
 
     with open(input_file, "r", encoding="utf-8") as words_file:
-        words = words_file.read()
+        # Extraction de tous les mots sous forme de liste
+        words = [line.strip() for line in words_file if line.strip()]
 
-        # Extraction de tous les mots à l'aide d'une regex
-        words = re.findall(r"\b\w+\b", words)
+    # Transformation en une seule chaîne de caractères pour spaCy
+    words = " ".join(words)
 
-        # Transformation en une seule chaîne de caractères pour spaCy
-        words = " ".join(words)
+    # Traitement du texte avec spaCy pour obtenir des objets doc contenant les lemmes
+    words = nlp(words)
 
-        # Traitement du texte avec spaCy pour obtenir des objets doc contenant les lemmes
-        words = nlp(words)
-
-        # Ouverture du fichier de sortie pour y écrire les lemmes
-        with open(output_file, "w", encoding="utf-8") as file:
-            for doc in words:
-                file.write(f"{doc.text} → {doc.lemma_}\n")
+    # Ouverture du fichier de sortie pour y écrire les lemmes
+    with open(output_file, "w", encoding="utf-8") as file:
+        for doc in words:
+            file.write(f"{doc.text} → {doc.lemma_}\n")
 
 
 def create_lemma_stemmer(input_file: str, output_file: str) -> None:
@@ -86,18 +81,16 @@ def create_lemma_stemmer(input_file: str, output_file: str) -> None:
     :return: None
     """
     with open(input_file, "r", encoding="utf-8") as words_file:
-        words = words_file.read()
+        # Extraction de tous les mots sous forme de liste
+        words = [line.strip() for line in words_file if line.strip()]
 
-        # Extraction de tous les mots à l'aide d'une regex
-        words = re.findall(r"\b\w+\b", words)
+    # Initialisation du stemmer pour la langue française
+    stemmer = FrenchStemmer()
 
-        # Initialisation du stemmer pour la langue française
-        stemmer = FrenchStemmer()
-
-        # Ouverture du fichier de sortie pour y écrire les lemmes
-        with open(output_file, "w", encoding="utf-8") as file:
-            for word in words:
-                file.write(f"{word} → {stemmer.stem(word)} \n")
+    # Ouverture du fichier de sortie pour y écrire les lemmes
+    with open(output_file, "w", encoding="utf-8") as file:
+        for word in words:
+            file.write(f"{word} → {stemmer.stem(word)} \n")
 
 
 def compute_stats_lemma(algo: str, input_file: str) -> None:
@@ -109,15 +102,17 @@ def compute_stats_lemma(algo: str, input_file: str) -> None:
     :return: None
     """
     if algo == "spacy":
-        create_lemma_spacy(input_file, "lemma_spacy.txt")
+        create_lemma_spacy(input_file, "../lemma_spacy.txt")
         lemma_dataframe = pd.read_csv(
-            "lemma_spacy.txt", sep="→", header=None, names=["word", "lemma"]
+            "../lemma_spacy.txt", sep="→", header=None, names=["word", "lemma"]
         )
     elif algo == "stemmer":
-        create_lemma_stemmer(input_file, "lemma_stemmer.txt")
+        create_lemma_stemmer(input_file, "../lemma_stemmer.txt")
         lemma_dataframe = pd.read_csv(
-            "lemma_stemmer.txt", sep="→", header=None, names=["word", "lemma"]
+            "../lemma_stemmer.txt", sep="→", header=None, names=["word", "lemma"]
         )
+    else:
+        raise ValueError(f"Algorithme '{algo}' n'existe pas.")
 
     # Calcul du nombre de lemmes uniques et du taux de compression lexicale
     unique_lemma = lemma_dataframe.nunique(axis=0).iloc[1]
@@ -151,7 +146,7 @@ def complete_subs_file(lemma_file: str, subs_file: str) -> None:
 
 
 if __name__ == "__main__":
-    extract_words_from_xml("../corpus_clean.xml", "../words_segmentation_clean.txt")
+    extract_words_from_xml("../corpus_wo_stopwords.xml", "../words_segmentation_clean.txt")
     create_lemma_spacy("../words_segmentation_clean.txt", "../lemma_spacy.txt")
     create_lemma_stemmer("../words_segmentation_clean.txt", "../lemma_stemmer.txt")
     compute_stats_lemma("spacy", "../words_segmentation_clean.txt")

@@ -7,6 +7,7 @@ import zipfile
 import re
 from typing import List
 from bs4 import BeautifulSoup
+import xml.etree.ElementTree as ET
 
 
 def unzip_data(zip_name: str, output_dir: str) -> str:
@@ -46,3 +47,15 @@ def tokenize(text: str) -> List[str]:
     :return: La liste des tokens extraits du texte.
     """
     return re.findall(r"\b\w+\b", text.lower())
+
+
+def parse_xml(file_path: str) -> ET.Element:
+    """
+    charge et parse un fichier xml
+
+    :param file_path: chemin du fichier xml
+    :return: élément racine de l'arbre xml
+    """
+    tree = ET.parse(file_path)
+    root = tree.getroot()
+    return root
