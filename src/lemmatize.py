@@ -25,7 +25,7 @@ def extract_words_from_xml(input_xml_file: str, output_file: str) -> None:
     # Initialisation d'un dataframe vide pour stocker les mots extraits
     df_words_sorted = pd.DataFrame(columns=["word"])
 
-    for article in tqdm(tree.xpath("/corpus/article")):
+    for article in tree.xpath("/corpus/article"):
         # On tokenise le titre et le texte de l'article
         titre = tokenize(article.find("titre").text)
         texte = tokenize(article.find("texte").text)
@@ -139,7 +139,7 @@ def complete_subs_file(lemma_file: str, subs_file: str) -> None:
     # (les termes de l'anti dictionnaire sont deja présents)
     with open(subs_file, "a", encoding="utf-8") as subs:
         with open(lemma_file, "r", encoding="utf-8") as lemma:
-            for line in tqdm(lemma):
+            for line in lemma:
                 # Extraction du mot d'origine et de sa substitution
                 word = line.split("→")[0].strip()
                 substitute = line.split("→")[1].strip()
