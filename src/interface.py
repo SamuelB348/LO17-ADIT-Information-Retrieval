@@ -11,7 +11,7 @@ def trier_resultats():
     query = search_entry.get()
     critere_tri = tri_var.get()
 
-    root_corpus = parse_xml('../corpus.xml')
+    root_corpus = parse_xml('data/corpus.xml')
 
     if query:
         resultats, doc_type = moteur(query)

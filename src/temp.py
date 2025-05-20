@@ -737,11 +737,11 @@ def moteur(requete_langage_naturel):
     # Etape 2
     if composants["titre"] is not None:
         composants["titre"] = correcteur_orthographique(
-            composants["titre"], "../lemma_stemmer.txt", 1, 12, 54
+            composants["titre"], "data/lemma_stemmer.txt", 1, 12, 54
         )
     if composants["contenu"] is not None:
         composants["contenu"] = correcteur_orthographique(
-            composants["contenu"], "../lemma_stemmer.txt", 1, 12, 54
+            composants["contenu"], "data/lemma_stemmer.txt", 1, 12, 54
         )
     if composants["keywords"] is not None:
         print(composants["keywords"])
@@ -751,14 +751,14 @@ def moteur(requete_langage_naturel):
             elif not word.startswith("pas "):
                 composants["keywords"][composants["keywords"].index(word)] = (
                     correcteur_orthographique(
-                        word, "../lemma_stemmer.txt", 1, 12, 54
+                        word, "data/lemma_stemmer.txt", 1, 12, 54
                     ).strip()
                 )
             else:
                 composants["keywords"][composants["keywords"].index(word)] = (
                     "pas "
                     + correcteur_orthographique(
-                        word[4:], "../lemma_stemmer.txt", 1, 12, 54
+                        word[4:], "data/lemma_stemmer.txt", 1, 12, 54
                     ).strip()
                 )
         # Etape 3
