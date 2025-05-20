@@ -5,9 +5,8 @@ Fichier permettant la constitution d'un anti-dictionnaire et le nettoyage du cor
 import math
 from typing import List
 import pandas as pd
-from xml.dom import minidom
-import xml.etree.ElementTree as ET
 from lxml import etree
+from tqdm import tqdm
 from segmente import tokenize
 from substitue import substitute_texte
 
@@ -138,16 +137,20 @@ def create_clean_xml_corpus(
     # Charge le fichier XML d'entrée et crée une copie
     tree = etree.parse(input_corpus)
 
-    for article in tree.xpath("/corpus/article"):
+    for article in tqdm(tree.xpath("/corpus/article")):
         # Tokenise le titre et applique les substitutions
         titre = tokenize(article.find("titre").text)
         titre = substitute_texte(titre, subs_file)
-        article.find("titre").text = "".join(titre)
+        titre = "".join(titre)
+        # .split() permet de retirer des espaces consécutifs
+        article.find("titre").text = " ".join(titre.split())
 
         # Tokenise le texte et applique les substitutions
         texte = tokenize(article.find("texte").text)
         texte = substitute_texte(texte, subs_file)
-        article.find("texte").text = "".join(texte)
+        texte = "".join(texte)
+        # .split() permet de retirer des espcaes consécutifs
+        article.find("texte").text = " ".join(texte.split())
 
     # Enregistre le fichier XML
     tree.write(
@@ -159,8 +162,13 @@ def create_clean_xml_corpus(
 
 
 if __name__ == "__main__":
-    # tf_determination("../words_segmentation.txt", "../TF_output.txt")
-    # idf_determination("../TF_output.txt", "../idf_output.txt")
-    # compute_tf_idf("../TF_output.txt", "../idf_output.txt", "../tfidf_output.txt")
-    # create_stop_words("../tfidf_output.txt", "../subs.txt", 0.0006)
-    create_clean_xml_corpus("../corpus.xml", "../subs.txt", "../corpus_wo_stopwords.xml")
+    print("Calcul de TF...")
+    tf_determination("data/words_segmentation.txt", "data/TF_output.txt")
+    print("Calcul du IDF...")
+    idf_determination("data/TF_output.txt", "data/idf_output.txt")
+    print("Calcul de TF-IDF...")
+    compute_tf_idf("data/TF_output.txt", "data/idf_output.txt", "data/tfidf_output.txt")
+    print("Génération de l'anti-dictionnaire...")
+    create_stop_words("data/tfidf_output.txt", "data/subs.txt", 0.0006)
+    print("Nettoyage du corpus...")
+    create_clean_xml_corpus("data/corpus.xml", "data/subs.txt", "data/corpus_wo_stopwords.xml")

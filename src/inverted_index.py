@@ -4,7 +4,7 @@ Fonctions pour créer un index inversé du corpus lemmatisé.
 
 import xml.etree.ElementTree as ET
 from collections import defaultdict
-from typing import List, Dict, Any
+from typing import List
 from utils import parse_xml
 
 
@@ -73,7 +73,7 @@ def save_inverted_index_txt(
             for doc_id, tags in inverted_index[word].items():
                 for tag, _ in tags.items():
                     doc_list.append(f"{doc_id}:{tag}")
-            f.write(f"{word},{', '.join(doc_list)}\n")
+            f.write(f"{word},{','.join(doc_list)}\n")
 
 
 if __name__ == "__main__":
@@ -86,6 +86,8 @@ if __name__ == "__main__":
         "texte",
         "images",
     ]
-    XML_FILE = "../corpus_clean.xml"
+    XML_FILE = "data/corpus_clean.xml"
+    print("Création de l'index inversé...")
     index = create_inverted_index(parse_xml(XML_FILE), tags_to_index)
-    save_inverted_index_txt(index, "../index_inverse.txt")
+    print("Sauvegarde de l'index inversé...")
+    save_inverted_index_txt(index, "data/index_inverse.txt")

@@ -29,4 +29,5 @@ def segmente_corpus(input_corpus: str, output_file: str) -> None:
 
 
 if __name__ == "__main__":
-    segmente_corpus("../corpus.xml", "../words_segmentation.txt")
+    print("Segmentation du corpus...")
+    segmente_corpus("data/corpus.xml", "data/words_segmentation.txt")

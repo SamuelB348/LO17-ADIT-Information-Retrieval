@@ -6,6 +6,7 @@ import spacy
 import pandas as pd
 from nltk.stem.snowball import FrenchStemmer
 from lxml import etree
+from tqdm import tqdm
 from anti_dictionnary import create_clean_xml_corpus
 from utils import tokenize
 
@@ -24,7 +25,7 @@ def extract_words_from_xml(input_xml_file: str, output_file: str) -> None:
     # Initialisation d'un dataframe vide pour stocker les mots extraits
     df_words_sorted = pd.DataFrame(columns=["word"])
 
-    for article in tree.xpath("/corpus/article"):
+    for article in tqdm(tree.xpath("/corpus/article")):
         # On tokenise le titre et le texte de l'article
         titre = tokenize(article.find("titre").text)
         texte = tokenize(article.find("texte").text)
@@ -102,14 +103,14 @@ def compute_stats_lemma(algo: str, input_file: str) -> None:
     :return: None
     """
     if algo == "spacy":
-        create_lemma_spacy(input_file, "../lemma_spacy.txt")
+        create_lemma_spacy(input_file, "data/lemma_spacy.txt")
         lemma_dataframe = pd.read_csv(
-            "../lemma_spacy.txt", sep="→", header=None, names=["word", "lemma"]
+            "data/lemma_spacy.txt", sep="→", header=None, names=["word", "lemma"], engine='python'
         )
     elif algo == "stemmer":
-        create_lemma_stemmer(input_file, "../lemma_stemmer.txt")
+        create_lemma_stemmer(input_file, "data/lemma_stemmer.txt")
         lemma_dataframe = pd.read_csv(
-            "../lemma_stemmer.txt", sep="→", header=None, names=["word", "lemma"]
+            "data/lemma_stemmer.txt", sep="→", header=None, names=["word", "lemma"], engine='python'
         )
     else:
         raise ValueError(f"Algorithme '{algo}' n'existe pas.")
@@ -138,7 +139,7 @@ def complete_subs_file(lemma_file: str, subs_file: str) -> None:
     # (les termes de l'anti dictionnaire sont deja présents)
     with open(subs_file, "a", encoding="utf-8") as subs:
         with open(lemma_file, "r", encoding="utf-8") as lemma:
-            for line in lemma:
+            for line in tqdm(lemma):
                 # Extraction du mot d'origine et de sa substitution
                 word = line.split("→")[0].strip()
                 substitute = line.split("→")[1].strip()
@@ -146,10 +147,16 @@ def complete_subs_file(lemma_file: str, subs_file: str) -> None:
 
 
 if __name__ == "__main__":
-    extract_words_from_xml("../corpus_wo_stopwords.xml", "../words_segmentation_clean.txt")
-    create_lemma_spacy("../words_segmentation_clean.txt", "../lemma_spacy.txt")
-    create_lemma_stemmer("../words_segmentation_clean.txt", "../lemma_stemmer.txt")
-    compute_stats_lemma("spacy", "../words_segmentation_clean.txt")
-    compute_stats_lemma("stemmer", "../words_segmentation_clean.txt")
-    complete_subs_file("../lemma_stemmer.txt", "../subs.txt")
-    create_clean_xml_corpus("../corpus.xml", "../subs.txt", "../corpus_clean.xml")
+    print("Nouvelle segmentation du corpus...")
+    extract_words_from_xml("data/corpus_wo_stopwords.xml", "data/words_segmentation_clean.txt")
+    print("Lemmatisation avec Spacy...")
+    create_lemma_spacy("data/words_segmentation_clean.txt", "data/lemma_spacy.txt")
+    print("Lemmatisation avec SnowBall...")
+    create_lemma_stemmer("data/words_segmentation_clean.txt", "data/lemma_stemmer.txt")
+    print("Calcul de statistiques...")
+    compute_stats_lemma("spacy", "data/words_segmentation_clean.txt")
+    compute_stats_lemma("stemmer", "data/words_segmentation_clean.txt")
+    print("Mis-à-jour du fichier de substitution...")
+    complete_subs_file("data/lemma_stemmer.txt", "data/subs.txt")
+    print("Nettoyage du corpus...")
+    create_clean_xml_corpus("data/corpus.xml", "data/subs.txt", "data/corpus_clean.xml")

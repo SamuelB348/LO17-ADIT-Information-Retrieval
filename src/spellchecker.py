@@ -112,7 +112,7 @@ def correcteur_orthographique(
     # Initialisation des variables
     output_liste = []
     lexique_dataframe = pd.read_csv(
-        lexique, sep="→", header=None, names=["mot", "lemme"]
+        lexique, sep="→", header=None, names=["mot", "lemme"], engine='python'
     )
 
     for word in tokenize(input_texte):
@@ -165,5 +165,5 @@ def correcteur_orthographique(
 
 if __name__ == "__main__":
     TEXTE = "etudia en nanotechnolojies"
-    TEXTE_CORRIGE = correcteur_orthographique(TEXTE, "../lemma_stemmer.txt", 3, 12, 60)
+    TEXTE_CORRIGE = correcteur_orthographique(TEXTE, "data/lemma_stemmer.txt", 3, 12, 60)
     print(TEXTE_CORRIGE)
