@@ -88,7 +88,8 @@ Si vous entrez la requête suivante :
 je veux des articles parlant de réalité virtuelle
 ```
 vous obtiendrez la liste des articles correspondants, triés selon votre critère choisi.  
-Vous pouvez alors consulter chaque article en cliquant sur le bouton **Consulter**.
-Les temps d’exécution rapportés dans le rapport pour le traitement des requêtes via la fonction moteur.py ont été mesurés sur Google Colab.
-En local, les temps moyens restent relativement similaires.
+Vous pouvez alors consulter chaque article en cliquant sur le bouton **Consulter**.  
+
+Les temps d’exécution rapportés dans le rapport pour le traitement des requêtes via la fonction moteur.py ont été mesurés sur Google Colab.  
+En local, les temps moyens restent relativement similaires.  
 Il ne faut pas s’inquiéter si l’exécution est légèrement plus longue de votre côté, cela dépend notamment des performances de votre machine.
