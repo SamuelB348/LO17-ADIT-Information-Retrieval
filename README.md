@@ -11,7 +11,7 @@ Il permet d’indexer, traiter et rechercher des articles à partir d’un corpu
 
 À la racine du projet, on trouve :
 
-- `bulletin.zip` : archive contenant les données initiales (bulletins et images associées).
+- `BULLETINS.zip` : archive contenant les données initiales (bulletins et images associées).
 - `.gitignore` : fichier pour exclure certains fichiers du suivi Git.
 - `requirements.txt` : liste des dépendances Python nécessaires au projet.
 - `src/` : dossier principal contenant tous les scripts Python, organisés pour faciliter le développement et les tests.
