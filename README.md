@@ -25,7 +25,7 @@ Il permet d’indexer, traiter et rechercher des articles à partir d’un corpu
 ├── bulletin.zip # Archive contenant les bulletins initiaux
 ├── .gitignore # Fichier Git pour ignorer certains fichiers
 ├── requirements.txt # Dépendances Python nécessaires
-├── src/
+├── src/ # Scripts source du projet
 │ ├── anti_dictionnaire.py # Filtrage des mots vides
 │ ├── data_parser.py # Parsing des données brutes
 │ ├── interface.py # Interface graphique (Tkinter)
@@ -38,10 +38,10 @@ Il permet d’indexer, traiter et rechercher des articles à partir d’un corpu
 │ ├── moteur.py # Moteur de recherche principal
 │ └── utils.py # Fonctions utilitaires
 ├── data/ # Dossier contenant les données générées
-│ ├── initial/ # Bulletins et images d'origine
-│ └── (autres fichiers générés)
-└── images/
-└── icon.png # Icône pour l'interface
+│ ├── initial/ # Bulletins et images d'origine  
+│ └── (autres fichiers générés)  
+└── images/ # Images utilisées par le projet  
+└── icon.png # Icône pour l'interface  
 
 ## Installation
 
