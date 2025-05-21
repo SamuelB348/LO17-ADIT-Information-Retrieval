@@ -31,8 +31,12 @@ def tf_determination(segmentation_file: str, output_tf_file: str) -> None:
         for file_number in liste_different_files:
             # Extraction des mots du fichier actuel
             file_df = segmentation_df[segmentation_df["file_number"] == file_number]
-            word_counts = file_df["word"].value_counts()  # Comptage des occurrences des mots
-            word_frequency = word_counts / len(file_df)  # Calcul de la fréquence des mots (TF)
+            word_counts = file_df[
+                "word"
+            ].value_counts()  # Comptage des occurrences des mots
+            word_frequency = word_counts / len(
+                file_df
+            )  # Calcul de la fréquence des mots (TF)
 
             # Enregistrement des résultats au format (numéro de fichier, mot, TF)
             for word, frequency in word_frequency.items():
@@ -99,7 +103,9 @@ def compute_tf_idf(
     tf_idf_dataframe.to_csv(output_tfidf_file, sep="\t", index=False, header=False)
 
 
-def create_stop_words(input_tfidf_file: str, subs_file: str, seuil_min: float) -> List[str]:
+def create_stop_words(
+    input_tfidf_file: str, subs_file: str, seuil_min: float
+) -> List[str]:
     """
     Crée un anti-dictionnaire en supprimant les termes ayant un tf-idf inférieur à un seuil minimum.
 
@@ -153,12 +159,7 @@ def create_clean_xml_corpus(
         article.find("texte").text = " ".join(texte.split())
 
     # Enregistre le fichier XML
-    tree.write(
-        output_corpus,
-        pretty_print=True,
-        xml_declaration=True,
-        encoding="UTF-8"
-    )
+    tree.write(output_corpus, pretty_print=True, xml_declaration=True, encoding="UTF-8")
 
 
 if __name__ == "__main__":
@@ -171,4 +172,6 @@ if __name__ == "__main__":
     print("Génération de l'anti-dictionnaire...")
     create_stop_words("data/tfidf_output.txt", "data/subs.txt", 0.0006)
     print("Nettoyage du corpus...")
-    create_clean_xml_corpus("data/corpus.xml", "data/subs.txt", "data/corpus_wo_stopwords.xml")
+    create_clean_xml_corpus(
+        "data/corpus.xml", "data/subs.txt", "data/corpus_wo_stopwords.xml"
+    )

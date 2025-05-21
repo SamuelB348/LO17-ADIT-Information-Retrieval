@@ -6,8 +6,8 @@ import os
 import zipfile
 import re
 from typing import List
-from bs4 import BeautifulSoup
 import xml.etree.ElementTree as ET
+from bs4 import BeautifulSoup
 
 
 def unzip_data(zip_name: str, output_dir: str) -> str:
@@ -18,7 +18,6 @@ def unzip_data(zip_name: str, output_dir: str) -> str:
     :param output_dir : Le nom du répertoire de destination.
     :return: None.
     """
-    # TODO : ajouter vérification sur la nature du zip
     os.makedirs(output_dir, exist_ok=True)
 
     with zipfile.ZipFile(zip_name, "r") as zip_ref:
@@ -46,7 +45,7 @@ def tokenize(text: str) -> List[str]:
     :param text: Le texte à tokeniser.
     :return: La liste des tokens extraits du texte.
     """
-    return re.findall(r"\b\w+\b", text.lower())
+    return re.findall(r"\b\w+(?:-\w+)*\b", text.lower())
 
 
 def parse_xml(file_path: str) -> ET.Element:

@@ -285,7 +285,7 @@ def check_all(verbose=False) -> bool:
         if os.path.isfile(os.path.join(folder, f))
     ]
 
-    for file_path in tqdm(files, desc='Vérification des n° de fichier'):
+    for file_path in tqdm(files, desc="Vérification des n° de fichier"):
         soup = open_file(file_path)
         file_name = extract_file_name(soup)
         if not file_name:
@@ -296,7 +296,7 @@ def check_all(verbose=False) -> bool:
         elif verbose:
             print(file_name)
 
-    for file_path in tqdm(files, desc='Vérification des n° de bulletin'):
+    for file_path in tqdm(files, desc="Vérification des n° de bulletin"):
         soup = open_file(file_path)
         bulletin_number = extract_bulletin_number(soup)
         if not bulletin_number:
@@ -308,7 +308,7 @@ def check_all(verbose=False) -> bool:
         elif verbose:
             print(bulletin_number)
 
-    for file_path in tqdm(files, desc='Vérification des dates'):
+    for file_path in tqdm(files, desc="Vérification des dates"):
         soup = open_file(file_path)
         date = extract_date(soup)
         if not date:
@@ -319,7 +319,7 @@ def check_all(verbose=False) -> bool:
         elif verbose:
             print(date)
 
-    for file_path in tqdm(files, desc='Vérification des rubriques'):
+    for file_path in tqdm(files, desc="Vérification des rubriques"):
         soup = open_file(file_path)
         rubrique = extract_section(soup)
         if not rubrique:
@@ -330,7 +330,7 @@ def check_all(verbose=False) -> bool:
         elif verbose:
             print(rubrique)
 
-    for file_path in tqdm(files, desc='Vérification des titres'):
+    for file_path in tqdm(files, desc="Vérification des titres"):
         soup = open_file(file_path)
         title = extract_title(soup)
         if not title:
@@ -339,7 +339,7 @@ def check_all(verbose=False) -> bool:
         elif verbose:
             print(title)
 
-    for file_path in tqdm(files, desc='Vérification des auteurs'):
+    for file_path in tqdm(files, desc="Vérification des auteurs"):
         soup = open_file(file_path)
         author = extract_author(soup)
         if not author:
@@ -351,7 +351,7 @@ def check_all(verbose=False) -> bool:
         elif verbose:
             print(author)
 
-    for file_path in tqdm(files, desc='Vérification des contenus'):
+    for file_path in tqdm(files, desc="Vérification des contenus"):
         soup = open_file(file_path)
         text = extract_text(soup)
         if not text:
@@ -362,13 +362,13 @@ def check_all(verbose=False) -> bool:
         elif verbose:
             print(text)
 
-    for file_path in tqdm(files, desc='Vérification des images'):
+    for file_path in tqdm(files, desc="Vérification des images"):
         soup = open_file(file_path)
         images = extract_images(soup)
         if verbose:
             pprint.pprint(images)
 
-    for file_path in tqdm(files, desc='Vérification des contacts'):
+    for file_path in tqdm(files, desc="Vérification des contacts"):
         soup = open_file(file_path)
         contacts = extract_contacts(soup)
         if not contacts:
@@ -431,7 +431,7 @@ def generate_corpus(zip_directory: str, output_file: str) -> None:
         workdir = unzip_data(zip_directory, "/..")
         corpus = ET.Element("corpus")
 
-        for element in tqdm(os.listdir(workdir), desc='Genération du corpus'):
+        for element in tqdm(os.listdir(workdir), desc="Genération du corpus"):
             file_path = os.path.join(workdir, element)
             if os.path.isfile(file_path):
                 article = generate_article(file_path)

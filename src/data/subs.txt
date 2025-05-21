@@ -3,8 +3,8 @@ et
 l	
 à	
 la	
-le	
 les	
+le	
 en	
 d	
 pour	
@@ -12,24 +12,24 @@ des
 du	
 ce	
 qui	
-au	
 une	
+au	
 un	
 que	
 cette	
-est	
 dans	
 par	
 sur	
 plus	
+est	
 ces	
 ainsi	
 a	
-il	
-s	
 avec	
+s	
 ou	
 être	
+il	
 recherche	
 aux	
 sont	
@@ -39,60 +39,56 @@ comme
 mais	
 deux	
 se	
-ont	
 été	
+ont	
 entre	
 aussi	
 c	
 très	
 alors	
 dont	
-ci	
 aujourd	
 hui	
 également	
 effet	
 où	
 dernier	
-chercheurs	
 objectif	
 ne	
+chercheurs	
 sein	
 ses	
 leur	
 si	
 développement	
-france	
-elle	
 pas	
 tout	
 n	
+france	
 donc	
 cadre	
 université	
-on	
 ans	
 cours	
+on	
 projet	
 déjà	
-même	
 or	
 première	
 travaux	
-nous	
-fois	
 autant	
-t	
-encore	
 cet	
-sa	
+elle	
+encore	
 depuis	
-explique	
+sa	
+fois	
 institut	
-ils	
+même	
 années	
 y	
-rappelons	
+faire	
+nous	
 afin	
 autre	
 premier	
@@ -100,195 +96,176 @@ premier
 particulier	
 autres	
 fait	
-celui	
-bien	
-précise	
+cela	
 laboratoire	
 plusieurs	
-cela	
+entreprise	
 notamment	
 leurs	
 monde	
-va	
-entreprise	
-celle	
-peut	
-autour	
 résultats	
 sans	
+autour	
 4	
+bien	
 domaine	
-faire	
+ils	
+va	
 ensemble	
 trois	
-sous	
-1	
 tous	
-permet	
 jusqu	
 grâce	
+permet	
+1	
 personnes	
+rappelons	
 projets	
 non	
-après	
-paris	
 laquelle	
 partenaires	
+peut	
 différentes	
 année	
 entreprises	
 temps	
 niveau	
+sous	
 moins	
 français	
 place	
-sera	
+directeur	
 mise	
 vient	
 centre	
-quelques	
+sera	
+explique	
 travail	
-2	
 avoir	
-nouvelle	
 sciences	
 secteur	
+paris	
 collaboration	
+2	
 occasion	
 pouvoir	
+nouvelle	
 enfin	
 000	
-développer	
 compte	
 permettre	
+quelques	
+développer	
 mieux	
 chez	
 près	
 scientifique	
+celui-ci	
 certains	
-dire	
 mettre	
 édition	
-dit	
-industrie	
-ceux	
 durant	
 matière	
 peuvent	
-agit	
+industrie	
 type	
 chaque	
-3	
+agit	
 applications	
-indique	
+3	
 beaucoup	
-exemple	
-avant	
 lors	
+celle-ci	
+exemple	
 technologie	
-lui	
 vont	
+dit	
 ecole	
 groupe	
 voire	
 présent	
 programme	
-soit	
+avant	
+là	
 nouveau	
-souligne	
-vous	
+précise	
 terme	
-équipe	
-marché	
-environnement	
-directeur	
-rappelle	
-faut	
+soit	
+après	
 équipes	
+équipe	
+lui	
+marché	
 international	
 pu	
 toutes	
-grand	
-forme	
-grande	
+environnement	
 production	
 qualité	
 utilisation	
-contexte	
 peu	
-pourrait	
+grand	
+rappelle	
+grande	
 était	
 quand	
 unité	
-nombre	
+contexte	
 cnrs	
-président	
+nombre	
 notre	
-là	
 formation	
-différents	
 industriels	
 ensuite	
 parmi	
+différents	
 innovation	
-point	
-6	
-résume	
+technologies	
 énergie	
-elles	
+6	
 activités	
 grandes	
 idée	
-devrait	
 parallèlement	
-savoir	
-technologies	
-10	
+point	
 domaines	
-chercheur	
+pourrait	
 pôle	
+chercheur	
+faut	
+devrait	
+10	
 désormais	
 créer	
 dernières	
-estime	
+indique	
 produire	
 recherches	
-systèmes	
 compétitivité	
-reste	
+systèmes	
 seconde	
-seront	
-techniques	
 nécessaires	
-mois	
+président	
 produit	
-5	
+techniques	
 nouveaux	
-système	
-vers	
 certaines	
 développé	
 seulement	
 évidemment	
 important	
 coeur	
-sommes	
-toujours	
-partenariat	
-7	
-etats	
-termes	
-traitement	
-avons	
-euros	
-possible	
-tant	
-unique	
+mois	
+forme	
+seront	
+système	
+vers	
+5	
 0	0
 00	00
+10-15	10-15
 100	100
 1000	1000
-100b	100b
 101	101
 1015	1015
 1024	1024
@@ -304,6 +281,7 @@ unique
 117	117
 11ème	11em
 12	12
+12-hydroxy	12-hydroxy
 120	120
 125	125
 126	126
@@ -378,34 +356,47 @@ unique
 1b	1b
 1er	1er
 1ère	1er
+2-1a	2-1a
+2-1b	2-1b
+2-h	2-h
+2-heptanone	2-heptanon
 20	20
 200	200
 2000	2000
 2001	2001
 2002	2002
 2003	2003
+2003-2004	2003-2004
 2004	2004
 2005	2005
 2006	2006
 2007	2007
 2008	2008
 2009	2009
+2009-2012	2009-2012
+2009-2015	2009-2015
 200m2	200m2
 2010	2010
+2010-2035	2010-2035
 2011	2011
+2011-2015	2011-2015
 2012	2012
+2012-2016	2012-2016
 20126	20126
 2013	2013
+2013-2014	2013-2014
 2014	2014
+2014-2015	2014-2015
+2014-2020	2014-2020
 2015	2015
 2016	2016
 2017	2017
 2018	2018
+2018-2020	2018-2020
 2020	2020
 2023	2023
 2025	2025
 2030	2030
-2035	2035
 2040	2040
 2050	2050
 2060	2060
@@ -462,7 +453,6 @@ unique
 36	36
 38	38
 3bcar	3bcar
-3c	3c
 3d	3d
 3dau	3dau
 3e	3e
@@ -509,6 +499,7 @@ unique
 69	69
 694	694
 6ème	6em
+7	7
 70	70
 700	700
 7000	7000
@@ -547,6 +538,9 @@ unique
 970	970
 98	98
 9ème	9em
+a-t-elle	a-t-el
+a-t-il	a-t-il
+a-t-on	a-t-on
 a320	a320
 a320neo	a320neo
 a350	a350
@@ -613,7 +607,7 @@ acceptable	accept
 acceptables	accept
 acceptant	accept
 accepter	accept
-acceptera	accept
+acceptera-t-il	acceptera-t-il
 accepté	accept
 accessible	accessibl
 accessibles	accessibl
@@ -691,7 +685,7 @@ acoustic	acoustic
 acousticiens	acousticien
 acoustique	acoust
 acoustiques	acoust
-acousto	acousto
+acousto-optique	acousto-opt
 acquiert	acquiert
 acquis	acquis
 acquise	acquis
@@ -775,7 +769,7 @@ administratives	administr
 administrée	administr
 admirer	admir
 admis	admis
-admission	admiss
+admission-postbac	admission-postbac
 adn	adn
 adolescent	adolescent
 adoptent	adoptent
@@ -872,6 +866,7 @@ agissaient	agiss
 agissait	agiss
 agisse	agiss
 agissent	agissent
+agit-il	agit-il
 agitation	agit
 agon	agon
 agonistes	agon
@@ -886,7 +881,14 @@ agriculteurs	agriculteur
 agriculture	agricultur
 agricultures	agricultur
 agrimip	agrimip
-agro	agro
+agro-alimentaire	agro-alimentair
+agro-environnement	agro-environ
+agro-environnementale	agro-environnemental
+agro-industrielle	agro-industriel
+agro-industries	agro-industr
+agro-ressources	agro-ressourc
+agro-sourcés	agro-sourc
+agro-économiste	agro-économ
 agroalimenaire	agroalimenair
 agroalimentaire	agroalimentair
 agroalimentaires	agroalimentair
@@ -937,10 +939,14 @@ airs	air
 aiserey	aiserey
 aisément	ais
 ait	ait
-aix	aix
+aix-en-provence	aix-en-provent
+aix-la-chapelle	aix-la-chapel
+aix-marseille	aix-marseil
 ajout	ajout
 ajoutant	ajout
 ajoute	ajout
+ajoute-t-elle	ajoute-t-el
+ajoute-t-il	ajoute-t-il
 ajoutent	ajoutent
 ajouter	ajout
 ajoutez	ajout
@@ -955,6 +961,7 @@ alabouvette	alabouvet
 aladin	aladin
 alain	alain
 alarme	alarm
+alarme-t-il	alarme-t-il
 alba	alba
 albert	albert
 alcatel	alcatel
@@ -1029,12 +1036,14 @@ allégations	alleg
 allégement	alleg
 alléger	alleg
 allés	allé
-almasat	almasat
-alone	alon
+almasat-1	almasat-1
 along	along
 alpes	alpe
+alpes-de-haute-provence	alpes-de-haute-provent
 alpespace	alpespac
 alpha	alpha
+alpha-route	alpha-rout
+alpha-synucléine	alpha-synucléin
 alpin	alpin
 alpine	alpin
 alsace	alsac
@@ -1117,10 +1126,10 @@ ams	am
 amsterdam	amsterdam
 amundi	amund
 amusant	amus
-amusez	amus
+amusez-vous	amusez-vous
+amusez-vousc	amusez-vousc
 amylgen	amylgen
-amyloid	amyloid
-amyloïde	amyloïd
+amyloid-ß	amyloid-ß
 amyotrophique	amyotroph
 amène	amen
 amènent	amènent
@@ -1159,7 +1168,6 @@ analytique	analyt
 analytiques	analyt
 anania	anani
 anantharaman	anantharaman
-anatomie	anatom
 ancien	ancien
 ancienne	ancien
 anciennes	ancien
@@ -1184,7 +1192,7 @@ anglais	anglais
 angle	angle
 angles	angle
 angleterre	angleterr
-anglo	anglo
+anglo-saxons	anglo-saxon
 angströms	angström
 angusticeps	angusticep
 anicap	anicap
@@ -1202,7 +1210,6 @@ animera	anim
 animé	anim
 animées	anim
 anions	anion
-anjou	anjou
 anne	anne
 anneau	anneau
 annexe	annex
@@ -1214,7 +1221,6 @@ annoncer	annonc
 annoncé	annonc
 annonçait	annonc
 annotée	annot
-annualiser	annualis
 annuel	annuel
 annuelle	annuel
 annuelles	annuel
@@ -1230,19 +1236,29 @@ anr	anr
 anru2	anru2
 ansdepuis	ansdepuis
 anses	anse
-anta	anta
+anta-diop	anta-diop
 antagonistes	antagon
 antarctique	antarct
 antares	antar
 antem	antem
 antenne	anten
 antennes	anten
+antennes-relais	antennes-rel
 anthropique	anthrop
 anthropiques	anthrop
 anthropologie	anthropolog
 anthropologue	anthropologu
 anthropologues	anthropologu
-anti	anti
+anti-bactériennes	anti-bactérien
+anti-bactériens	anti-bactérien
+anti-caries	anti-car
+anti-fuite	anti-fuit
+anti-microbienne	anti-microbien
+anti-oxydantes	anti-oxyd
+anti-oxydants	anti-oxyd
+anti-radicalaire	anti-radicalair
+anti-radicalaires	anti-radicalair
+anti-épileptiques	anti-épilept
 antibiotique	antibiot
 antibiotiques	antibiot
 anticancéreuse	anticancer
@@ -1262,14 +1278,14 @@ antimonure	antimonur
 antine	antin
 antioxydant	antioxyd
 antioxydants	antioxyd
-antipolis	antipol
+antipolis-méditerranée	antipolis-méditerran
 antiseptiques	antisept
 antiépileptiques	antiépilept
 antoine	antoin
 aoc	aoc
 aon	aon
 août	août
-ap	ap
+ap-hp	ap-hp
 ap1000	ap1000
 aperçu	aperçu
 apix	apix
@@ -1383,6 +1399,8 @@ appuyé	appui
 appuyée	appui
 appétence	appétent
 appétit	appet
+après-kyoto	après-kyoto
+après-midi	après-mid
 apte	apte
 aptes	apte
 aptitude	aptitud
@@ -1405,6 +1423,7 @@ arbault	arbault
 arbre	arbre
 arbres	arbre
 arc	arc
+arc-nucléart	arc-nucléart
 arcachon	arcachon
 arcanes	arcan
 architecte	architect
@@ -1424,13 +1443,15 @@ areva	arev
 argent	argent
 argile	argil
 argileux	argil
-argilo	argilo
+argilo-calcaires	argilo-calcair
+argilo-limoneux	argilo-limon
 argos	argos
 argument	argument
 ariane	arian
+ariane-5	ariane-5
 arianespace	arianespac
 ariatt	ariatt
-arilait	aril
+arilait-recherche	arilait-recherch
 arimnet	arimnet
 aritt	aritt
 ariège	arieg
@@ -1458,6 +1479,7 @@ arranger	arrang
 array	array
 arrivant	arriv
 arrive	arriv
+arrive-t-elle	arrive-t-el
 arrivent	arrivent
 arriver	arriv
 arriveront	arriv
@@ -1465,6 +1487,7 @@ arrivée	arriv
 arrivées	arriv
 arrivés	arriv
 arrière	arrier
+arrière-plan	arrière-plan
 arrosage	arrosag
 arrêt	arrêt
 arrête	arrêt
@@ -1480,10 +1503,10 @@ arthropodes	arthropod
 artichaut	artichaut
 article	articl
 articles	articl
-articulaires	articulair
 articulant	articul
 articulation	articul
 articule	articul
+articule-t-elle	articule-t-el
 articulent	articulent
 articulera	articul
 articuleront	articul
@@ -1507,6 +1530,7 @@ ascq	ascq
 asi	asi
 asiatiques	asiat
 asie	asi
+asie-pacifique	asie-pacif
 asiela	asiel
 asipag	asipag
 asn	asn
@@ -1517,10 +1541,7 @@ aspirations	aspir
 assainissement	assain
 assemblage	assemblag
 assemblages	assemblag
-assemblent	assemblent
 assembler	assembl
-assemblées	assembl
-assemblés	assembl
 asset	asset
 assez	assez
 assiami	assiam
@@ -1530,7 +1551,7 @@ assimilation	assimil
 assimile	assimil
 assimilé	assimil
 assimilée	assimil
-assis	assis
+assis-debout	assis-debout
 assises	assis
 assistait	assist
 assistance	assist
@@ -1589,6 +1610,8 @@ ati	ati
 atlantique	atlant
 atmospheric	atmospheric
 atmosphère	atmospher
+atmosphère-mer	atmosphère-m
+atmosphère-terre-surfaces	atmosphère-terre-surfac
 atmosphérique	atmospher
 atmosphériques	atmospher
 atoll	atoll
@@ -1601,7 +1624,7 @@ atopica	atopic
 atout	atout
 atouts	atout
 atpu	atpu
-atr	atr
+atr-42	atr-42
 atrophie	atroph
 attachant	attach
 attache	attach
@@ -1628,6 +1651,7 @@ atteler	attel
 attend	attend
 attendant	attend
 attendent	attendent
+attendent-ils	attendent-il
 attendons	attendon
 attendre	attendr
 attendu	attendu
@@ -1664,6 +1688,8 @@ atv2	atv2
 atv3	atv3
 atypique	atyp
 atypiques	atyp
+au-delà	au-delà
+au-dessus	au-dessus
 aubage	aubag
 aube	aub
 aubert	aubert
@@ -1687,7 +1713,7 @@ augmenté	augment
 augmentée	augment
 augsburg	augsburg
 auguste	august
-auo	auo
+auo-assemblage	auo-assemblag
 aupalesens	aupalesen
 auparavant	auparav
 auprès	aupres
@@ -1696,6 +1722,7 @@ aura	aur
 auraient	aur
 aurais	aur
 aurait	aur
+aurait-il	aurait-il
 auras	aur
 aureus	aureus
 aurinvest	aurinvest
@@ -1712,7 +1739,15 @@ auteurs	auteur
 authenticité	authent
 authentification	authentif
 authentique	authent
-auto	auto
+auto-assemblage	auto-assemblag
+auto-assemblent	auto-assemblent
+auto-assemblées	auto-assembl
+auto-assemblés	auto-assembl
+auto-entretenue	auto-entretenu
+auto-immunes	auto-immun
+auto-organiser	auto-organis
+auto-organisées	auto-organis
+auto-pilote	auto-pilot
 autobus	autobus
 autochtones	autochton
 autocuiseur	autocuiseur
@@ -1757,6 +1792,7 @@ auxquels	auxquel
 avaient	avaient
 avais	avais
 avait	avait
+avait-il	avait-il
 aval	aval
 avalanche	avalanch
 avance	avanc
@@ -1766,6 +1802,10 @@ avanciez	avanc
 avancée	avanc
 avancées	avanc
 avancés	avanc
+avant-coureur	avant-coureur
+avant-postes	avant-post
+avant-projet	avant-projet
+avant-projets	avant-projet
 avantage	avantag
 avantages	avantag
 avantageuses	avantag
@@ -1777,6 +1817,7 @@ aversions	avers
 avertissement	avert
 aveyron	aveyron
 avez	avez
+avez-vous	avez-vous
 avia	avi
 aviation	aviat
 avicenne	avicen
@@ -1787,11 +1828,14 @@ avionneur	avionneur
 avionneurs	avionneur
 avions	avion
 avis	avis
+avons	avon
+avons-nous	avons-nous
 avoue	avou
 avouer	avou
 avril	avril
 avum	avum
 avère	aver
+avère-t-il	avère-t-il
 avèrent	avèrent
 avérait	aver
 avérant	aver
@@ -1830,7 +1874,6 @@ aérospatial	aérospatial
 aérotechnique	aérotechn
 aérothermique	aérotherm
 aérothermiques	aérotherm
-aérée	aer
 aînée	aîn
 b	b
 b2b	b2b
@@ -1847,8 +1890,6 @@ bactéricides	bactéricid
 bactérie	bacter
 bactérien	bactérien
 bactérienne	bactérien
-bactériennes	bactérien
-bactériens	bactérien
 bactéries	bacter
 bagages	bagag
 bagarre	bagarr
@@ -1895,7 +1936,6 @@ banquier	banqui
 banquise	banquis
 bao	bao
 baptisant	baptis
-baptiste	baptist
 baptisé	baptis
 baptisée	baptis
 baptisées	baptis
@@ -1921,6 +1961,8 @@ base	bas
 bases	bas
 basiques	basiqu
 basse	bass
+basse-normandie	basse-normand
+basse-résolution	basse-résolu
 basses	bass
 bassin	bassin
 bassins	bassin
@@ -1946,6 +1988,7 @@ beau	beau
 beaujolais	beaujol
 beauvais	beauv
 beaux	beau
+beaux-arts	beaux-art
 beaver	beav
 becoulet	becoulet
 beihang	beihang
@@ -1975,11 +2018,13 @@ besoins	besoin
 beta	bet
 beuffe	beuff
 bi	bi
+bi-centenaire	bi-centenair
 biais	bi
 biausser	biauss
 bibliographie	bibliograph
 bibliothèque	bibliothequ
 bic	bic
+bien-être	bien-êtr
 biene	bien
 biennal	biennal
 biennale	biennal
@@ -1996,6 +2041,10 @@ binaire	binair
 binoculaire	binoculair
 binôme	binôm
 bio	bio
+bio-informatique	bio-informat
+bio-inspirées	bio-inspir
+bio-sourcés	bio-sourc
+bio-éthanol	bio-éthanol
 bioalliance	bioallianc
 bioaxial	bioaxial
 biocapteurs	biocapteur
@@ -2054,7 +2103,6 @@ biotechnologie	biotechnolog
 biotechnologies	biotechnolog
 biotechnologiques	biotechnolog
 biotechnology	biotechnology
-biothon	biothon
 biotisa	biotis
 biovalley	biovalley
 biovision	biovis
@@ -2067,6 +2115,7 @@ bipolar	bipolar
 bisannuelle	bisannuel
 biscarossaises	biscarossais
 biscarosse	biscaross
+biscarosse-fort-de-france	biscarosse-fort-de-fr
 bischoff	bischoff
 bistouri	bistour
 bit	bit
@@ -2090,6 +2139,7 @@ blue	blu
 bluffant	bluff
 bluffé	bluff
 blériot	blériot
+blériot-fabre	blériot-fabr
 bmbf	bmbf
 boas	bo
 bobiné	bobin
@@ -2117,12 +2167,13 @@ booster	boost
 boras	bor
 bord	bord
 bordeaux	bordeau
+bordeaux-talence	bordeaux-talent
 bordelais	bordel
 bordelaise	bordelais
 bords	bord
 bordé	bord
 bordée	bord
-bore	bor
+bore-azote	bore-azot
 borg	borg
 borne	born
 bornes	born
@@ -2130,7 +2181,7 @@ borsali	borsal
 bosse	boss
 bouche	bouch
 bouchemoua	bouchemou
-bouches	bouch
+bouches-du-rhône	bouches-du-rhôn
 boucle	boucl
 boucler	boucl
 boucles	boucl
@@ -2151,10 +2202,11 @@ bouleversement	boulevers
 bouleversements	boulevers
 bouleverser	boulevers
 bouleversées	boulevers
-boulogne	boulogn
+boulogne-sur-mer	boulogne-sur-m
 bouquet	bouquet
 bourdelais	bourdel
 bourg	bourg
+bourg-en-bresse	bourg-en-bress
 bourgain	bourgain
 bourgeons	bourgeon
 bourget	bourget
@@ -2177,7 +2229,6 @@ bout	bout
 boutade	boutad
 bouteille	bouteil
 bouteilles	bouteil
-bouton	bouton
 bouts	bout
 bouttes	boutt
 bouyer	boui
@@ -2251,7 +2302,7 @@ brut	brut
 brutes	brut
 bruxelles	bruxel
 bruyant	brui
-bruyères	bruyer
+bruyères-le-châtel	bruyères-le-châtel
 brésil	brésil
 brésilien	brésilien
 brésiliens	brésilien
@@ -2261,7 +2312,7 @@ brûleurs	brûleur
 btob	btob
 btp	btp
 bts	bt
-bucco	bucco
+bucco-dentaires	bucco-dentair
 buck	buck
 budget	budget
 budgétaire	budgétair
@@ -2272,17 +2323,17 @@ bulgarie	bulgar
 bull	bull
 bulles	bull
 bulletin	bulletin
-bulletins	bulletin
+bulletins-electroniques	bulletins-electron
 bureau	bureau
 bureaux	bureau
-bures	bur
+bures-sur-yvette	bures-sur-yvet
 burkina	burkin
 bus	bus
 business	business
 but	but
 buvaient	buv
 buveurs	buveur
-buy	buy
+buy-out	buy-out
 bv	bv
 by	by
 bâti	bât
@@ -2317,6 +2368,8 @@ béryllium	béryllium
 bétail	bétail
 béton	béton
 bêta	bêt
+bêta-amyloïde	bêta-amyloïd
+bêta-bloquant	bêta-bloqu
 bêtes	bêt
 c02	c02
 c1	c1
@@ -2337,15 +2390,12 @@ cadoret	cadoret
 cadres	cadr
 caen	caen
 caffarel	caffarel
-café	caf
 cahier	cahi
 caillage	caillag
 caillette	caillet
 cailloux	cailloux
 caillé	caill
 caisse	caiss
-calais	cal
-calcaires	calcair
 calcium	calcium
 calcul	calcul
 calculateur	calcul
@@ -2367,7 +2417,6 @@ calédonie	calédon
 calédonien	calédonien
 camarades	camarad
 cambes	camb
-cambresis	cambres
 camembert	camembert
 cameron	cameron
 cameroun	cameroun
@@ -2412,6 +2461,7 @@ capacité	capac
 capacités	capac
 capenergie	capenerg
 capital	capital
+capital-risque	capital-risqu
 capitale	capital
 capitales	capital
 capitaliser	capitalis
@@ -2455,7 +2505,7 @@ carburants	carbur
 carbure	carbur
 carcinome	carcinom
 cardiaque	cardiaqu
-cardio	cardio
+cardio-thoracique	cardio-thorac
 cardiométabolime	cardiométabolim
 cardiométabolisme	cardiométabol
 cardiovasculaires	cardiovasculair
@@ -2470,6 +2520,7 @@ carmejane	carmejan
 carminatti	carminatt
 carnet	carnet
 carnot	carnot
+carnot-fraunhofer	carnot-fraunhof
 caroline	carolin
 carraro	carraro
 carrefour	carrefour
@@ -2493,7 +2544,6 @@ caréné	caren
 cas	cas
 casablanca	casablanc
 cascade	cascad
-case	cas
 casque	casqu
 casquette	casquet
 cassable	cassabl
@@ -2501,7 +2551,7 @@ cassent	cassent
 casser	cass
 cassis	cass
 cassé	cass
-castillon	castillon
+castillon-la-bataille	castillon-la-bataill
 cataclysme	cataclysm
 catalinas	catalin
 catalogue	catalogu
@@ -2539,6 +2589,7 @@ ccip	ccip
 ccl2	ccl2
 ccrt	ccrt
 cd	cd
+cd-rom	cd-rom
 cd36	cd36
 cdc	cdc
 cdio	cdio
@@ -2546,24 +2597,35 @@ cdte	cdte
 cdti	cdti
 ce2	ce2
 cea	ce
+cea-dam	cea-dam
+cea-ibitec-s	cea-ibitec-
+cea-iramis	cea-iram
+cea-leti	cea-let
+cea-list	cea-list
+cea-liten	cea-liten
 cecalait	cecal
 ceci	cec
 ceinture	ceintur
 ceintures	ceintur
 celia	celi
 cell	cel
+celle	cel
 celles	cel
+celles-ci	celles-c
 celllules	celllul
 cellulaire	cellulair
 cellulaires	cellulair
 cellule	cellul
 cellules	cellul
 cellulose	cellulos
+celui	celui
 celuii	celui
 cemafroid	cemafroid
 cemagref	cemagref
 cemes	cem
+cemes-cnrs	cemes-cnr
 cen	cen
+cen-sad	cen-sad
 cenaero	cenaero
 censés	cens
 cent	cent
@@ -2614,6 +2676,8 @@ cessé	cess
 ceti	cet
 cetilab	cetilab
 cetp	cetp
+ceux	ceux
+ceux-ci	ceux-c
 cfm	cfm
 cfm56	cfm56
 cfp	cfp
@@ -2653,14 +2717,13 @@ chantiers	chanti
 chanvre	chanvr
 chaotique	chaotiqu
 chapdaniel	chapdaniel
-chapelle	chapel
 chapitre	chapitr
 chapitres	chapitr
 charbon	charbon
 charcuterie	charcuter
 charcutiers	charcuti
 chardonnay	chardonnay
-charente	charent
+charente-maritime	charente-maritim
 charenton	charenton
 charge	charg
 chargent	chargent
@@ -2704,6 +2767,7 @@ cher	cher
 cherchait	cherch
 cherche	cherch
 cherchent	cherchent
+cherchent-ils	cherchent-il
 chercher	cherch
 chercheuse	chercheux
 chercheuses	chercheux
@@ -2724,7 +2788,7 @@ chili	chil
 chilien	chilien
 chilienne	chilien
 chimie	chim
-chimio	chimio
+chimio-sensorielles	chimio-sensoriel
 chimioembolisation	chimioembolis
 chimiokine	chimiokin
 chimiokines	chimiokin
@@ -2778,16 +2842,16 @@ chromophore	chromophor
 chronique	chroniqu
 chroniques	chroniqu
 chrono	chrono
+chrono-environnement	chrono-environ
 chronologie	chronolog
 chu	chu
 chuter	chut
 chymosine	chymosin
 chypriotes	chypriot
-châlons	châlon
+châlons-en-champagne	châlons-en-champagn
 château	château
 châteauroux	châteauroux
-châtel	châtel
-châtenay	châtenay
+châtenay-malabry	châtenay-malabry
 chèvres	chevr
 chêne	chên
 chômé	chôm
@@ -2800,7 +2864,7 @@ ciblé	cibl
 ciblée	cibl
 ciblées	cibl
 ciblés	cibl
-cic	cic
+cic-it	cic-
 cicatrisation	cicatris
 cie	ci
 ciel	ciel
@@ -2851,7 +2915,6 @@ clairance	clairanc
 claire	clair
 clairement	clair
 clara	clar
-class	class
 classe	class
 classement	class
 classements	class
@@ -2865,8 +2928,7 @@ classé	class
 classés	class
 claude	claud
 claustres	claustr
-clef	clef
-clermont	clermont
+clermont-ferrand	clermont-ferrand
 clichés	clich
 client	client
 clients	client
@@ -2881,7 +2943,6 @@ climatisées	climatis
 climatologie	climatolog
 climatologues	climatologu
 climats	climat
-climb	climb
 clinical	clinical
 cliniciens	clinicien
 clinique	cliniqu
@@ -2900,16 +2961,37 @@ clés	clé
 clôturera	clôtur
 clôturée	clôtur
 cm	cm
+cm-cic	cm-cic
 cm1k	cm1k
-cmip	cmip
+cmip-5	cmip-5
 cnam	cnam
 cnaol	cnaol
 cnes	cne
 cniel	cniel
 cnr	cnr
-cnrm	cnrm
+cnrm-game	cnrm-gam
+cnrs-académie	cnrs-academ
 cnrst	cnrst
-co	co
+co-concepteur	co-concepteur
+co-construire	co-construir
+co-directeur	co-directeur
+co-dirige	co-dirig
+co-dirigée	co-dirig
+co-détient	co-détient
+co-développée	co-développ
+co-finance	co-fin
+co-financé	co-financ
+co-fondateur	co-fond
+co-fondateurs	co-fond
+co-fondé	co-fond
+co-labellisé	co-labellis
+co-labellisés	co-labellis
+co-mandataires	co-mandatair
+co-organisé	co-organis
+co-produits	co-produit
+co-responsable	co-respons
+co-signée	co-sign
+co-écrit	co-ecr
 co2	co2
 coaching	coaching
 coag	coag
@@ -2924,7 +3006,7 @@ cocagne	cocagn
 coche	coch
 cochon	cochon
 cocotier	cocoti
-cocotte	cocott
+cocotte-minute	cocotte-minut
 codant	cod
 code	cod
 codes	cod
@@ -2993,7 +3075,7 @@ collègues	collègu
 collégiens	collégien
 collés	coll
 colmar	colmar
-colo	colo
+colo-rectum	colo-rectum
 colombie	colomb
 colonel	colonel
 colonies	colon
@@ -3174,10 +3256,7 @@ compétition	compétit
 compétitives	compétit
 comte	comt
 comtois	comtois
-comtoise	comtois
-comtoises	comtois
 comté	comt
-comète	comet
 concentration	concentr
 concentrations	concentr
 concentre	concentr
@@ -3208,10 +3287,12 @@ conchyculteurs	conchyculteur
 concilier	concili
 concitoyens	concitoyen
 conclu	conclu
-concluent	concluent
+concluent-ils	concluent-il
 conclusion	conclus
 conclusions	conclus
 conclut	conclut
+conclut-elle	conclut-el
+conclut-il	conclut-il
 concombres	concombr
 concourant	concour
 concourir	concour
@@ -3404,6 +3485,7 @@ constants	const
 constat	constat
 constatant	constat
 constate	constat
+constate-t-il	constate-t-il
 constatent	constatent
 constater	constat
 constats	constat
@@ -3414,6 +3496,7 @@ constituait	constitu
 constituant	constitu
 constituants	constitu
 constitue	constitu
+constitue-t-il	constitue-t-il
 constituent	constituent
 constituer	constitu
 constituera	constitu
@@ -3427,6 +3510,7 @@ constructeur	constructeur
 constructeurs	constructeur
 constructibilité	constructibil
 construction	construct
+construction-réhabilitation-aménagement	construction-réhabilitation-aménag
 constructions	construct
 construire	construir
 construisent	construisent
@@ -3576,7 +3660,6 @@ cordier	cordi
 corinne	corinn
 corino	corino
 coriolis	coriol
-cornet	cornet
 cornée	corn
 cornées	corn
 coronographes	coronograph
@@ -3599,7 +3682,7 @@ corrélé	correl
 corrélée	correl
 corse	cors
 cortex	cortex
-cortico	cortico
+cortico-nasale	cortico-nasal
 cortège	corteg
 corvée	corv
 corée	cor
@@ -3607,7 +3690,7 @@ coréen	coréen
 coréens	coréen
 cosmetic	cosmetic
 cosmetics	cosmetic
-cosmeto	cosmeto
+cosmeto-food	cosmeto-food
 cosmiques	cosmiqu
 cosmologie	cosmolog
 cosmétique	cosmet
@@ -3649,7 +3732,6 @@ courants	cour
 courbes	courb
 courbure	courbur
 coureaud	coureaud
-coureur	coureur
 couronne	couron
 courons	couron
 courrons	courron
@@ -3657,6 +3739,7 @@ course	cours
 courses	cours
 courspierre	courspierr
 court	court
+court-moyen	court-moyen
 courtes	court
 courts	court
 couse	cous
@@ -3696,7 +3779,6 @@ creux	creux
 criant	cri
 criblage	criblag
 crier	cri
-criminalité	criminal
 criquet	criquet
 crise	cris
 crises	cris
@@ -3727,6 +3809,7 @@ croit	croit
 crops	crop
 croquettes	croquet
 croyez	croi
+croyez-moi	croyez-moi
 croître	croîtr
 croûte	croût
 cru	cru
@@ -3809,6 +3892,7 @@ cumuler	cumul
 cuoq	cuoq
 curatif	curat
 curie	cur
+curie-paris	curie-par
 curien	curien
 curieusement	curieux
 curieux	curieux
@@ -3825,7 +3909,7 @@ cvg	cvg
 cyaa	cya
 cyan	cyan
 cyanobactéries	cyanobacter
-cyber	cyb
+cyber-criminalité	cyber-criminal
 cybersécurité	cybersécur
 cyceron	cyceron
 cycle	cycl
@@ -3871,6 +3955,7 @@ côté	côt
 côtés	côt
 dakar	dakar
 dam	dam
+dam-ile-de-france	dam-ile-de-fr
 danemark	danemark
 danger	dang
 dangereux	danger
@@ -3904,8 +3989,9 @@ days	day
 daïchi	daïch
 dbi	dbi
 dcns	dcn
+de-ci	de-c
+de-là	de-là
 dea	de
-debout	debout
 debry	debry
 debré	debr
 deexbio	deexbio
@@ -3920,15 +4006,16 @@ dehecq	dehecq
 dehli	dehl
 dehors	dehor
 delair	delair
+delair-tech	delair-tech
 delaunay	delaunay
 delcroix	delcroix
 delphine	delphin
 dels	del
 delta	delt
-delà	delà
 demain	demain
 demainconcernant	demainconcern
 demand	demand
+demand-supply	demand-supply
 demande	demand
 demandent	demandent
 demander	demand
@@ -3940,6 +4027,7 @@ demay	demay
 demeter	demet
 demeure	demeur
 demi	dem
+demi-siècle	demi-siecl
 dendroapsis	dendroaps
 dengue	dengu
 denhaut	denhaut
@@ -3955,7 +4043,6 @@ densité	densit
 densités	densit
 dent	dent
 dentaire	dentair
-dentaires	dentair
 denver	denv
 department	department
 depaulis	depaul
@@ -3969,6 +4056,7 @@ dernière	derni
 derrière	derri
 desbarats	desbarat
 descartes	descart
+descartes-hôpital	descartes-hôpital
 descartesajoutons	descartesajouton
 descendre	descendr
 descendu	descendu
@@ -3983,14 +4071,12 @@ dessinent	dessinent
 dessiner	dessin
 dessiné	dessin
 dessous	dessous
-dessus	dessus
 destination	destin
 destiné	destin
 destinée	destin
 destinées	destin
 destinés	destin
 destructif	destruct
-destructifs	destruct
 destruction	destruct
 destructive	destruct
 destructuration	destructur
@@ -4020,9 +4106,13 @@ devis	dev
 devise	devis
 devoir	devoir
 devons	devon
+devons-nous	devons-nous
 devra	devr
 devraient	devr
+devraient-elles	devraient-el
+devrait-on	devrait-on
 devront	devront
+devront-ils	devront-il
 dga	dga
 dgac	dgac
 dgcis	dgcis
@@ -4080,7 +4170,7 @@ digestive	digest
 digestives	digest
 digital	digital
 digitale	digital
-digne	dign
+digne-les-bains	digne-les-bain
 dijon	dijon
 dijonnais	dijon
 dijonnaise	dijonnais
@@ -4099,7 +4189,6 @@ dimères	dimer
 dinasolar	dinasolar
 diode	diod
 diodes	diod
-diop	diop
 dior	dior
 dioxyde	dioxyd
 diplomatique	diplomat
@@ -4109,6 +4198,7 @@ diplômé	diplôm
 diplômée	diplôm
 diplômés	diplôm
 dira	dir
+dire	dir
 direct	direct
 directe	direct
 directement	direct
@@ -4134,10 +4224,8 @@ dirigés	dirig
 dis	dis
 disa	dis
 disait	dis
-disant	dis
 disasolar	disasolar
 discerner	discern
-disciplinarité	disciplinar
 discipline	disciplin
 disciplines	disciplin
 discours	discour
@@ -4177,10 +4265,12 @@ disposaient	dispos
 disposait	dispos
 disposant	dispos
 dispose	dispos
+dispose-t-elle	dispose-t-el
 disposent	disposent
 disposer	dispos
 disposera	dispos
 disposeront	dispos
+disposeront-ils	disposeront-il
 disposez	dispos
 disposions	dispos
 dispositif	disposit
@@ -4209,6 +4299,8 @@ distributeurs	distributeur
 distributing	distributing
 distribution	distribu
 distribué	distribu
+dit-elle	dit-el
+dit-il	dit-il
 dite	dit
 dites	dit
 dits	dit
@@ -4234,7 +4326,6 @@ djibouti	djibout
 dlr	dlr
 dluo	dluo
 dmla	dmla
-doc	doc
 docteur	docteur
 docteurs	docteur
 doctoral	doctoral
@@ -4263,7 +4354,7 @@ donne	don
 donnent	donnent
 donner	don
 donnera	don
-donnet	donnet
+donnet-lévêque	donnet-lévêqu
 donneurs	donneur
 donné	don
 donnée	don
@@ -4278,7 +4369,7 @@ doris	dor
 dorn	dorn
 dornier	dorni
 dorsale	dorsal
-dorso	dorso
+dorso-ventral	dorso-ventral
 dorée	dor
 dosage	dosag
 dose	dos
@@ -4316,8 +4407,9 @@ drastiques	drastiqu
 dresde	dresd
 dressage	dressag
 dresse	dress
+dresse-t-il	dresse-t-il
 dresser	dress
-dressez	dress
+dressez-vous	dressez-vous
 dressé	dress
 drire	drir
 driven	driven
@@ -4334,8 +4426,9 @@ druon	druon
 dryade	dryad
 dsf	dsf
 dsm	dsm
-dsp	dsp
-dt	dt
+dsm-energie	dsm-energ
+dt-18	dt-18
+dt-26	dt-26
 dual	dual
 dualine	dualin
 ducrocq	ducrocq
@@ -4429,7 +4522,10 @@ décision	décis
 décisions	décis
 décisives	décis
 déclare	déclar
+déclare-t-elle	déclare-t-el
+déclare-t-il	déclare-t-il
 déclarent	déclarent
+déclarent-ils	déclarent-il
 déclarer	déclar
 déclaré	déclar
 déclarés	déclar
@@ -4593,7 +4689,6 @@ dépasserait	dépass
 dépend	dépend
 dépendaient	dépend
 dépendance	dépend
-dépendant	dépend
 dépendante	dépend
 dépendantes	dépend
 dépendent	dépendent
@@ -4617,6 +4712,7 @@ déplass	déplass
 déploiement	déploi
 déplorable	déplor
 déplore	déplor
+déplore-t-il	déplore-t-il
 déploré	déplor
 déployer	déploi
 déployé	déploi
@@ -4728,6 +4824,11 @@ dévoilée	dévoil
 déçus	déçus
 dû	dû
 e	e
+e-biothon	e-biothon
+e-learning	e-learning
+e-nutrition	e-nutrit
+e-santé	e-sant
+e-tribart	e-tribart
 eads	ead
 earth	earth
 earthquake	earthquak
@@ -4738,7 +4839,10 @@ ebt	ebt
 ec6	ec6
 eccp	eccp
 ecnu	ecnu
-eco	eco
+eco-campus	eco-campus
+eco-climb	eco-climb
+eco-efficient	eco-efficient
+eco-extraction	eco-extract
 ecolab	ecolab
 ecoles	ecol
 ecologie	ecolog
@@ -4785,9 +4889,7 @@ efficacement	efficac
 efficaces	efficac
 efficacité	efficac
 efficience	efficient
-efficient	efficient
 efficientes	efficient
-efficients	efficient
 effinergie	effinerg
 effluents	effluent
 effondre	effondr
@@ -4797,7 +4899,7 @@ effort	effort
 efforts	effort
 effrénée	effren
 egalement	egal
-egg	egg
+egg-energy	egg-energy
 egly	egly
 ego	ego
 egypte	egypt
@@ -4817,16 +4919,18 @@ eldorado	eldorado
 electric	electric
 electrique	electr
 electro	electro
+electro-magnetic	electro-magnetic
 electron	electron
 electronique	electron
-electroniques	electron
-elektronen	elektronen
+elektronen-synchrotron	elektronen-synchrotron
 element	element
 elements	element
 elevator	elevator
 elisa	elis
 elisabeth	elisabeth
-elleune	elleun
+elle-même	elle-mêm
+elles	elle
+elles-mêmes	elles-mêm
 elo	elo
 elova	elov
 else	else
@@ -4856,7 +4960,6 @@ emc2	emc2
 emergence	emergent
 emirats	emirat
 emissions	emiss
-emitting	emitting
 emlyon	emlyon
 emm	emm
 emm2013	emm2013
@@ -4882,7 +4985,7 @@ emporter	emport
 emportera	emport
 empreinte	empreint
 empreintes	empreint
-empresse	empress
+empresse-t-il	empresse-t-il
 emprunt	emprunt
 empruntant	emprunt
 empruntent	empruntent
@@ -4910,8 +5013,6 @@ encouragés	encourag
 encre	encre
 encyclopédie	encycloped
 encéphale	encéphal
-encéphalique	encéphal
-end	end
 endettement	endet
 endocells	endocel
 endocrine	endocrin
@@ -4964,7 +5065,7 @@ enils	enil
 enitiaa	enitia
 enjeu	enjeu
 enjeux	enjeux
-enki	enki
+enki-heh	enki-heh
 enlever	enlev
 enquête	enquêt
 enregistre	enregistr
@@ -4986,6 +5087,7 @@ ensaplv	ensaplv
 ensbana	ensban
 enseignant	enseign
 enseignants	enseign
+enseignants-chercheurs	enseignants-chercheur
 enseigne	enseign
 enseignement	enseign
 enseignements	enseign
@@ -4994,7 +5096,6 @@ enseigner	enseign
 ensembliers	ensembli
 ensg	ensg
 ensia	ensi
-ensiacet	ensiacet
 ensica	ensic
 ensicaen	ensicaen
 ensma	ensma
@@ -5018,6 +5119,8 @@ entendue	entendu
 enterococcus	enterococcus
 enterome	enterom
 enthousiasme	enthousiasm
+enthousiasme-t-elle	enthousiasme-t-el
+enthousiasme-t-il	enthousiasme-t-il
 enthousiasmés	enthousiasm
 enthousiaste	enthousiast
 enthousiastes	enthousiast
@@ -5055,7 +5158,6 @@ entrera	entrer
 entreront	entreront
 entres	entre
 entretenir	entreten
-entretenue	entretenu
 entretien	entretien
 entretiennent	entretiennent
 entretiens	entretien
@@ -5075,6 +5177,7 @@ environment	environment
 environmental	environmental
 environnant	environ
 environnants	environ
+environnement-climat-santé	environnement-climat-sant
 environnemental	environnemental
 environnementale	environnemental
 environnementales	environnemental
@@ -5110,7 +5213,7 @@ ephe	ephe
 epilepsie	epileps
 epinière	epini
 eportfolio	eportfolio
-epos	epos
+epos-eu	epos-eu
 eppn	eppn
 epsetein	epsetein
 epsztein	epsztein
@@ -5123,7 +5226,8 @@ equipex	equipex
 equipé	equip
 equitation	equit
 equity	equity
-era	era
+era-min	era-min
+era-net	era-net
 erasmus	erasmus
 erc	erc
 erectus	erectus
@@ -5133,11 +5237,13 @@ ergothérapeutes	ergothérapeut
 eric	eric
 erik	erik
 erlangen	erlangen
+erlangen-nuremberg	erlangen-nuremberg
 erreur	erreur
 erreurs	erreur
 erythrée	erythr
 esa	esa
 esc	esc
+esc-lessac	esc-lessac
 escale	escal
 escales	escal
 escatha	escath
@@ -5169,14 +5275,15 @@ esquisser	esquiss
 esr	esr
 esrc	esrc
 esrf	esrf
-ess	ess
 essai	essai
+essai-erreur	essai-erreur
 essaimage	essaimag
 essais	essais
 essayant	essai
 essayent	essayent
 essayer	essai
 essayons	essayon
+essayons-nous	essayons-nous
 essayé	essai
 essca	essca
 essence	essenc
@@ -5190,6 +5297,10 @@ essex	essex
 essonne	esson
 essor	essor
 essoufflement	essouffl
+est-ce	est-ce
+est-elle	est-el
+est-il	est-il
+est-à-dire	est-à-dir
 estaca	estac
 ester	ester
 esther	esther
@@ -5197,6 +5308,9 @@ estii	estii
 estimant	estim
 estimation	estim
 estimations	estim
+estime	estim
+estime-t-elle	estime-t-el
+estime-t-il	estime-t-il
 estiment	estiment
 estimer	estim
 estimons	estimon
@@ -5212,10 +5326,13 @@ esturgeon	esturgeon
 esturgeons	esturgeon
 etablissement	etabl
 etat	etat
+etat-région	etat-région
+etats	etat
+etats-unis	etats-un
 etc	etc
 ethiopie	ethiop
 etienne	etien
-etp	etp
+etp-smr	etp-smr
 etre	etre
 etude	etud
 etudes	etud
@@ -5226,7 +5343,7 @@ eumetsat	eumetsat
 euphorique	euphor
 euralis	eural
 euratom	euratom
-euro	euro
+euro-case	euro-cas
 eurobiomed	eurobiomed
 eurocentriste	eurocentr
 eurocopter	eurocopt
@@ -5240,10 +5357,12 @@ européenne	européen
 européennes	européen
 européens	européen
 eurorégion	eurorégion
+euros	euros
 eurotrans	eurotran
 eurêka	eurêk
 eustache	eustach
 eux	eux
+eux-mêmes	eux-mêm
 evaluation	evalu
 evaluations	evalu
 evaluer	evalu
@@ -5252,6 +5371,7 @@ evolutive	evolut
 evoquant	evoqu
 evry	evry
 ex	ex
+ex-oseo	ex-oseo
 exacerbée	exacerb
 exactement	exact
 exactes	exact
@@ -5259,6 +5379,8 @@ exaflopiques	exaflop
 examen	examen
 examens	examen
 exawatt	exawatt
+exawatt-zetawatt	exawatt-zetawatt
+exawatt-zettawatt	exawatt-zettawatt
 excellence	excellent
 excellente	excellent
 excellentes	excellent
@@ -5270,7 +5392,7 @@ exceptionnelles	exceptionnel
 exceptionnels	exceptionnel
 excessive	excess
 excitateurs	excit
-exclame	exclam
+exclame-t-il	exclame-t-il
 exclu	exclu
 exclusif	exclus
 exclusive	exclus
@@ -5310,6 +5432,7 @@ existante	exist
 existantes	exist
 existants	exist
 existe	exist
+existe-t-il	existe-t-il
 existence	existent
 existent	existent
 exister	exist
@@ -5327,9 +5450,13 @@ expertes	expert
 expertise	expertis
 expertises	expertis
 experts	expert
+experts-partenaires	experts-partenair
 expiration	expir
 explication	expliqu
 explicites	explicit
+explique-t-elle	explique-t-el
+explique-t-il	explique-t-il
+explique-t-on	explique-t-on
 expliquent	expliquent
 expliquer	expliqu
 expliquerait	expliqu
@@ -5395,7 +5522,7 @@ extension	extens
 externalisée	externalis
 externe	extern
 extia	exti
-extra	extra
+extra-tropiques	extra-trop
 extraction	extract
 extraire	extrair
 extrait	extrait
@@ -5475,7 +5602,6 @@ faites	fait
 faits	fait
 falcon	falcon
 falconnier	falconni
-falcoz	falcoz
 fallait	fall
 falloir	falloir
 fallu	fallu
@@ -5487,7 +5613,6 @@ familiariser	familiaris
 familiaux	familial
 famille	famill
 familles	famill
-fance	fanc
 fantasmé	fantasm
 fao	fao
 far	far
@@ -5503,11 +5628,13 @@ fatigue	fatigu
 fatiguer	fatigu
 fatty	fatty
 faudra	faudr
+faudra-t-il	faudra-t-il
 faudrait	faudr
 faunes	faun
 faupel	faupel
 faurre	faurr
 fausse	fauss
+faut-il	faut-il
 faute	faut
 fauteuil	fauteuil
 fauteuils	fauteuil
@@ -5533,7 +5660,7 @@ femelle	femel
 femelles	femel
 femme	femm
 femmes	femm
-femto	femto
+femto-seconde	femto-second
 femtosecondes	femtosecond
 fer	fer
 fera	fer
@@ -5548,7 +5675,6 @@ fermilab	fermilab
 fermières	fermi
 fermé	ferm
 feront	feront
-ferrand	ferrand
 ferrant	ferr
 ferrary	ferrary
 ferroviaire	ferroviair
@@ -5578,7 +5704,7 @@ fiches	fich
 fichiers	fichi
 fiction	fiction
 fidèles	fidel
-field	field
+field-programmable	field-programm
 fields	field
 fier	fi
 fiers	fier
@@ -5589,6 +5715,7 @@ figurent	figurent
 figures	figur
 figés	fig
 fijus	fijus
+fijus-raisol	fijus-raisol
 fil	fil
 filage	filag
 filament	fil
@@ -5674,6 +5801,7 @@ flexibles	flexibl
 flexisécurité	flexisécur
 floralis	floral
 flore	flor
+flore-climat	flore-climat
 flottante	flott
 flottantes	flott
 flottation	flottat
@@ -5700,6 +5828,7 @@ focalisés	focalis
 focus	focus
 foetal	foetal
 foie	foi
+fois-ci	fois-c
 foix	foix
 foliaire	foliair
 foll	foll
@@ -5737,13 +5866,12 @@ fonde	fond
 fondeur	fondeur
 fonds	fond
 fondu	fondu
-fondé	fond
 fondée	fond
 font	font
 fontaine	fontain
 fontainebleau	fontainebleau
 fonte	font
-fontenay	fontenay
+fontenay-aux-roses	fontenay-aux-ros
 food	food
 for	for
 force	forc
@@ -5802,10 +5930,12 @@ foudre	foudr
 fouilles	fouill
 foules	foul
 foulon	foulon
+foulon-sopagly	foulon-sopagly
 foulée	foul
 foundation	foundat
 four	four
 fourier	fouri
+fourier-grenoble	fourier-grenobl
 fourmillant	fourmill
 fourmille	fourmill
 fournaison	fournaison
@@ -5840,11 +5970,14 @@ fragmenter	fragment
 fragmenté	fragment
 frais	frais
 fraise	frais
-frama	fram
+frama-c	frama-c
 framatome	framatom
-franc	franc
+franc-comtois	franc-comtois
+franc-comtoise	franc-comtois
+franc-comtoises	franc-comtois
+france-unesco-académie	france-unesco-academ
 francfort	francfort
-franche	franch
+franche-comté	franche-comt
 franchi	franch
 franchir	franch
 franchit	franch
@@ -5855,13 +5988,20 @@ franciliens	francilien
 francin	francin
 francis	franc
 francisco	francisco
-franco	franco
+franco-allemand	franco-allemand
+franco-américain	franco-américain
+franco-américaine	franco-américain
+franco-anglais	franco-angl
+franco-indien	franco-indien
+franco-indienne	franco-indien
+franco-russe	franco-russ
 francophone	francophon
 francophones	francophon
-francs	franc
+francs-comtois	francs-comtois
 française	français
 françaises	français
 françois	françois
+françois-andré	françois-andr
 frappant	frapp
 frapper	frapp
 frappé	frapp
@@ -5894,6 +6034,7 @@ fromagère	fromager
 fromagères	fromager
 fromsante	froms
 front	front
+front-end	front-end
 frontale	frontal
 frontière	fronti
 frontières	fronti
@@ -5917,7 +6058,6 @@ fs	f
 fsi	fsi
 fui	fui
 fuir	fuir
-fuite	fuit
 fuites	fuit
 fukushima	fukushim
 fumée	fum
@@ -5953,6 +6093,7 @@ fédératrice	féder
 fédérer	féder
 fées	fé
 félicite	félicit
+félicite-t-il	félicite-t-il
 félicité	féliqu
 fémur	fémur
 février	févri
@@ -5988,10 +6129,10 @@ galien	galien
 galileo	galileo
 galles	gall
 gallium	gallium
-galvestine	galvestin
+galvestine-1	galvestine-1
 gam	gam
-game	gam
 gamma	gamm
+gamma-ray	gamma-ray
 gamme	gamm
 gammes	gamm
 gand	gand
@@ -6011,18 +6152,17 @@ garches	garch
 gard	gard
 gardent	gardent
 garder	gard
-garonne	garon
 gars	gar
 gaspillage	gaspillag
 gaspillé	gaspill
 gaston	gaston
-gastro	gastro
+gastro-intestinal	gastro-intestinal
+gastro-intestinale	gastro-intestinal
 gastronomes	gastronom
 gastronomie	gastronom
 gate	gat
 gauche	gauch
 gaulle	gaull
-gayon	gayon
 gaz	gaz
 gazeuse	gazeux
 gazeuses	gazeux
@@ -6041,6 +6181,7 @@ genci	genc
 gendarmerie	gendarmer
 gene	gen
 genepi	genep
+genepi-3c	genepi-3c
 general	general
 generation	gener
 generis	gener
@@ -6059,7 +6200,6 @@ gentille	gentill
 gentleman	gentleman
 genève	genev
 genérateur	gener
-geo	geo
 geodata	geodat
 geoinformation	geoinform
 georges	georg
@@ -6085,7 +6225,7 @@ gibaru	gibaru
 gie	gi
 giec	giec
 giens	gien
-gif	gif
+gif-sur-yvette	gif-sur-yvet
 gifas	gif
 giga	gig
 gigantesque	gigantesqu
@@ -6098,6 +6238,7 @@ giorgio	giorgio
 gipc	gipc
 giron	giron
 gironde	girond
+gironde-garonne-dordogne	gironde-garonne-dordogn
 gis	gis
 gisement	gis
 gisements	gis
@@ -6122,12 +6263,10 @@ globules	globul
 glucagon	glucagon
 glucides	glucid
 glycochimie	glycochim
-glycofilms	glycofilm
 glycémie	glycem
 gmbh	gmbh
 gmes	gme
 gns	gn
-gobain	gobain
 goce	goc
 goettmann	goettmann
 golfe	golf
@@ -6139,6 +6278,7 @@ goubet	goubet
 gourm	gourm
 gourmands	gourmand
 goutte	goutt
+goutte-à-goutte	goutte-à-goutt
 gouttelettes	gouttelet
 gouvernance	gouvern
 gouvernances	gouvern
@@ -6158,6 +6298,7 @@ gpan	gpan
 gpao	gpao
 gpm	gpm
 gps	gp
+gps-ros	gps-ros
 gradients	gradient
 graduate	graduat
 grain	grain
@@ -6167,6 +6308,9 @@ grains	grain
 gram	gram
 grameen	grameen
 grammes	gramm
+grand-mère	grand-mer
+grand-témoin	grand-témoin
+grande-bretagne	grande-bretagn
 grandement	grand
 grandeur	grandeur
 grandir	grand
@@ -6210,6 +6354,8 @@ greffé	greff
 greffées	greff
 grenelle	grenel
 grenoble	grenobl
+grenoble-alpes	grenoble-alp
+grenoble-université	grenoble-univers
 grenoblois	grenoblois
 grenobloise	grenoblois
 grenobloises	grenoblois
@@ -6306,6 +6452,7 @@ génétique	génet
 génétiquement	génet
 génétiques	génet
 géo	géo
+géo-localisés	géo-localis
 géochimiste	géochim
 géoconcept	géoconcept
 géodésie	géodes
@@ -6362,11 +6509,11 @@ habitués	habitu
 habitées	habit
 haida	haid
 haies	hai
-hainaut	hainaut
+hainaut-cambresis	hainaut-cambres
 haleine	halein
 hall	hall
 hallucinante	hallucin
-hamac	hamac
+hamac-senior	hamac-senior
 hambourg	hambourg
 hammer	hamm
 handicap	handicap
@@ -6384,9 +6531,15 @@ hasard	hasard
 haumont	haumont
 hausse	hauss
 haut	haut
+haut-débit	haut-deb
+haut-ogooué	haut-ogoou
+haut-saône	haut-saôn
 haute	haut
+haute-résolution	haute-résolu
+haute-savoie	haute-savoi
 hautement	haut
 hautes	haut
+hautes-pyrénées	hautes-pyren
 hauteur	hauteur
 hauts	haut
 head	head
@@ -6396,9 +6549,7 @@ hec	hec
 hectare	hectar
 hectares	hectar
 hectolitres	hectolitr
-heh	heh
 henri	henr
-heptanone	heptanon
 heracles	heracl
 herbacées	herbac
 herbe	herb
@@ -6423,6 +6574,7 @@ hexagone	hexagon
 hier	hi
 hifu	hifu
 high	high
+high-tech	high-tech
 hindi	hind
 hipercom	hipercom
 hippocampe	hippocamp
@@ -6440,7 +6592,9 @@ hollande	holland
 holothuries	holothur
 hommage	hommag
 homme	homm
+homme-machine	homme-machin
 hommes	homm
+hommes-milieux	hommes-mili
 homo	homo
 homogène	homogen
 homogénéisation	homogénéis
@@ -6475,6 +6629,7 @@ houllier	houlli
 howard	howard
 hp	hp
 hpc	hpc
+hpc-pme	hpc-pme
 hpv	hpv
 hpv16	hpv16
 htm	htm
@@ -6514,6 +6669,8 @@ hydravion	hydravion
 hydravions	hydrav
 hydrique	hydriqu
 hydro	hydro
+hydro-hélicoptères	hydro-hélicopter
+hydro-ulm	hydro-ulm
 hydrocarbures	hydrocarbur
 hydrodynamique	hydrodynam
 hydrodynamiques	hydrodynam
@@ -6529,9 +6686,8 @@ hydrométéorologie	hydrométéorolog
 hydrométéorologiques	hydrométéorolog
 hydrophiles	hydrophil
 hydrophobes	hydrophob
-hydroxy	hydroxy
 hymex	hymex
-hyper	hyp
+hyper-rustique	hyper-rust
 hypertension	hypertens
 hypophysaires	hypophysair
 hypostyle	hypostyl
@@ -6552,7 +6708,7 @@ hélas	hel
 hélice	hélic
 hélicoptère	hélicopter
 hélicoptères	hélicopter
-hélio	hélio
+hélio-spir	hélio-sp
 héliobiotec	héliobiotec
 hélion	hélion
 hélios	hélios
@@ -6561,13 +6717,11 @@ hélium	hélium
 hélène	hélen
 hémangiome	hémangiom
 hémangiomes	hémangiom
-hémato	hémato
-hématologie	hématolog
+hémato-encéphalique	hémato-encéphal
 hématopoïèse	hématopoïes
 hémorragies	hémorrag
 hémorragiques	hémorrag
 hépatique	hépat
-hépatite	hépatit
 hépatocellulaire	hépatocellulair
 hérault	hérault
 hérauts	héraut
@@ -6584,10 +6738,13 @@ hôte	hôt
 hôtel	hôtel
 hôtellerie	hôteller
 i	i
+i-comète	i-comet
+i-phone	i-phon
 iar	iar
 iasi	iasi
+iasi-ng	iasi-ng
 iasp	iasp
-ibitec	ibitec
+ibitec-s	ibitec-
 ibm	ibm
 ic3k	ic3k
 ican	ican
@@ -6644,12 +6801,15 @@ igpsc	igpsc
 ihes	ihe
 ii	ii
 iii	iii
+iii-paul	iii-paul
+iii-v	iii-v
 iil	iil
 iir	iir
 iisb	iisb
 ijcci	ijcci
-ilcette	ilcet
 ile	ile
+ile-de-france	ile-de-fr
+ile-et-vilaine	ile-et-vilain
 iles	ile
 illuminer	illumin
 illuminée	illumin
@@ -6674,7 +6834,7 @@ images	imag
 imageur	imageur
 imageurs	imageur
 imaginaient	imagin
-imaginait	imagin
+imaginait-on	imaginait-on
 imagination	imagin
 imagine	imagin
 imaginer	imagin
@@ -6702,11 +6862,10 @@ immobilisée	immobilis
 immobilière	immobili
 immortalisant	immortalis
 immune	immun
-immunes	immun
 immunitaire	immunitair
 immunitaires	immunitair
 immunité	immun
-immuno	immuno
+immuno-hématologie	immuno-hématolog
 immunochimique	immunochim
 immunodéficiente	immunodéficient
 immunodépression	immunodépress
@@ -6786,6 +6945,7 @@ impératives	imper
 impôt	impôt
 imt	imt
 in	in
+in-vivo	in-vivo
 ina	ina
 inaccessible	inaccessibl
 inaccessibles	inaccessibl
@@ -6856,6 +7016,9 @@ indifférents	indifférent
 indigo	indigo
 indiquait	indiqu
 indiquant	indiqu
+indique-t-elle	indique-t-el
+indique-t-il	indique-t-il
+indique-t-on	indique-t-on
 indiquent	indiquent
 indiquer	indiqu
 indiqué	indiqu
@@ -6871,9 +7034,8 @@ individuelle	individuel
 individuelles	individuel
 individuels	individuel
 individus	individus
-indo	indo
-indre	indre
-induced	induced
+indo-french	indo-french
+indre-et-loire	indre-et-loir
 induisait	induis
 induisant	induis
 induisent	induisent
@@ -6943,7 +7105,7 @@ informations	inform
 informatique	informat
 informatiques	informat
 informer	inform
-infra	infra
+infra-rouge	infra-roug
 infrared	infrared
 infrarouge	infraroug
 infrarouges	infraroug
@@ -6961,6 +7123,9 @@ ingénieriste	ingénier
 ingénieur	ingénieur
 ingénieure	ingénieur
 ingénieurs	ingénieur
+ingénieurs-architectes	ingénieurs-architect
+ingénieurs-chercheurs	ingénieurs-chercheur
+ingénieurs-inventeurs	ingénieurs-inventeur
 ingénieursau	ingénieursau
 ingénérie	ingéner
 ingérer	inger
@@ -6992,6 +7157,7 @@ injustifiées	injustifi
 inlandsis	inlands
 inlassablement	inlass
 inn	inn
+inn-ovations	inn-ov
 innobio	innobio
 innocuité	innocu
 innoecho	innoecho
@@ -7018,16 +7184,17 @@ inosport	inosport
 inoviaflow	inoviaflow
 inovsys	inovsy
 inp	inp
+inp-ensiacet	inp-ensiacet
 inpi	inpi
 inpt	inpt
 inquiètent	inquiètent
 inquiètes	inquiet
 inquiétude	inquiétud
 inra	inra
+inra-urtal	inra-urtal
 inria	inri
 insa	insa
 insatisfaits	insatisfait
-insaturés	insatur
 insb	insb
 inscription	inscript
 inscriptions	inscript
@@ -7044,6 +7211,8 @@ insectes	insect
 insecticides	insecticid
 insensible	insensibl
 inserm	inserm
+inserm-cnrs-université	inserm-cnrs-univers
+inserm-université	inserm-univers
 insertion	insert
 inshs	insh
 insistant	insist
@@ -7059,7 +7228,6 @@ inspiration	inspir
 inspirer	inspir
 inspiré	inspir
 inspirée	inspir
-inspirées	inspir
 inspirés	inspir
 instabilité	instabl
 installant	install
@@ -7093,13 +7261,12 @@ insuffisante	insuffis
 insulaire	insulair
 insulaires	insulair
 insuline	insulin
-insulino	insulino
+insulino-dépendant	insulino-dépend
 insurmontable	insurmont
 insérer	inser
 inséré	inser
 intact	intact
 integrated	integrated
-integration	integr
 integrations	integr
 intellectuel	intellectuel
 intellectuelle	intellectuel
@@ -7112,6 +7279,7 @@ intelligents	intelligent
 intelligibilité	intelligibil
 intempéries	intemper
 intense	intens
+intense-3	intense-3
 intenses	intens
 intensif	intens
 intensification	intensif
@@ -7121,6 +7289,9 @@ intensive	intens
 intensives	intens
 intention	intent
 inter	inter
+inter-disciplinarité	inter-disciplinar
+inter-instruments	inter-instru
+inter-universitaire	inter-universitair
 interactif	interact
 interactifs	interact
 interaction	interact
@@ -7165,6 +7336,7 @@ interprofessionnelle	interprofessionnel
 interprètes	interpret
 interreg	interreg
 interroge	interrog
+interroge-t-il	interroge-t-il
 interrogeant	interrog
 interrogent	interrogent
 interroger	interrog
@@ -7196,6 +7368,8 @@ intitulée	intitul
 intitulées	intitul
 intoxication	intox
 intra	intra
+intra-oculaire	intra-oculair
+intra-tropique	intra-trop
 intracellulaire	intracellulair
 intrants	intrant
 intrinsèque	intrinsequ
@@ -7247,7 +7421,6 @@ intérêt	intérêt
 intérêts	intérêt
 inutile	inutil
 invalidation	invalid
-invasifs	invas
 invasions	invas
 invasive	invas
 inventaire	inventair
@@ -7278,6 +7451,7 @@ investment	investment
 investor	investor
 invitation	invit
 invite	invit
+invite-elle	invite-el
 invitent	invitent
 invité	invit
 invités	invit
@@ -7303,17 +7477,16 @@ ipcms	ipcm
 iphc	iphc
 ipno	ipno
 ipsen	ipsen
-ipsl	ipsl
+ipsl-cnrs	ipsl-cnr
 ipsos	ipsos
 ira	ira
-iramis	iram
 irc	irc
 ircam	ircam
 ird	ird
 irdi	irdi
 irfm	irfm
 irfu	irfu
-irions	irion
+irions-nous	irions-nous
 iris	iris
 irlande	irland
 irm	irm
@@ -7351,7 +7524,6 @@ issue	issu
 issues	issu
 issus	issus
 isère	iser
-it	it
 italia	itali
 italie	ital
 italien	italien
@@ -7367,11 +7539,10 @@ itti	itti
 iut	iut
 iuvv	iuvv
 iva	iva
-ivry	ivry
+ivry-sur-seine	ivry-sur-sein
 izest	izest
 iéna	ien
 j	j
-jacente	jacent
 jacquart	jacquart
 jacques	jacqu
 jalon	jalon
@@ -7389,12 +7560,24 @@ japonaise	japonais
 japonaises	japonais
 jardins	jardin
 jardinées	jardin
-jason	jason
+jason-1	jason-1
+jason-2	jason-2
+jason-3	jason-3
 jaune	jaun
 java	jav
 jaxa	jax
 je	je
 jean	jean
+jean-baptiste	jean-bapt
+jean-claude	jean-claud
+jean-françois	jean-françois
+jean-lou	jean-lou
+jean-louis	jean-lou
+jean-marc	jean-marc
+jean-michel	jean-michel
+jean-paul	jean-paul
+jean-philippe	jean-philipp
+jean-pierre	jean-pierr
 jeandel	jeandel
 jerphagnon	jerphagnon
 jersey	jersey
@@ -7412,12 +7595,12 @@ johor	johor
 joie	joi
 joindre	joindr
 joint	joint
+joint-venture	joint-ventur
 joliment	jol
 joly	joly
 jonction	jonction
 jordanie	jordan
 jordi	jord
-josas	jos
 joseph	joseph
 jouait	jou
 joue	jou
@@ -7426,16 +7609,17 @@ jouer	jou
 jouera	jou
 jouerait	jou
 jour	jour
+jour-là	jour-là
 jourdain	jourdain
 journal	journal
 journaliste	journal
-journalistes	journal
+journalistes-météo	journalistes-météo
 journalière	journali
 journalières	journali
 journée	journ
 journées	journ
 jours	jour
-jouy	jouy
+jouy-en-josas	jouy-en-jos
 jouzel	jouzel
 joué	jou
 joyeuse	joyeux
@@ -7448,6 +7632,7 @@ judith	judith
 juillet	juillet
 juin	juin
 jules	jul
+jules-verne	jules-vern
 jullian	jullian
 jumelage	jumelag
 jumelée	jumel
@@ -7497,7 +7682,6 @@ kit	kit
 klorane	kloran
 km	km
 km2	km2
-knocked	knocked
 knockout	knockout
 knowledge	knowledg
 kobilka	kobilk
@@ -7526,7 +7710,6 @@ labex	labex
 laboratoires	laboratoir
 laboratory	laboratory
 labri	labr
-labrèze	labrez
 labs	lab
 labège	labeg
 lac	lac
@@ -7567,6 +7750,7 @@ lampe	lamp
 lamprecht	lamprecht
 lamure	lamur
 lance	lanc
+lance-t-il	lance-t-il
 lancement	lanc
 lancements	lanc
 lancent	lancent
@@ -7584,7 +7768,7 @@ landowner	landown
 langerhans	langerhan
 langevin	langevin
 langue	langu
-languedoc	languedoc
+languedoc-roussillon	languedoc-roussillon
 lanréotide	lanréotid
 lanthanides	lanthanid
 lanvéoc	lanvéoc
@@ -7594,6 +7778,7 @@ laos	laos
 lapines	lapin
 laplace	laplac
 lara	lar
+lara-spiral	lara-spiral
 larchey	larchey
 lares	lar
 larf	larf
@@ -7610,7 +7795,6 @@ larve	larv
 larves	larv
 laryngectomie	laryngectom
 laryngectomies	laryngectom
-laryngologie	laryngolog
 larynx	larynx
 las	las
 lasagyl	lasagyl
@@ -7649,7 +7833,6 @@ leadership	leadership
 leading	leading
 lean	lean
 leap	leap
-learning	learning
 learninglab	learninglab
 leb	leb
 leblanc	leblanc
@@ -7667,7 +7850,7 @@ legos	legos
 legs	leg
 leibler	leibl
 leiv	leiv
-lem	lem
+lem-phea	lem-ph
 lemaître	lemaîtr
 lempe	lemp
 lendemain	lendemain
@@ -7675,7 +7858,7 @@ lensing	lensing
 lent	lent
 lentement	lent
 lentes	lent
-leprince	leprinc
+leprince-ringuet	leprince-ringuet
 lequel	lequel
 lesia	lesi
 lesieur	lesieur
@@ -7693,7 +7876,7 @@ leurre	leurr
 leurrer	leurr
 leurrées	leurr
 levage	levag
-levallois	levallois
+levallois-perret	levallois-perret
 levang	levang
 levant	lev
 lever	lev
@@ -7706,7 +7889,7 @@ levée	lev
 levés	lev
 lewiner	lewin
 lewis	lew
-lfc	lfc
+lfc-r	lfc-r
 lhc	lhc
 lheea	lhe
 lhoste	lhost
@@ -7740,12 +7923,11 @@ life	lif
 ligands	ligand
 ligature	ligatur
 ligatures	ligatur
-light	light
+light-emitting	light-emitting
 ligne	lign
 lignes	lign
 lignées	lign
 ligue	ligu
-like	lik
 lille	lill
 lillecollaborateurs	lillecollabor
 limitant	limit
@@ -7761,13 +7943,11 @@ limité	limit
 limitée	limit
 limitées	limit
 limoges	limog
-limoneux	limon
 limons	limon
 limousin	limousin
 limsi	lims
 lin	lin
 linda	lind
-lines	lin
 lingual	lingual
 linéaire	linéair
 linéaires	linéair
@@ -7777,7 +7957,7 @@ lipid	lipid
 lipides	lipid
 lipidique	lipid
 lipidiques	lipid
-lipido	lipido
+lipido-récepteurs	lipido-récepteur
 lipidoprotéique	lipidoproté
 lipidots	lipidot
 lipoproteins	lipoprotein
@@ -7881,8 +8061,9 @@ lorraine	lorrain
 lorsqu	lorsqu
 lorsque	lorsqu
 lot	lot
-lou	lou
 louis	lou
+louis-georges	louis-georg
+louis-philippe	louis-philipp
 lourd	lourd
 lourde	lourd
 lourdes	lourd
@@ -7898,12 +8079,13 @@ lpsc	lpsc
 lsce	lsce
 lsi	lsi
 ltds	ltd
-lu	lu
+lu-mondelez	lu-mondel
 lucent	lucent
 lucratif	lucrat
 ludwik	ludwik
 lueur	lueur
 lufthansa	lufthans
+lui-même	lui-mêm
 luminance	lumin
 luminescentes	luminescent
 lumineuse	lumin
@@ -7925,12 +8107,15 @@ lyon	lyon
 lyonbiopôle	lyonbiopôl
 lyonnais	lyon
 lyonnaise	lyonnais
+là-bas	là-b
 lâche	lâch
+lâche-t-elle	lâche-t-el
+lâche-t-il	lâche-t-il
 lâcher	lâch
 lâchée	lâch
 lègue	lègu
 lève	lev
-léauté	léaut
+léauté-labrèze	léauté-labrez
 légale	légal
 légende	légend
 léger	leg
@@ -7948,7 +8133,6 @@ légères	léger
 légèreté	légèret
 lésion	lésion
 lésions	lésion
-lévêque	lévêqu
 m	m
 m2	m2
 m2i	m2i
@@ -7957,6 +8141,7 @@ mabimprove	mabimprov
 mace	mac
 machine	machin
 machines	machin
+machines-outils	machines-outil
 macromoléculaire	macromoléculair
 macromolécules	macromolécul
 macroscopique	macroscop
@@ -7972,12 +8157,11 @@ magasin	magasin
 magazine	magazin
 magique	magiqu
 magistrales	magistral
-magnetic	magnetic
 magnifique	magnif
 magnifiques	magnif
 magnétique	magnet
 magnétiques	magnet
-magnéto	magnéto
+magnéto-inertielle	magnéto-inertiel
 magnétomètres	magnétometr
 maguin	maguin
 magéo	magéo
@@ -8006,9 +8190,9 @@ majoritairement	majoritair
 majorité	major
 makers	maker
 mal	mal
-malabry	malabry
 malade	malad
 malades	malad
+malades-fondation	malades-fond
 maladie	malad
 maladies	malad
 malaisie	malais
@@ -8033,7 +8217,6 @@ manager	manag
 manche	manch
 manchester	manchest
 mancini	mancin
-mandataires	mandatair
 mandibulaires	mandibulair
 mandibule	mandibul
 manganèse	manganes
@@ -8105,6 +8288,7 @@ marketing	marketing
 marle	marl
 marmite	marmit
 marne	marn
+marne-la-vallée	marne-la-vall
 maroc	maroc
 marocain	marocain
 marocains	marocain
@@ -8120,6 +8304,7 @@ marquée	marqu
 marqués	marqu
 mars	mar
 marseille	marseil
+marseille-provence	marseille-provent
 marteau	marteau
 martin	martin
 martèle	martel
@@ -8140,6 +8325,7 @@ massive	massiv
 massivement	massiv
 massy	massy
 master	mast
+master-class	master-class
 master2	master2
 masters	master
 masticateur	mastiqu
@@ -8184,7 +8370,7 @@ mauvaise	mauvais
 mauvaises	mauvais
 maux	maux
 maxi	max
-maxillo	maxillo
+maxillo-faciale	maxillo-facial
 maximal	maximal
 maximale	maximal
 maxime	maxim
@@ -8223,7 +8409,7 @@ meeting	meeting
 meetings	meeting
 megamark	megamark
 megamix	megamix
-megha	megh
+megha-tropiques	megha-trop
 megève	megev
 mehg	mehg
 meilleur	meilleur
@@ -8289,6 +8475,7 @@ mettant	met
 mettent	mettent
 mettez	met
 mettra	mettr
+mettra-t-elle	mettra-t-el
 mettrons	mettron
 metz	metz
 meurent	meurent
@@ -8297,7 +8484,10 @@ meute	meut
 mexique	mexiqu
 mgd1	mgd1
 mgp	mgp
-mi	mi
+mi-2014	mi-2014
+mi-chemin	mi-chemin
+mi-janvier	mi-janvi
+mi-octobre	mi-octobr
 micalis	mical
 mice	mic
 micelles	micel
@@ -8308,6 +8498,16 @@ michelin	michelin
 michèle	michel
 mici	mic
 micro	micro
+micro-algues	micro-algu
+micro-aérée	micro-aer
+micro-environnement	micro-environ
+micro-geo	micro-geo
+micro-informatique	micro-informat
+micro-levier	micro-levi
+micro-leviers	micro-levi
+micro-obese	micro-obes
+micro-ondes	micro-ond
+micro-satellites	micro-satellit
 microalgues	microalgu
 microbe	microb
 microbien	microbien
@@ -8349,6 +8549,8 @@ microtechniques	microtechn
 microélectronique	microélectron
 mid	mid
 midi	mid
+midi-pyréenes	midi-pyréen
+midi-pyrénées	midi-pyren
 midinnov	midinnov
 migrateur	migrateur
 migration	migrat
@@ -8363,7 +8565,7 @@ milieux	milieux
 militaire	militair
 militaires	militair
 militante	milit
-militaro	militaro
+militaro-industrielle	militaro-industriel
 millba	millb
 mille	mill
 milles	mill
@@ -8383,14 +8585,17 @@ millons	millon
 millénaires	millénair
 mimer	mim
 mimétiques	mimet
-min	min
 mince	minc
 minces	minc
 mine	min
 minerais	min
 mines	min
+mines-télécom	mines-télécom
 minet	minet
 mini	min
+mini-drones	mini-dron
+mini-protéine	mini-protéin
+mini-quiz	mini-quiz
 miniaturisation	miniaturis
 miniaturisée	miniaturis
 miniaturisés	miniaturis
@@ -8426,6 +8631,7 @@ mistral	mistral
 mistrals	mistral
 mit	mit
 mixte	mixt
+mixte-réduction	mixte-réduct
 mixtes	mixt
 mk	mk
 mm	mm
@@ -8482,23 +8688,24 @@ moho	moho
 moi	moi
 moindre	moindr
 moindres	moindr
+mois-ci	mois-c
 moisson	moisson
 moitié	moiti
 mol	mol
 molecular	molecular
 mollard	mollard
 molle	moll
-moltech	moltech
+moltech-anjou	moltech-anjou
 moléculaire	moléculair
 moléculaires	moléculair
 molécule	molécul
+molécule-clef	molécule-clef
 molécules	molécul
 moment	moment
 moments	moment
 mon	mon
 monaco	monaco
 monate	monat
-mondelez	mondel
 mondes	mond
 mondial	mondial
 mondiale	mondial
@@ -8535,6 +8742,7 @@ montent	montent
 monter	mont
 montlouis	montlou
 montpellier	montpelli
+montpellier-2	montpellier-2
 montpelliéraine	montpelliérain
 montrait	montr
 montrant	montr
@@ -8598,6 +8806,8 @@ mouvements	mouv
 mouvoir	mouvoir
 moveo	moveo
 moyen	moyen
+moyen-long	moyen-long
+moyen-orient	moyen-orient
 moyennant	moyen
 moyenne	moyen
 moyennes	moyen
@@ -8615,7 +8825,12 @@ mt	mt
 mturquoise2	mturquoise2
 muhammad	muhammad
 mulhouse	mulhous
-multi	mult
+multi-expositions	multi-exposit
+multi-fonctionnels	multi-fonctionnel
+multi-ondes	multi-ond
+multi-physiques	multi-phys
+multi-sites	multi-sit
+multi-spectral	multi-spectral
 multicentriques	multicentr
 multiculturelle	multiculturel
 multidisciplinaire	multidisciplinair
@@ -8647,7 +8862,7 @@ murs	mur
 muscade	muscad
 muscariniques	muscarin
 musculaire	musculair
-musculo	musculo
+musculo-squelettiques	musculo-squelet
 musicologie	musicolog
 musique	musiqu
 musiques	musiqu
@@ -8680,9 +8895,11 @@ mâle	mâl
 mâles	mâl
 mène	men
 mènent	mènent
+mènent-ils	mènent-il
 mère	mer
 mères	mer
 mètre	metr
+mètre-étalon	mètre-étalon
 mètres	metr
 mécanique	mécan
 mécaniques	mécan
@@ -8717,8 +8934,12 @@ méditerranéen	méditerranéen
 méditerranéenne	méditerranéen
 méditerranéennes	méditerranéen
 méfiance	méfianc
-méga	meg
+méga-projets	méga-projet
+méga-séisme	méga-sé
 mégha	megh
+mégha-tropique	mégha-trop
+mégha-tropiques	mégha-trop
+mégha-tropiquesle	mégha-tropiquesl
 mélange	mélang
 mélanges	mélang
 mélangé	mélang
@@ -8769,6 +8990,9 @@ métropolisé	métropolis
 métropolitaine	métropolitain
 métropolitains	métropolitain
 météo	météo
+météo-climat	météo-climat
+météo-fance	météo-f
+météo-france	météo-fr
 météorologie	météorolog
 météorologique	météorolog
 météorologiques	météorolog
@@ -8776,7 +9000,7 @@ mêlent	mêlent
 mêmes	mêm
 mûrir	mûr
 nacl	nacl
-naco	naco
+naco-caractérisation	naco-caractéris
 nacre	nacr
 nahum	nahum
 naissait	naiss
@@ -8786,6 +9010,21 @@ naissent	naissent
 nalini	nalin
 nancy	nancy
 nano	nano
+nano-ampère	nano-amper
+nano-antenne	nano-anten
+nano-antennes	nano-anten
+nano-circuits	nano-circuit
+nano-composants	nano-compos
+nano-fibres	nano-fibr
+nano-glycofilms	nano-glycofilm
+nano-micro	nano-micro
+nano-moteur	nano-moteur
+nano-objets	nano-objet
+nano-particules	nano-particul
+nano-satellites	nano-satellit
+nano-structuration	nano-structur
+nano-structurés	nano-structur
+nano-vectoriser	nano-vectoris
 nanobiotechnologies	nanobiotechnolog
 nanobiotix	nanobiotix
 nanochargé	nanocharg
@@ -8829,7 +9068,6 @@ napoléon	napoléon
 nappes	napp
 narbonne	narbon
 nasa	nas
-nasale	nasal
 nasales	nasal
 nash	nash
 naskéo	naskéo
@@ -8866,12 +9104,12 @@ naviguent	naviguent
 naviguer	navigu
 navire	navir
 navires	navir
-nazaire	nazair
 naît	naît
 naître	naîtr
 naïo	naïo
 ncbir	ncbir
 necker	neck
+necker-enfants	necker-enf
 neige	neig
 nems	nem
 nerf	nerf
@@ -8879,7 +9117,6 @@ nerveuse	nerveux
 nerveuses	nerveux
 nerveux	nerveux
 nestlé	nestl
-net	net
 netsis	nets
 nette	net
 nettement	net
@@ -8890,6 +9127,8 @@ neuf	neuf
 neufs	neuf
 neumann	neumann
 neuro	neuro
+neuro-anatomie	neuro-anatom
+neuro-dsp	neuro-dsp
 neurobiologie	neurobiolog
 neurobiologiste	neurobiolog
 neurochirurgie	neurochirurg
@@ -8929,7 +9168,6 @@ neuville	neuvill
 nevers	never
 new	new
 newvectys	newvecty
-ng	ng
 ngl	ngl
 ni	ni
 niccolaï	niccolaï
@@ -8962,7 +9200,7 @@ nofima	nofim
 noir	noir
 noire	noir
 noires	noir
-noisy	noisy
+noisy-le-grand	noisy-le-grand
 nom	nom
 nombreuses	nombreux
 nombreux	nombreux
@@ -8972,21 +9210,30 @@ nommer	nomm
 nommé	nomm
 nommée	nomm
 noms	nom
+non-circulantes	non-circul
+non-destructifs	non-destruct
+non-invasifs	non-invas
 nontissés	nontiss
 norbert	norbert
 nord	nord
+nord-américain	nord-américain
+nord-est	nord-est
+nord-occidental	nord-occidental
+nord-occidentale	nord-occidental
+nord-ouest	nord-ouest
+nord-sud	nord-sud
 normal	normal
 normale	normal
 normalement	normal
 normales	normal
 normalisation	normalis
-normandie	normand
 normes	norm
 norvège	norveg
 nos	nos
 nota	not
 notable	notabl
 note	not
+note-t-il	note-t-il
 noter	not
 notion	notion
 notoires	notoir
@@ -9007,6 +9254,7 @@ nourrit	nourr
 nourriture	nourritur
 nouveautés	nouveaut
 nouvel	nouvel
+nouvelle-zélande	nouvelle-zéland
 nouvellement	nouvel
 nouvelles	nouvel
 noué	nou
@@ -9020,7 +9268,7 @@ nox	nox
 noyau	noyau
 noyaux	noyal
 nse	nse
-nu	nu
+nu-age	nu-ag
 nuage	nuag
 nuages	nuag
 nuageuse	nuageux
@@ -9029,7 +9277,6 @@ nucadvisor	nucadvisor
 nuclear	nuclear
 nucléaire	nucléair
 nucléaires	nucléair
-nucléart	nucléart
 nuisibles	nuisibl
 nuit	nuit
 nul	nul
@@ -9038,7 +9285,6 @@ numérique	numer
 numériques	numer
 numéro	numéro
 nuptiale	nuptial
-nuremberg	nuremberg
 nutox	nutox
 nutraceutiques	nutraceut
 nutriment	nutr
@@ -9058,6 +9304,7 @@ nécessairement	nécessair
 nécessitant	nécessit
 nécessite	nécessit
 nécessitent	nécessitent
+nécessitent-ils	nécessitent-il
 nécessiter	nécessit
 nécessitera	nécessit
 nécessité	nécess
@@ -9086,7 +9333,6 @@ nés	né
 nîmes	nîm
 nôtre	nôtr
 obasanjo	obasanjo
-obese	obes
 objectifs	object
 objective	object
 objet	objet
@@ -9106,11 +9352,16 @@ observait	observ
 observant	observ
 observateur	observ
 observation	observ
+observation-main	observation-main
 observations	observ
 observationsd	observationsd
 observatoire	observatoir
 observe	observ
+observe-t-elle	observe-t-el
+observe-t-il	observe-t-il
+observe-t-on	observe-t-on
 observent	observent
+observent-ils	observent-il
 observer	observ
 observing	observing
 observé	observ
@@ -9135,10 +9386,8 @@ obésité	obes
 ocari	ocar
 occasionnant	occasion
 occident	occident
-occidental	occidental
 occidentale	occidental
 occidentaux	occidental
-occultation	occult
 occupait	occup
 occupant	occup
 occupe	occup
@@ -9155,9 +9404,7 @@ oceanic	oceanic
 oceans	ocean
 ockham	ockham
 octapeptide	octapeptid
-octets	octet
 octobre	octobr
-oculaire	oculair
 oculaires	oculair
 oculomoteurs	oculomoteur
 oculomotricité	oculomotr
@@ -9209,7 +9456,6 @@ offreurs	offreur
 offrir	offrir
 offrira	offrir
 offriront	offriront
-ogooué	ogoou
 oh	oh
 ohio	ohio
 ohmi	ohmi
@@ -9240,6 +9486,8 @@ onera	oner
 ong	ong
 oniris	onir
 online	onlin
+ont-il	ont-il
+ont-ils	ont-il
 ontario	ontario
 onu	onu
 onze	onze
@@ -9280,7 +9528,7 @@ optionnels	optionnel
 optique	optiqu
 optiques	optiqu
 optitec	optitec
-opto	opto
+opto-mécanique	opto-mécan
 optoélectronique	optoélectron
 optronique	optron
 opté	opté
@@ -9297,9 +9545,7 @@ opérationnelles	opérationnel
 opérationnels	opérationnel
 opérations	oper
 opératoire	opératoir
-opératoires	opératoir
 opérer	oper
-opérés	oper
 orageuse	orag
 orageux	orag
 orale	oral
@@ -9368,7 +9614,9 @@ orl	orl
 orléans	orléan
 ormeaux	ormeau
 ornementaux	ornemental
-oro	oro
+oro-détection	oro-détect
+oro-intestinal-hypothalamus	oro-intestinal-hypothalamus
+oro-sensorielle	oro-sensoriel
 orpaillage	orpaillag
 orphelines	orphelin
 orpheon	orpheon
@@ -9393,13 +9641,13 @@ ossements	ossement
 osseuse	osseux
 osseuses	osseux
 osseux	osseux
-ostéo	ostéo
+ostéo-articulaires	ostéo-articulair
 ostéoclastes	ostéoclast
 ostéoporose	ostéoporos
 osé	osé
 oséo	oséo
 otc	otc
-oto	oto
+oto-rhino-laryngologie	oto-rhino-laryngolog
 ouagadougou	ouagadougou
 oublier	oubli
 oublions	oublion
@@ -9416,6 +9664,8 @@ outil	outil
 outillage	outillag
 outils	outil
 outre	outr
+outre-atlantique	outre-atlant
+outre-mer	outre-m
 ouvert	ouvert
 ouverte	ouvert
 ouvertes	ouvert
@@ -9432,23 +9682,22 @@ ouvrons	ouvron
 ovations	ovat
 ovoïde	ovoïd
 oxford	oxford
-oxy	oxy
+oxy-combustion	oxy-combust
 oxydant	oxyd
-oxydantes	oxyd
-oxydants	oxyd
 oxydatif	oxyd
 oxydatifpour	oxydatifpour
 oxydatifs	oxyd
 oxyde	oxyd
 oxyder	oxyd
 oxydes	oxyd
-oxydo	oxydo
+oxydo-réduction	oxydo-réduct
 oxydoréduction	oxydoréduct
 oxygène	oxygen
 oz	oz
 ozone	ozon
 oïdium	oïdium
 p	p
+p-g	p-g
 p80	p80
 p80fw	p80fw
 pac	pac
@@ -9469,7 +9718,7 @@ paisible	paisibl
 paix	paix
 palais	pal
 palaiseau	palaiseau
-paleo	paleo
+paleo-specimens	paleo-specimen
 pales	pal
 palette	palet
 paliers	pali
@@ -9485,7 +9734,7 @@ paléopathologie	paléopatholog
 paléopathologiste	paléopatholog
 pam	pam
 pamatec	pamatec
-pan	pan
+pan-européenne	pan-européen
 panache	panach
 panaches	panach
 pancréas	pancré
@@ -9496,7 +9745,6 @@ panne	pann
 panneaux	panneau
 panoplie	panopl
 panorama	panoram
-pape	pap
 papier	papi
 papiers	papi
 papilles	papill
@@ -9527,7 +9775,7 @@ parcours	parcour
 parcouru	parcouru
 parcourues	parcouru
 parcourus	parcourus
-pare	par
+pare-feux	pare-f
 pareil	pareil
 parentales	parental
 parentalité	parental
@@ -9540,17 +9788,26 @@ parfaits	parfait
 parfois	parfois
 parfum	parfum
 parfumerie	parfumer
+parfumerie-cosmétique	parfumerie-cosmet
 parfums	parfum
 pari	pari
 parietal	parietal
 parieurs	parieur
+paris-diderot	paris-diderot
+paris-est	paris-est
+paris-saclay-ile-de-france	paris-saclay-ile-de-fr
+paris-sud	paris-sud
+paris-vi	paris-v
 parisien	parisien
 parisienne	parisien
 paristech	paristech
 parkinson	parkinson
 parkinsoniens	parkinsonien
 parle	parl
+parle-t-elle	parle-t-el
+parle-t-on	parle-t-on
 parlent	parlent
+parlent-ils	parlent-il
 parler	parl
 parlera	parl
 parlez	parl
@@ -9574,6 +9831,7 @@ partant	part
 partenaire	partenair
 partenariale	partenarial
 partenariales	partenarial
+partenariat	partenariat
 partenariats	partenariat
 parti	part
 participait	particip
@@ -9611,6 +9869,7 @@ parvenons	parvenon
 parvenu	parvenu
 parvenus	parvenus
 parvient	parvient
+pas-de-calais	pas-de-cal
 pasadena	pasaden
 pasadéna	pasaden
 pascal	pascal
@@ -9667,7 +9926,7 @@ pattes	patt
 pau	pau
 paul	paul
 paulo	paulo
-pauses	paus
+pauses-café	pauses-caf
 pauvre	pauvr
 pauvres	pauvr
 pauvreté	pauvret
@@ -9675,8 +9934,8 @@ pavillon	pavillon
 payantes	pai
 payraud	payraud
 pays	pay
+pays-bas	pays-b
 paysage	paysag
-paysagère	paysager
 paysandisia	paysandisi
 paysanne	paysann
 paysans	paysan
@@ -9703,6 +9962,7 @@ penchées	pench
 pendant	pend
 pensait	pens
 pense	pens
+pense-t-elle	pense-t-el
 penser	pens
 penserons	pens
 pensons	penson
@@ -9713,14 +9973,15 @@ pente	pent
 pentrite	pentrit
 pepsine	pepsin
 peptide	peptid
+peptide-induced	peptide-induced
 peptides	peptid
-per	per
+per-opératoire	per-opératoir
 perceptible	perceptibl
 perceptibles	perceptibl
 perception	percept
 perceptions	percept
 perceptives	percept
-percevez	percev
+percevez-vous	percevez-vous
 percevoir	percevoir
 percée	perc
 percées	perc
@@ -9742,6 +10003,7 @@ permanence	permanent
 permanent	permanent
 permanente	permanent
 permanents	permanent
+permet-elle	permet-el
 permettait	permet
 permettant	permet
 permette	permet
@@ -9750,16 +10012,15 @@ permettra	permettr
 permettraient	permettr
 permettrait	permettr
 permettront	permettront
+permettront-elles	permettront-el
 permis	perm
 permise	permis
 perméabilité	perméabl
 perméable	perméabl
-perméables	perméabl
 peroxysomes	peroxysom
 perpétuel	perpétuel
 perpétuent	perpétuent
-perret	perret
-perrier	perri
+perrier-cornet	perrier-cornet
 persistance	persist
 persistant	persist
 persistante	persist
@@ -9811,6 +10072,11 @@ peupler	peupl
 peuples	peupl
 peuplé	peupl
 peur	peur
+peut-elle	peut-el
+peut-il	peut-il
+peut-on	peut-on
+peut-être	peut-êtr
+peuvent-ils	peuvent-il
 peyne	peyn
 ph	ph
 phare	phar
@@ -9827,10 +10093,8 @@ pharmacologue	pharmacologu
 pharmacotechnie	pharmacotechn
 phase	phas
 phases	phas
-phea	phe
 phenome	phenom
 phenotyping	phenotyping
-phi	phi
 philip	philip
 philippe	philipp
 philippines	philippin
@@ -9844,6 +10108,7 @@ phosphatés	phosphat
 phospholipid	phospholipid
 phospholipides	phospholipid
 photo	photo
+photo-acoustique	photo-acoust
 photocoagulation	photocoagul
 photocopie	photocop
 photodetector	photodetector
@@ -9862,12 +10127,12 @@ photovoltaics	photovoltaic
 photovoltaïque	photovoltaïqu
 photovoltaïques	photovoltaïqu
 phrases	phras
-phy	phy
-physco	physco
+physco-chimie	physco-chim
 physical	physical
 physicien	physicien
 physiciens	physicien
-physico	physico
+physico-chimie	physico-chim
+physico-chimiques	physico-chim
 physics	physic
 physiologie	physiolog
 physiologique	physiolog
@@ -9878,7 +10143,7 @@ physiopathologies	physiopatholog
 physiopathologique	physiopatholog
 physique	physiqu
 physiques	physiqu
-phyto	phyto
+phyto-chimique	phyto-chim
 phytochip	phytochip
 phytosanitaire	phytosanitair
 phénix	phénix
@@ -9907,6 +10172,8 @@ pied	pied
 pieds	pied
 piercan	piercan
 pierre	pierr
+pierre-georges	pierre-georg
+pierre-gilles	pierre-gill
 pierrot	pierrot
 pieux	pieux
 pigment	pigment
@@ -9929,7 +10196,7 @@ pionnier	pionni
 pionniers	pionni
 pionnière	pionni
 pionnières	pionni
-pipe	pip
+pipe-lines	pipe-lin
 piquer	piqu
 piqué	piqu
 piraterie	pirater
@@ -9975,6 +10242,7 @@ planifier	planifi
 plans	plan
 plant	plant
 plante	plant
+plante-hôte	plante-hôt
 planter	plant
 plantes	plant
 planteurs	planteur
@@ -10002,11 +10270,12 @@ plasturgie	plasturg
 plasturgiste	plasturg
 plat	plat
 plate	plat
+plate-forme	plate-form
 plateau	plateau
 plateaux	plateau
 plateforme	plateform
 plateformes	plateform
-plates	plat
+plates-formes	plates-form
 platform	platform
 plats	plat
 plausibles	plausibl
@@ -10025,10 +10294,12 @@ plos	plos
 ployage	ployag
 ployages	ployag
 pltp	pltp
+pltp-knocked	pltp-knocked
 pluie	plui
 pluies	plui
 plupart	plupart
-pluri	plur
+pluri-annualiser	pluri-annualis
+pluri-thématique	pluri-thémat
 pluriannuelle	pluriannuel
 pluridisciplinaire	pluridisciplinair
 pluridisciplinarité	pluridisciplinar
@@ -10042,6 +10313,7 @@ plénière	pléni
 plénières	pléni
 pléïades	pléïad
 pme	pme
+pme-pmi	pme-pm
 pmi	pmi
 pmrc	pmrc
 pnas	pnas
@@ -10053,6 +10325,7 @@ poche	poch
 poids	poid
 poignée	poign
 poincaré	poincar
+point-clé	point-cl
 pointe	point
 pointes	point
 points	point
@@ -10082,7 +10355,7 @@ polluée	pollu
 pologne	pologn
 polonais	polon
 poloïdal	poloïdal
-poly	poly
+poly-insaturés	poly-insatur
 polygones	polygon
 polymorphe	polymorph
 polymère	polymer
@@ -10094,7 +10367,7 @@ polyphenols	polyphenol
 polyphénol	polyphénol
 polyphénols	polyphénol
 polysaccharide	polysaccharid
-polystyrène	polystyren
+polystyrène-silicié	polystyrène-silici
 polytechnicien	polytechnicien
 polytechniciens	polytechnicien
 polytechnique	polytechn
@@ -10133,6 +10406,9 @@ portage	portag
 portail	portail
 portant	port
 porte	port
+porte-ceinture	porte-ceintur
+porte-clés	porte-cl
+porte-t-il	porte-t-il
 portefeuille	portefeuill
 portent	portent
 porter	port
@@ -10161,6 +10437,7 @@ positifs	posit
 position	posit
 positionnant	position
 positionne	position
+positionne-t-il	positionne-t-il
 positionnement	position
 positionner	position
 positionnée	position
@@ -10173,6 +10450,7 @@ positives	posit
 positrons	positron
 possibilité	possibil
 possibilités	possibil
+possible	possibl
 possibles	possibl
 possède	possed
 possèdent	possèdent
@@ -10180,7 +10458,13 @@ possédant	possed
 posséder	possed
 possédons	possédon
 post	post
-postbac	postbac
+post-bac	post-bac
+post-doc	post-doc
+post-doctoral	post-doctoral
+post-doctorales	post-doctoral
+post-doctorants	post-doctor
+post-opératoires	post-opératoir
+post-opérés	post-oper
 postdoctoraux	postdoctoral
 poste	post
 posteriori	posterior
@@ -10211,13 +10495,17 @@ pourcentage	pourcentag
 pourquoi	pourquoi
 pourra	pourr
 pourraient	pourr
+pourrait-elle	pourrait-el
+pourrait-on	pourrait-on
 pourrions	pourrion
 pourrons	pourron
 pourront	pourront
 poursuit	poursuit
+poursuit-il	poursuit-il
 poursuite	poursuit
 poursuivant	poursuiv
 poursuivent	poursuivent
+poursuivent-elles	poursuivent-el
 poursuivi	poursuiv
 poursuivions	poursuiv
 poursuivis	poursuiv
@@ -10240,6 +10528,7 @@ poutine	poutin
 poutre	poutr
 pouvaient	pouv
 pouvait	pouv
+pouvait-il	pouvait-il
 pouvant	pouv
 pouvez	pouv
 pouvoirs	pouvoir
@@ -10287,6 +10576,7 @@ president	president
 presqu	presqu
 presque	presqu
 presse	press
+presse-bouton	presse-bouton
 pressent	pressent
 pressenti	pressent
 pression	pression
@@ -10301,7 +10591,6 @@ prestigieuses	prestigi
 prestigieux	prestigi
 preuve	preuv
 prides	prid
-priest	priest
 primaire	primair
 primaires	primair
 prime	prim
@@ -10339,6 +10628,7 @@ privées	priv
 privés	priv
 prix	prix
 pro	pro
+pro-actifs	pro-act
 probable	probabl
 probablement	probabl
 probante	prob
@@ -10421,7 +10711,6 @@ programmables	programm
 programmation	programm
 programmer	programm
 programmes	programm
-programmé	programm
 programmée	programm
 programmées	programm
 programmés	programm
@@ -10530,7 +10819,9 @@ protégé	proteg
 protégées	proteg
 protégés	proteg
 protéine	protéin
+protéine-protéine	protéine-protéin
 protéines	protéin
+protéines-clés	protéines-cl
 protéique	protéiqu
 protéolytiques	protéolyt
 protéomique	protéom
@@ -10538,7 +10829,7 @@ prouesse	prouess
 prouver	prouv
 prouvé	prouv
 prouvés	prouv
-provenaient	proven
+provenaient-ils	provenaient-il
 provenance	proven
 provenant	proven
 provence	provenc
@@ -10555,7 +10846,15 @@ provoquera	provoqu
 provoquée	provoqu
 proximité	proxim
 proximités	proxim
-pré	pré
+pré-assemblage	pré-assemblag
+pré-clinique	pré-clin
+pré-cliniques	pré-clin
+pré-industrialisation	pré-industrialis
+pré-industriel	pré-industriel
+pré-organisés	pré-organis
+pré-programmé	pré-programm
+pré-qualifié	pré-qualifi
+pré-qualifiées	pré-qualifi
 préalable	préalabl
 préalablement	préalabl
 précarité	précar
@@ -10566,7 +10865,11 @@ précipitation	précipit
 précipitations	précipit
 précis	prec
 précisant	précis
-précisent	précisent
+précise-t-elle	précise-t-el
+précise-t-elleune	précise-t-elleun
+précise-t-il	précise-t-il
+précise-t-on	précise-t-on
+précisent-ils	précisent-il
 préciser	précis
 précision	précis
 précisions	précis
@@ -10641,7 +10944,7 @@ préparatoires	préparatoir
 prépare	prépar
 préparent	préparent
 préparer	prépar
-préparons	préparon
+préparons-nous	préparons-nous
 préparé	prépar
 préparées	prépar
 présence	présenc
@@ -10651,6 +10954,7 @@ présentant	présent
 présentation	présent
 présentations	présent
 présente	présent
+présente-t-elle	présente-t-el
 présentent	présentent
 présenter	présent
 présentera	présent
@@ -10669,6 +10973,7 @@ préserver	préserv
 préservées	préserv
 préside	présid
 présidence	président
+président-directeur	président-directeur
 présidente	président
 présidents	président
 présidé	présid
@@ -10717,16 +11022,20 @@ psychosocial	psychosocial
 pti	pti
 ptychographie	ptychograph
 public	public
+public-privé	public-priv
 publication	publiqu
 publications	publiqu
 publics	public
+publics-privés	publics-priv
 publie	publ
 publient	publient
 publier	publi
 publiera	publi
 publique	publiqu
+publique-hôpitaux	publique-hôpital
 publiquement	publiqu
 publiques	publiqu
+publiques-hôpitaux	publiques-hôpital
 publié	publi
 publiée	publi
 publiées	publi
@@ -10752,7 +11061,6 @@ pulsée	puls
 pulvérisation	pulvéris
 pupitre	pupitr
 pur	pur
-pure	pur
 purement	pur
 pures	pur
 pureté	puret
@@ -10761,8 +11069,8 @@ purifié	purifi
 puteaux	puteau
 puzzle	puzzl
 pwr	pwr
-pyréenes	pyréen
 pyrénées	pyren
+pyrénées-méditerranée	pyrénées-méditerran
 pythagore	pythagor
 pâteux	pâteux
 pâtisserie	pâtisser
@@ -10777,10 +11085,11 @@ pédagogique	pédagog
 pédagogiques	pédagog
 pédiatres	pédiatr
 pédiatrique	pédiatr
-pédo	pédo
+pédo-paysagère	pédo-paysager
 pédologues	pédologu
 pégase	pégas
 pékin	pékin
+pékin-beihang	pékin-beihang
 pékn	pekn
 pénalisants	pénalis
 pénaliser	pénalis
@@ -10796,7 +11105,7 @@ pépites	pépit
 pérennes	péren
 pérennisation	pérennis
 pérennité	péren
-péri	per
+péri-récepteurs	péri-récepteur
 périmètre	périmetr
 période	périod
 périodes	périod
@@ -10806,7 +11115,7 @@ périphérique	péripher
 périphériques	péripher
 périple	péripl
 pérou	pérou
-péta	pet
+péta-octets	péta-octet
 pétaflopiques	pétaflop
 pétri	petr
 pétrochimie	pétrochim
@@ -10830,7 +11139,7 @@ qualifier	qualifi
 qualifié	qualifi
 qualifiées	qualifi
 qualifiés	qualifi
-qualigras	qualigr
+qualigras-phy	qualigras-phy
 qualimed	qualimed
 qualiment	qual
 qualitatif	qualit
@@ -10851,16 +11160,20 @@ quarantaine	quarantain
 quarante	quar
 quart	quart
 quasi	quas
+quasi-complète	quasi-complet
+quasi-totalité	quasi-total
 quasiment	quas
 quatorze	quatorz
 quatre	quatr
+quatre-vingt	quatre-vingt
 quatrième	quatriem
 quel	quel
 quelle	quel
 quelles	quel
 quelque	quelqu
+quelques-unes	quelques-un
+quelques-uns	quelques-un
 quels	quel
-quentin	quentin
 quercypôle	quercypôl
 querleux	querleux
 question	question
@@ -10873,7 +11186,6 @@ quinzaine	quinzain
 quinze	quinz
 quitter	quitt
 quitté	quitt
-quiz	quiz
 quoi	quoi
 quotidien	quotidien
 quotidienne	quotidien
@@ -10908,10 +11220,10 @@ radiation	radiat
 radiations	radiat
 radical	radical
 radicalaire	radicalair
-radicalaires	radicalair
 radicalement	radical
 radicaux	radical
 radio	radio
+radio-occultation	radio-occult
 radioactifs	radioact
 radiologiques	radiolog
 radiomètre	radiometr
@@ -10960,7 +11272,10 @@ rapides	rapid
 rapidité	rapid
 rappelant	rappel
 rappeler	rappel
+rappelle-t-elle	rappelle-t-el
+rappelle-t-il	rappelle-t-il
 rappellent	rappellent
+rappelons-le	rappelons-l
 rappels	rappel
 rappelé	rappel
 rapport	rapport
@@ -10997,7 +11312,6 @@ ravaud	ravaud
 ravie	rav
 ravis	rav
 ravitaillement	ravitaill
-ray	ray
 rayleigh	rayleigh
 rayon	rayon
 rayonnement	rayon
@@ -11028,6 +11342,7 @@ recevait	recev
 recevoir	recevoir
 recevront	recevront
 rechargement	recharg
+recherche-industrie	recherche-industr
 recherchent	recherchent
 rechercher	recherch
 recherché	recherch
@@ -11049,6 +11364,7 @@ reconnaissances	reconnaiss
 reconnaissant	reconnaiss
 reconnaissent	reconnaissent
 reconnaît	reconnaît
+reconnaît-il	reconnaît-il
 reconnaître	reconnaîtr
 reconnu	reconnu
 reconnue	reconnu
@@ -11077,9 +11393,7 @@ recruté	recrut
 recrutée	recrut
 recrutés	recrut
 recréer	recré
-recteur	recteur
 rectorat	rectorat
-rectum	rectum
 recueillies	recueil
 recueillir	recueil
 recuites	recuit
@@ -11216,7 +11530,7 @@ renaissance	renaiss
 renard	renard
 renaut	renaut
 rencontre	rencontr
-rencontrent	rencontrent
+rencontrent-elles	rencontrent-el
 rencontrer	rencontr
 rencontres	rencontr
 rencontré	rencontr
@@ -11227,7 +11541,7 @@ rendant	rend
 rendement	rend
 rendements	rend
 rendent	rendent
-rendez	rend
+rendez-vous	rendez-vous
 rendra	rendr
 rendre	rendr
 rendu	rendu
@@ -11255,6 +11569,7 @@ renouveler	renouvel
 renouvellement	renouvel
 renouvelé	renouvel
 renseignement	renseign
+renseignement-sitac	renseignement-sitac
 renseignements	renseign
 renseignera	renseign
 rentabiliser	rentabilis
@@ -11301,6 +11616,7 @@ représentations	représent
 représentatives	représent
 représentativité	représentat
 représente	représent
+représente-t-il	représente-t-il
 représentent	représentent
 représenter	représent
 représenterait	représent
@@ -11352,6 +11668,8 @@ restaurant	restaur
 restauration	restaur
 restaurer	restaur
 restauré	restaur
+reste	rest
+reste-t-il	reste-t-il
 restent	restent
 rester	rest
 restera	rest
@@ -11395,14 +11713,14 @@ retrouveront	retrouv
 retrouvé	retrouv
 retrouvés	retrouv
 revanche	revanch
-revellin	revellin
+revellin-falcoz	revellin-falcoz
 revendeurs	revendeur
 revendiquer	revendiqu
 revenir	reven
 revenu	revenu
 revenue	revenu
 revenus	revenus
-reverse	revers
+reverse-phi	reverse-ph
 revienne	revien
 reviens	revien
 revient	revient
@@ -11431,7 +11749,6 @@ rhenepi	rhenep
 rhenovia	rhenovi
 rhepach	rhepach
 rhepatch	rhepatch
-rhino	rhino
 rhizotron	rhizotron
 rhizotrons	rhizotron
 rhodia	rhodi
@@ -11439,8 +11756,10 @@ rhônalpin	rhônalpin
 rhônalpine	rhônalpin
 rhônalpines	rhônalpin
 rhône	rhôn
-rhônes	rhôn
-ribereau	ribereau
+rhône-alpes	rhône-alp
+rhône-alpin	rhône-alpin
+rhônes-alpes	rhônes-alp
+ribereau-gayon	ribereau-gayon
 ribon	ribon
 richard	richard
 riche	rich
@@ -11458,9 +11777,8 @@ rigoureuse	rigour
 rigueur	rigueur
 rihb	rihb
 riken	riken
-rillieux	rillieux
+rillieux-la-pape	rillieux-la-pap
 riment	riment
-ringuet	ringuet
 risque	risqu
 risques	risqu
 risqué	risqu
@@ -11499,10 +11817,8 @@ rogeaux	rogeau
 roger	rog
 rogers	roger
 roi	roi
-rom	rom
 roma	rom
 romain	romain
-romaine	romain
 romainville	romainvill
 rome	rom
 romeo	romeo
@@ -11513,7 +11829,6 @@ rongeurs	rongeur
 room	room
 roquecourbe	roquecourb
 roquette	roquet
-ros	ros
 rosa	ros
 roses	ros
 rosé	ros
@@ -11534,7 +11849,6 @@ roulants	roul
 roule	roul
 rouler	roul
 roumanie	rouman
-roussillon	roussillon
 route	rout
 routes	rout
 routine	routin
@@ -11544,6 +11858,7 @@ royal	royal
 royale	royal
 royant	roi
 royaume	royaum
+royaume-uni	royaume-un
 rt	rt
 rt2012	rt2012
 rubis	rub
@@ -11562,7 +11877,6 @@ russel	russel
 russes	russ
 russie	russ
 russiele	russiel
-rustique	rustiqu
 rutherford	rutherford
 ruthénium	ruthénium
 rvvs	rvv
@@ -11575,7 +11889,9 @@ règle	regl
 règles	regl
 règne	regn
 règnent	règnent
-ré	ré
+ré-industrialisation	ré-industrialis
+ré-ingénierie	ré-ingénier
+ré-échantillonnées	ré-échantillon
 réacteur	réacteur
 réacteurs	réacteur
 réactifs	réactif
@@ -11587,6 +11903,7 @@ réactivé	réactiv
 réactivée	réactiv
 réagir	réag
 réagissent	réag
+réagissent-ils	réagissent-il
 réagit	réag
 réalisant	réalis
 réalisation	réalis
@@ -11659,6 +11976,7 @@ réfléchir	réflech
 réfléchiront	réflech
 réfléchissant	réflech
 réfléchissent	réflech
+réfléchissent-ils	réfléchissent-il
 réfléchissons	réflech
 réfléchit	réflech
 réformant	réform
@@ -11793,7 +12111,11 @@ résultant	résult
 résultat	résultat
 résultent	résultent
 résumant	résum
+résume	résum
+résume-t-elle	résume-t-el
+résume-t-il	résume-t-il
 résument	résu
+résument-ils	résument-il
 résumer	résum
 résumé	résum
 résumée	résum
@@ -11801,7 +12123,7 @@ réséda	résed
 rétine	rétin
 rétinienne	rétinien
 rétinopathie	rétinopath
-rétorque	rétorqu
+rétorque-t-il	rétorque-t-il
 rétorqueront	rétorqu
 rétractable	rétract
 rétrocontrôle	rétrocontrôl
@@ -11812,6 +12134,7 @@ réuni	réun
 réunion	réunion
 réunir	réun
 réunira	réun
+réunira-t-il	réunira-t-il
 réuniront	réun
 réunis	réun
 réunissant	réun
@@ -11846,6 +12169,8 @@ rêvons	rêvon
 rêvé	rêv
 rôdé	rôd
 rôle	rôl
+s-100b	s-100b
+s-seb	s-seb
 sabatier	sabati
 sable	sabl
 sables	sabl
@@ -11856,9 +12181,8 @@ sachets	sachet
 sachez	sach
 saclay	saclay
 sacrifier	sacrifi
-sad	sad
 sadron	sadron
-saf	saf
+saf-agriculteurs	saf-agriculteur
 safire	safir
 safran	safran
 sagem	sagem
@@ -11870,6 +12194,13 @@ sain	sain
 saine	sain
 sains	sain
 saint	saint
+saint-etienne	saint-etien
+saint-gobain	saint-gobain
+saint-jacques	saint-jacqu
+saint-louis	saint-lou
+saint-nazaire	saint-nazair
+saint-priest	saint-priest
+saint-quentin-en-yvelines	saint-quentin-en-yvelin
 sainte	saint
 saisie	sais
 saisir	sais
@@ -11888,6 +12219,7 @@ salle	sall
 salles	sall
 salmonella	salmonel
 salon	salon
+salon-de-provence	salon-de-provent
 salons	salon
 salpêtrière	salpêtri
 salsifis	salsif
@@ -11909,8 +12241,10 @@ sanitaires	sanitair
 sanofi	sanof
 santa	sant
 santé	sant
+santé-environnement-handicap	santé-environnement-handicap
 sao	sao
 sapeurs	sapeur
+sapeurs-pompiers	sapeurs-pompi
 saphir	saph
 saragosse	saragoss
 saral	saral
@@ -11954,15 +12288,17 @@ savent	savent
 savety	savety
 saveur	saveur
 saveurs	saveur
-savez	sav
+savez-vous	savez-vous
 savions	savion
 savoie	savoi
+savoir	savoir
+savoir-faire	savoir-fair
 savoirs	savoir
 savon	savon
 savons	savon
-saxons	saxon
 sayette	sayet
 saône	saôn
+saône-et-loire	saône-et-loir
 sc13	sc13
 sca	sca
 scale	scal
@@ -11990,7 +12326,7 @@ scid	scid
 science	scienc
 scientifiquement	scientif
 scientifiques	scientif
-sck	sck
+sck-cen	sck-cen
 sclérose	scléros
 scolaire	scolair
 scolaires	scolair
@@ -12005,7 +12341,7 @@ scène	scen
 scénarii	scénarii
 scénario	scénario
 scénarios	scénarios
-sds	sd
+sds-nice	sds-nic
 sdsc	sdsc
 sea	se
 seb	seb
@@ -12028,6 +12364,8 @@ segalen	segalen
 segard	segard
 segment	segment
 seine	sein
+seine-et-marne	seine-et-marn
+seine-saint-denis	seine-saint-den
 seins	sein
 sel	sel
 selenide	selenid
@@ -12041,11 +12379,15 @@ semblable	semblabl
 semblait	sembl
 semblant	sembl
 semble	sembl
+semble-t-il	semble-t-il
 semblent	semblent
 semblerait	sembl
 semblé	sembl
 semenciers	semenci
-semi	sem
+semi-conducteur	semi-conducteur
+semi-conducteurs	semi-conducteur
+semi-perméable	semi-permé
+semi-perméables	semi-permé
 semis	sem
 semrev	semrev
 semée	sem
@@ -12071,7 +12413,7 @@ sensoriels	sensoriel
 sensostat	sensostat
 sensée	sens
 sent	sent
-sentez	sent
+sentez-vous	sentez-vous
 sentinel	sentinel
 sentinel1	sentinel1
 sentinelles	sentinel
@@ -12080,8 +12422,11 @@ sentir	sent
 sept	sept
 septembre	septembr
 septentrionaux	septentrional
+sera-t-il	sera-t-il
 seraient	ser
 serait	ser
+serait-ce	serait-c
+serait-il	serait-il
 serein	serein
 sereine	serein
 sereinement	serein
@@ -12091,6 +12436,7 @@ series	ser
 serions	serion
 serono	serono
 serons	seron
+seront-elles	seront-el
 serpents	serpent
 serrage	serrag
 serre	serr
@@ -12114,7 +12460,7 @@ seul	seul
 seule	seul
 seules	seul
 seuls	seul
-seurin	seurin
+seurin-sur-l	seurin-sur-l
 seventure	seventur
 sevrage	sevrag
 sexuel	sexuel
@@ -12157,7 +12503,6 @@ silencieuses	silenci
 silencieux	silenci
 silice	silic
 silicium	silicium
-silicié	silici
 silico	silico
 silicon	silicon
 sillage	sillag
@@ -12168,7 +12513,7 @@ silxwpour	silxwpour
 similaire	similair
 similaires	similair
 similarités	similar
-simili	simil
+simili-viandes	simili-viand
 simon	simon
 simple	simpl
 simplement	simpl
@@ -12197,8 +12542,7 @@ sismiques	sismiqu
 sismologie	sismolog
 sismologique	sismolog
 sismomètres	sismometr
-sita	sit
-sitac	sitac
+sita-suez	sita-su
 site	sit
 sites	sit
 sitges	sitg
@@ -12227,7 +12571,6 @@ smartox	smartox
 smartphone	smartphon
 smartphones	smartphon
 smos	smos
-smr	smr
 sncf	sncf
 snecma	snecm
 soa	so
@@ -12236,7 +12579,8 @@ sociale	social
 sociales	social
 sociaux	social
 society	society
-socio	socio
+socio-économique	socio-économ
+socio-économiques	socio-économ
 sociologique	sociolog
 sociologue	sociologu
 sociologues	sociologu
@@ -12245,22 +12589,23 @@ sociétale	sociétal
 sociétales	sociétal
 sociétaux	sociétal
 société	societ
+société-soeur	société-soeur
 sociétés	societ
 sodexo	sodexo
 sodium	sodium
-soeur	soeur
 sofimac	sofimac
 sofiproteol	sofiproteol
 sofradir	sofrad
 soft	soft
 software	softwar
-soi	soi
+soi-disant	soi-dis
 soient	soient
 soignants	soign
 soigner	soign
 soin	soin
 soins	soin
 soirée	soir
+soit-elle	soit-el
 soixantaine	soixantain
 soixante	soix
 sol	sol
@@ -12293,6 +12638,8 @@ somatostatine	somatostatin
 sombrer	sombr
 somme	somm
 sommeil	sommeil
+sommes	somm
+sommes-nous	sommes-nous
 sommet	sommet
 sommets	sommet
 sonde	sond
@@ -12302,8 +12649,10 @@ sondeur	sondeur
 sonne	son
 sonore	sonor
 sonores	sonor
-sopagly	sopagly
+sont-elles	sont-el
+sont-ils	sont-il
 sophia	sophi
+sophia-antipolis	sophia-antipol
 sophie	soph
 sophistiqué	sophistiqu
 sophistiquées	sophistiqu
@@ -12343,6 +12692,7 @@ souhaitaient	souhait
 souhaitait	souhait
 souhaitant	souhait
 souhaite	souhait
+souhaite-t-il	souhaite-t-il
 souhaitent	souhaitent
 souhaiter	souhait
 souhaitera	souhait
@@ -12354,9 +12704,14 @@ souhaits	souhait
 souhaité	souhait
 soulagement	soulag
 soulevées	soulev
-souligine	souligin
+souligine-t-il	souligine-t-il
+souligne	soulign
+souligne-t-elle	souligne-t-el
+souligne-t-il	souligne-t-il
+souligne-t-on	souligne-t-on
 souligner	soulign
 soulignons	soulignon
+soulignons-le	soulignons-l
 souligné	soulign
 soulève	soulev
 soumettre	soumettr
@@ -12369,8 +12724,27 @@ souplesse	soupless
 soupçonnais	soupçon
 source	sourc
 sources	sourc
-sourcés	sourc
 souris	sour
+sous-critique	sous-crit
+sous-critiques	sous-crit
+sous-disciplines	sous-disciplin
+sous-ensemble	sous-ensembl
+sous-jacente	sous-jacent
+sous-marin	sous-marin
+sous-marine	sous-marin
+sous-marins	sous-marin
+sous-officiers	sous-offici
+sous-population	sous-popul
+sous-produits	sous-produit
+sous-sol	sous-sol
+sous-tendent	sous-tendent
+sous-titre	sous-titr
+sous-traitance	sous-trait
+sous-traitantes	sous-trait
+sous-types	sous-typ
+sous-unités	sous-un
+sous-utilisé	sous-utilis
+sous-vêtements	sous-vêt
 souscrite	souscrit
 soutenir	souten
 soutenu	soutenu
@@ -12385,6 +12759,7 @@ soutient	soutient
 souvenirs	souvenir
 souvent	souvent
 souvient	souvient
+souvient-il	souvient-il
 soviétique	soviet
 soyons	soyon
 soyouz	soyouz
@@ -12396,14 +12771,12 @@ spatiale	spatial
 spatiales	spatial
 spatialisée	spatialis
 spatiaux	spatial
-spatio	spatio
+spatio-temporelle	spatio-temporel
 spc	spc
 speakers	speaker
-specimens	specimen
-spectral	spectral
 spectrale	spectral
 spectre	spectr
-spectro	spectro
+spectro-imageur	spectro-imageur
 spectromètre	spectrometr
 spectroscopie	spectroscop
 spectroscopiques	spectroscop
@@ -12412,9 +12785,10 @@ speed	speed
 sphériques	sphériqu
 spie	spi
 spin	spin
+spin-off	spin-off
+spin-orbite	spin-orbit
 spinale	spinal
 spintronique	spintron
-spir	spir
 spiral	spiral
 spiral2	spiral2
 spirit	spir
@@ -12457,7 +12831,6 @@ spécifiques	spécif
 spécimens	spécimen
 spéculateur	spécul
 squelette	squelet
-squelettiques	squelet
 sriharikota	sriharikot
 srl	srl
 stabilisation	stabilis
@@ -12473,6 +12846,7 @@ stage	stag
 stages	stag
 stagiaire	stagiair
 stand	stand
+stand-alone	stand-alon
 standard	standard
 standardisation	standardis
 standards	standard
@@ -12481,7 +12855,9 @@ stanislas	stanisl
 staphylococcus	staphylococcus
 staps	stap
 start	start
-state	stat
+start-up	start-up
+start-upprésident	start-upprésident
+start-ups	start-up
 statines	statin
 station	station
 stationnaire	stationnair
@@ -12493,7 +12869,7 @@ statistique	statist
 statistiques	statist
 stator	stator
 statut	statut
-steady	steady
+steady-state	steady-stat
 steve	stev
 sti2d	sti2d
 stigmatiser	stigmatis
@@ -12547,11 +12923,12 @@ study	study
 sturio	sturio
 style	styl
 stéarique	stéariqu
-stéato	stéato
+stéato-hépatite	stéato-hépatit
 stéphane	stéphan
 stériles	stéril
 su	su
-sub	sub
+sub-exawatt	sub-exawatt
+sub-surface	sub-surfac
 subatomique	subatom
 subi	sub
 subir	sub
@@ -12591,6 +12968,10 @@ sucres	sucr
 sucré	sucr
 sucrés	sucr
 sud	sud
+sud-africain	sud-africain
+sud-est	sud-est
+sud-occidental	sud-occidental
+sud-ouest	sud-ouest
 suez	su
 suffiront	suff
 suffisait	suffis
@@ -12601,6 +12982,7 @@ suffit	suff
 suggère	sugger
 suggèrent	sugg
 suis	suis
+suis-je	suis-j
 suisse	suiss
 suit	suit
 suite	suit
@@ -12626,6 +13008,7 @@ sup	sup
 supaero	supaero
 supagro	supagro
 super	sup
+super-cocotte	super-cocott
 supercalculateur	supercalcul
 supercalculateurs	supercalcul
 supercomputing	supercomputing
@@ -12732,7 +13115,6 @@ synthèses	synthes
 synthétiques	synthet
 synthétiser	synthétis
 synthétisée	synthétis
-synucléine	synucléin
 syphilis	syphil
 syphilitique	syphilit
 syrota	syrot
@@ -12820,6 +13202,7 @@ table	tabl
 tableau	tableau
 tableaux	tableau
 tables	tabl
+tables-rondes	tables-rond
 tablettes	tablet
 tactile	tactil
 tactiles	tactil
@@ -12837,6 +13220,7 @@ tandis	tand
 tango	tango
 tanin	tanin
 tank	tank
+tant	tant
 tantale	tantal
 tanzanie	tanzan
 tapissant	tapiss
@@ -12851,6 +13235,7 @@ tardives	tardiv
 tardé	tard
 targuer	targu
 tarn	tarn
+tarn-et-garonne	tarn-et-garon
 tarses	tars
 tarte	tart
 tas	tas
@@ -12864,7 +13249,7 @@ tech	tech
 technicien	technicien
 techniciens	technicien
 technicité	techniqu
-technico	technico
+technico-économie	technico-économ
 technique	techniqu
 technocampus	technocampus
 technolac	technolac
@@ -12926,10 +13311,11 @@ tenté	tent
 tenu	tenu
 tenue	tenu
 tequi	tequ
-tera	ter
+tera-octets	tera-octet
 teractec	teractec
 teratec	teratec
 terifiq	terifiq
+termes	term
 terminait	termin
 terminale	terminal
 terminaux	terminal
@@ -12943,6 +13329,7 @@ terre	terr
 terrena	terren
 terreo	terreo
 terres	terr
+terres-là	terres-là
 terrestre	terrestr
 terrestres	terrestr
 territoire	territoir
@@ -12965,7 +13352,6 @@ testées	test
 testés	test
 tetis	tet
 tev	tev
-tex	tex
 textes	text
 textile	textil
 textiles	textil
@@ -12995,7 +13381,6 @@ thin	thin
 think	think
 thinking	thinking
 thomas	thom
-thoracique	thorac
 through	through
 thème	them
 thèmes	them
@@ -13003,6 +13388,7 @@ thèse	thes
 thèses	thes
 thé	thé
 thématique	thémat
+thématique-phare	thématique-phar
 thématiques	thémat
 théorie	théor
 théories	théor
@@ -13024,6 +13410,8 @@ tiendra	tiendr
 tienne	tien
 tiennent	tiennent
 tient	tient
+tient-elle	tient-el
+tient-il	tient-il
 tiers	tier
 timbre	timbr
 timidité	timid
@@ -13060,6 +13448,7 @@ toile	toil
 tokamak	tokamak
 tokyo	tokyo
 toll	toll
+toll-like	toll-lik
 tolérance	toler
 tolérant	toler
 tolérantes	toler
@@ -13072,7 +13461,7 @@ tonalité	tonal
 tonne	ton
 tonnes	ton
 top	top
-topex	topex
+topex-poséidon	topex-poséidon
 topographie	topograph
 topographiques	topograph
 topography	topography
@@ -13088,15 +13477,17 @@ totalement	total
 totales	total
 totalise	totalis
 totalisent	totalisent
-totalité	total
 touchant	touch
 touche	touch
+touche-à-tout	touche-à-tout
 touchent	touchent
 toucher	touch
 touches	touch
 touché	touch
 touchés	touch
+toujours	toujour
 toulon	toulon
+toulon-var	toulon-var
 toulousain	toulousain
 toulousaine	toulousain
 toulousains	toulousain
@@ -13161,10 +13552,9 @@ train	train
 training	training
 trains	train
 trait	trait
-traitance	traitanc
 traitant	trait
-traitantes	trait
 traite	trait
+traitement	trait
 traitements	trait
 traiter	trait
 traitera	trait
@@ -13271,7 +13661,6 @@ trente	trent
 trentenaire	trentenair
 tri	tri
 triarylamines	triarylamin
-tribart	tribart
 tribologie	tribolog
 tribune	tribun
 tributaire	tributair
@@ -13303,9 +13692,7 @@ tropical	tropical
 tropicale	tropical
 tropicales	tropical
 tropicaux	tropical
-tropique	tropiqu
 tropiques	tropiqu
-tropiquesle	tropiquesl
 trossat	trossat
 trou	trou
 trouble	troubl
@@ -13345,6 +13732,7 @@ tumeurs	tumeur
 tumoral	tumoral
 tumorales	tumoral
 tungsten	tungsten
+tungsten-w	tungsten-w
 tungstène	tungsten
 tungstènea	tungsten
 tunisie	tunis
@@ -13371,7 +13759,7 @@ tâche	tâch
 tâches	tâch
 télescope	télescop
 télescopes	télescop
-télé	tel
+télé-épidémiologie	télé-épidémiolog
 télécom	télécom
 télécommunications	télécommun
 télécoms	télécom
@@ -13410,25 +13798,28 @@ ulis	ulis
 ulm	ulm
 ultime	ultim
 ultra	ultra
+ultra-minces	ultra-minc
+ultra-pure	ultra-pur
+ultra-sensible	ultra-sensibl
 ultrasons	ultrason
 ultraviolet	ultraviolet
 ultérieurement	ultérieur
 umami	umam
 umi	umi
+umi-ess	umi-ess
 umpc	umpc
 umr	umr
 umt	umt
 unanimité	unanim
 unes	une
 unesco	unesco
-uni	uni
 unies	uni
 uniformes	uniform
 union	union
+unique	uniqu
 uniquement	uniqu
 uniques	uniqu
 unir	unir
-unis	unis
 unitaire	unitair
 unitaires	unitair
 united	united
@@ -13446,10 +13837,10 @@ unmanned	unmanned
 unrpa	unrpa
 uns	un
 up	up
+up-tex	up-tex
 up1	up1
 upec	upec
 upmc	upmc
-upprésident	upprésident
 ups	up
 ur10	ur10
 uranium	uranium
@@ -13470,7 +13861,6 @@ urgentiste	urgent
 urgentistes	urgent
 urgents	urgent
 url	url
-urtal	urtal
 us	us
 usage	usag
 usages	usag
@@ -13503,6 +13893,8 @@ utérus	utérus
 uv	uv
 uvsq	uvsq
 v	v
+va-t-elle	va-t-el
+va-t-il	va-t-il
 vacccin	vacccin
 vaccin	vaccin
 vaccination	vaccin
@@ -13512,10 +13904,11 @@ vagues	vagu
 vaimos	vaimos
 vain	vain
 vaines	vain
-vaison	vaison
+vaison-la-romaine	vaison-la-romain
 vaisseau	vaisseau
 vaisseaux	vaisseau
 val	val
+val-de-marne	val-de-marn
 valence	valenc
 valencia	valenci
 valenciennes	valencien
@@ -13575,10 +13968,10 @@ vastes	vast
 vaucluse	vauclus
 vaudra	vaudr
 vaut	vaut
+vaut-il	vaut-il
 veau	veau
 vecteur	vecteur
 vecteurs	vecteur
-vectoriser	vectoris
 vectorisée	vectoris
 vega	veg
 vegepolys	vegepoly
@@ -13604,7 +13997,6 @@ venons	venon
 vent	vent
 vente	vent
 ventes	vent
-ventral	ventral
 vents	vent
 venture	ventur
 ventures	ventur
@@ -13643,10 +14035,10 @@ vertueux	vertueux
 vertus	vertus
 vertébrale	vertébral
 verwaerde	verwaerd
-very	very
+very-large-scale-integration	very-large-scale-integr
 vestiges	vestig
 veulent	veulent
-veurey	veurey
+veurey-voroize	veurey-voroiz
 veut	veut
 veux	veux
 vi	vi
@@ -13656,13 +14048,15 @@ viables	viabl
 viagora	viagor
 vialou	vialou
 viande	viand
-viandes	viand
 vias	vi
 vibration	vibrat
 vibrations	vibrat
 vibratoire	vibratoir
 vibreurs	vibreur
 vice	vic
+vice-président	vice-président
+vice-présidents	vice-président
+vice-recteur	vice-recteur
 victimes	victim
 victoire	victoir
 vidar	vidar
@@ -13687,7 +14081,6 @@ vignoble	vignobl
 vignobles	vignobl
 vignon	vignon
 vikings	viking
-vilaine	vilain
 vilarem	vilarem
 vilhena	vilhen
 village	villag
@@ -13704,8 +14097,7 @@ vinautre	vinautr
 vinci	vinc
 vingt	vingt
 vingtaine	vingtain
-vini	vin
-vinicole	vinicol
+vini-viticole	vini-viticol
 vinicoles	vinicol
 viniculture	vinicultur
 vinification	vinif
@@ -13730,9 +14122,10 @@ virtuelles	virtuel
 virtuels	virtuel
 virus	virus
 vis	vis
+vis-à-vis	vis-à-v
 visage	visag
 visant	vis
-visco	visco
+visco-élastiques	visco-élast
 viscosité	viscos
 vise	vis
 visent	visent
@@ -13766,7 +14159,7 @@ vitamines	vitamin
 vite	vit
 vitesse	vitess
 vitesses	vitess
-viti	vit
+viti-vinicole	viti-vinicol
 viticole	viticol
 viticoles	viticol
 viticulteurs	viticulteur
@@ -13789,7 +14182,7 @@ vivons	vivon
 vivrait	vivr
 vivre	vivr
 vivrières	vivri
-vivrons	vivron
+vivrons-nous	vivrons-nous
 vième	viem
 vladimir	vladim
 vlsi	vlsi
@@ -13834,7 +14227,6 @@ volumes	volum
 volumineux	volumin
 volée	vol
 von	von
-voroize	voroiz
 vos	vos
 votre	votr
 voulais	voul
@@ -13844,7 +14236,7 @@ voulions	voulion
 vouloir	vouloir
 voulons	voulon
 voulu	voulu
-vousc	vousc
+vous	vous
 voyage	voyag
 voyager	voyag
 voyages	voyag
@@ -13893,7 +14285,6 @@ vétérinaire	vétérinair
 vétérinaires	vétérinair
 vêtements	vêt
 vôtres	vôtr
-w	w
 waard	waard
 wafers	wafer
 wageningen	wageningen
@@ -13954,15 +14345,10 @@ yonne	yon
 york	york
 yttrium	yttrium
 yunus	yunus
-yvelines	yvelin
 yves	yve
-yvette	yvet
-z23	z23
-z9a	z9a
-zefiro	zefiro
-zetawatt	zetawatt
-zetta	zet
-zettawatt	zettawatt
+zefiro-z23	zefiro-z23
+zefiro-z9a	zefiro-z9
+zetta-exawatt	zetta-exawatt
 zimmer	zimm
 zirconium	zirconium
 ziziphus	ziziphus
@@ -13974,10 +14360,8 @@ zoologie	zoolog
 zoologique	zoolog
 zuckerberg	zuckerberg
 zébus	zébus
-zélande	zéland
 zéro	zéro
 zérodur	zérodur
-ß	ß
 âge	âge
 âges	âge
 âgé	âgé
@@ -14001,7 +14385,6 @@ zérodur	zérodur
 échantillon	échantillon
 échantillonnage	échantillonnag
 échantillonner	échantillon
-échantillonnées	échantillon
 échantillons	échantillon
 échappent	échappent
 échappez	échapp
@@ -14018,7 +14401,9 @@ zérodur	zérodur
 éclairés	éclair
 éclater	éclat
 éclore	éclor
-éco	éco
+éco-conception	éco-concept
+éco-efficients	éco-efficient
+éco-extraction	éco-extract
 école	écol
 écoles	écol
 écoliers	écoli
@@ -14080,7 +14465,6 @@ zérodur	zérodur
 élargi	élarg
 élargie	élarg
 élargir	élarg
-élastiques	élast
 élastographie	élastograph
 élastomère	élastomer
 élection	élect
@@ -14126,6 +14510,7 @@ zérodur	zérodur
 élucider	élucid
 élus	élus
 élève	élev
+élève-ingénieur	élève-ingénieur
 élèvent	élèvent
 élèves	élev
 élégance	éleg
@@ -14212,6 +14597,7 @@ zérodur	zérodur
 équilibrés	équilibr
 équine	équin
 équipage	équipag
+équipe-projet	équipe-projet
 équipement	équip
 équipements	équip
 équipent	équipent
@@ -14238,9 +14624,9 @@ zérodur	zérodur
 étage	étag
 étages	étag
 étaient	étaient
+étaient-elles	étaient-el
 étais	étais
 étalant	étal
-étalon	étalon
 étalonnage	étalonnag
 étalés	étal
 étanche	étanch
@@ -14271,6 +14657,7 @@ zérodur	zérodur
 étonnante	éton
 étonnantes	éton
 étonne	éton
+étonne-t-ilcette	étonne-t-ilcet
 étonnement	éton
 étonnera	éton
 étrange	étrang

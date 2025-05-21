@@ -6,7 +6,6 @@ import spacy
 import pandas as pd
 from nltk.stem.snowball import FrenchStemmer
 from lxml import etree
-from tqdm import tqdm
 from anti_dictionnary import create_clean_xml_corpus
 from utils import tokenize
 
@@ -105,12 +104,20 @@ def compute_stats_lemma(algo: str, input_file: str) -> None:
     if algo == "spacy":
         create_lemma_spacy(input_file, "data/lemma_spacy.txt")
         lemma_dataframe = pd.read_csv(
-            "data/lemma_spacy.txt", sep="→", header=None, names=["word", "lemma"], engine='python'
+            "data/lemma_spacy.txt",
+            sep="→",
+            header=None,
+            names=["word", "lemma"],
+            engine="python",
         )
     elif algo == "stemmer":
         create_lemma_stemmer(input_file, "data/lemma_stemmer.txt")
         lemma_dataframe = pd.read_csv(
-            "data/lemma_stemmer.txt", sep="→", header=None, names=["word", "lemma"], engine='python'
+            "data/lemma_stemmer.txt",
+            sep="→",
+            header=None,
+            names=["word", "lemma"],
+            engine="python",
         )
     else:
         raise ValueError(f"Algorithme '{algo}' n'existe pas.")
@@ -148,7 +155,9 @@ def complete_subs_file(lemma_file: str, subs_file: str) -> None:
 
 if __name__ == "__main__":
     print("Nouvelle segmentation du corpus...")
-    extract_words_from_xml("data/corpus_wo_stopwords.xml", "data/words_segmentation_clean.txt")
+    extract_words_from_xml(
+        "data/corpus_wo_stopwords.xml", "data/words_segmentation_clean.txt"
+    )
     print("Lemmatisation avec Spacy...")
     create_lemma_spacy("data/words_segmentation_clean.txt", "data/lemma_spacy.txt")
     print("Lemmatisation avec SnowBall...")
