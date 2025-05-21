@@ -41,11 +41,18 @@ Il permet d’indexer, traiter et rechercher des articles à partir d’un corpu
 │ ├── initial/ # Bulletins et images d'origine  
 │ └── (autres fichiers générés dans le projet)  
 └── images/ # Images initiales du projet  
-└── icon.png # Icône pour l'interface  
+└── icon.png # Icône pour l'interface   
 
 Tous les scripts situés dans le dossier src/ peuvent être exécutés séparément.
 Ils fonctionnent chacun de manière autonome, ce qui vous permet de tester et visualiser le traitement étape par étape.
-Cela est particulièrement utile si vous souhaitez comprendre ou valider chaque phase du projet avant d’utiliser l’interface graphique. 
+Cela est particulièrement utile si vous souhaitez comprendre ou valider chaque phase du projet avant d’utiliser l’interface graphique.   
+
+Pour générer les fichiers du projet, veuillez suivre les étapes suivantes :
+- Etape 1 : lancer data_parser.py
+- Etape 2 : lancer segmente.py
+- Etape 3 : lancer anti_dictionnary.py
+- Etape 4 : lancer lemmatize.py
+- Etape 5 : lancer inverted_index.py
 ---
 
 ## Installation
