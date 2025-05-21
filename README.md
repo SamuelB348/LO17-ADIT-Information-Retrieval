@@ -35,9 +35,9 @@ Il permet d’indexer, traiter et rechercher des articles à partir d’un corpu
 │ ├── spellchecker.py # Correction orthographique  
 │ ├── substitue.py # Gestion des synonymes  
 │ ├── traitement_requete.py # Traitement des requêtes utilisateur  
-│ ├── moteur.py # Moteur de recherche principal
-│ └── utils.py # Fonctions utilitaires
-├── data/ # Dossier contenant les données générées
+│ ├── moteur.py # Moteur de recherche principal  
+│ └── utils.py # Fonctions utilitaires  
+├── data/ # Dossier contenant les données générées  
 │ ├── initial/ # Bulletins et images d'origine  
 │ └── (autres fichiers générés dans le projet)  
 └── images/ # Images initiales du projet  
