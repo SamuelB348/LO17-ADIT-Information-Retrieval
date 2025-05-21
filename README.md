@@ -43,6 +43,10 @@ Il permet d’indexer, traiter et rechercher des articles à partir d’un corpu
 └── images/ # Images initiales du projet  
 └── icon.png # Icône pour l'interface  
 
+Tous les scripts situés dans le dossier src/ peuvent être exécutés séparément.
+Ils fonctionnent chacun de manière autonome, ce qui vous permet de tester et visualiser le traitement étape par étape.
+Cela est particulièrement utile si vous souhaitez comprendre ou valider chaque phase du projet avant d’utiliser l’interface graphique.  
+
 ## Installation
 
 Avant toute chose, il est nécessaire d’installer les dépendances Python listées dans `requirements.txt`.  
@@ -51,5 +55,14 @@ Exécutez la commande suivante dans votre terminal :
 ```bash
 pip install -r requirements.txt
 
-## Comment utiliser notre interface
+## Utilisation de l'interface
 
+Pour lancer l’interface graphique, exécutez la commande suivante dans le terminal :
+
+```bash
+python src/interface.py
+
+Les temps d’exécution rapportés dans le rapport pour le traitement des requêtes via la fonction moteur.py ont été mesurés sur Google Colab.
+
+En local, les temps moyens restent relativement similaires.
+Il ne faut pas s’inquiéter si l’exécution est légèrement plus longue de votre côté, cela dépend notamment des performances de votre machine.
