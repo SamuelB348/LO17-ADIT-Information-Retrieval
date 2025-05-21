@@ -1,9 +1,9 @@
 # LO17-ADIT-Information-Retrieval
 
+## Description
 
-## Description du projet
-
-Ce projet est un système de recherche d'information développé dans le cadre du cours LO17 à l'ADIT. Il permet d'effectuer des recherches sur un corpus de bulletins avec une interface graphique intuitive, basée sur Tkinter.
+Ce projet est un moteur de recherche d’informations développé dans le cadre du cours LO17 à l’ADIT.  
+Il permet d’indexer, traiter et rechercher des articles à partir d’un corpus de bulletins, avec une interface graphique intuitive.
 
 ---
 
@@ -11,39 +11,42 @@ Ce projet est un système de recherche d'information développé dans le cadre d
 
 À la racine du projet, on trouve :
 
-- `bulletin.zip` : archive contenant les données initiales.
-- `.gitignore` : fichier de gestion des fichiers à ignorer par Git.
+- `bulletin.zip` : archive contenant les données initiales (bulletins et images associées).
+- `.gitignore` : fichier pour exclure certains fichiers du suivi Git.
 - `requirements.txt` : liste des dépendances Python nécessaires au projet.
-- `src/` : dossier principal contenant les scripts Python du projet.
-- `images/` : dossier contenant les images utilisées, notamment `icon.png` pour l’interface.
-- `data/` : dossier contenant les fichiers générés par le projet.
-- `data/initia/` : sous-dossier avec les bulletins initiaux et leurs images associées.
+- `src/` : dossier principal contenant tous les scripts Python, organisés pour faciliter le développement et les tests.
+- `images/` : contient les icônes utilisées pour l’interface graphique (notamment `icon.png`).
+- `data/` : contient tous les fichiers générés lors de l’exécution du projet ainsi que le dossier `initial/` avec les bulletins et images sources.
 
 ---
 
-### Contenu du dossier `src/`
+### Structure détaillée du projet
 
-Ce dossier contient les différentes fonctions et scripts, qui peuvent être lancés séparément pour tester chaque étape du projet :
-
-- `anti_dictionnaire.py` (ou `anti_dictionnaire.py`)  
-- `data_parser.py`  
-- `interface.py`  
-- `inverted_index.py`  
-- `lemmatize.py`  
-- `segmente.py`  
-- `spellchecker.py`  
-- `substitue.py`  
-- `traitement_requete.py`  
-- `moteur.py`  
-- `utils.py`  
-
----
+├── bulletin.zip # Archive contenant les bulletins initiaux
+├── .gitignore # Fichier Git pour ignorer certains fichiers
+├── requirements.txt # Dépendances Python nécessaires
+├── src/
+│ ├── anti_dictionnaire.py # Filtrage des mots vides
+│ ├── data_parser.py # Parsing des données brutes
+│ ├── interface.py # Interface graphique (Tkinter)
+│ ├── inverted_index.py # Index inversé pour la recherche
+│ ├── lemmatize.py # Lemmatisation des termes
+│ ├── segmente.py # Segmentation du texte
+│ ├── spellchecker.py # Correction orthographique
+│ ├── substitue.py # Gestion des synonymes
+│ ├── traitement_requete.py # Traitement des requêtes utilisateur
+│ ├── moteur.py # Moteur de recherche principal
+│ └── utils.py # Fonctions utilitaires
+├── data/ # Dossier contenant les données générées
+│ ├── initial/ # Bulletins et images d'origine
+│ └── (autres fichiers générés)
+└── images/
+└── icon.png # Icône pour l'interface
 
 ## Installation
 
-Avant de lancer le projet, il est nécessaire d'installer les dépendances Python. Celles-ci sont listées dans le fichier `requirements.txt`.
-
-Pour installer les modules requis, exécutez la commande suivante dans votre terminal :
+Avant toute chose, il est nécessaire d’installer les dépendances Python listées dans `requirements.txt`.  
+Exécutez la commande suivante dans votre terminal :
 
 ```bash
 pip install -r requirements.txt
