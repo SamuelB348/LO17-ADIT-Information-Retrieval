@@ -22,25 +22,25 @@ Il permet d’indexer, traiter et rechercher des articles à partir d’un corpu
 
 ### Structure détaillée du projet
 
-├── bulletin.zip # Archive contenant les bulletins initiaux
-├── .gitignore # Fichier Git pour ignorer certains fichiers
-├── requirements.txt # Dépendances Python nécessaires
-├── src/ # Scripts source du projet
-│ ├── anti_dictionnaire.py # Filtrage des mots vides
-│ ├── data_parser.py # Parsing des données brutes
-│ ├── interface.py # Interface graphique (Tkinter)
-│ ├── inverted_index.py # Index inversé pour la recherche
-│ ├── lemmatize.py # Lemmatisation des termes
-│ ├── segmente.py # Segmentation du texte
-│ ├── spellchecker.py # Correction orthographique
-│ ├── substitue.py # Gestion des synonymes
-│ ├── traitement_requete.py # Traitement des requêtes utilisateur
+├── bulletin.zip # Archive contenant les bulletins initiaux  
+├── .gitignore # Fichier Git pour ignorer certains fichiers  
+├── requirements.txt # Dépendances Python nécessaires  
+├── src/ # Scripts source du projet  
+│ ├── anti_dictionnaire.py # Filtrage des mots vides  
+│ ├── data_parser.py # Parsing des données brutes  
+│ ├── interface.py # Interface graphique (Tkinter)  
+│ ├── inverted_index.py # Index inversé pour la recherche  
+│ ├── lemmatize.py # Lemmatisation des termes  
+│ ├── segmente.py # Segmentation du texte  
+│ ├── spellchecker.py # Correction orthographique  
+│ ├── substitue.py # Gestion des synonymes  
+│ ├── traitement_requete.py # Traitement des requêtes utilisateur  
 │ ├── moteur.py # Moteur de recherche principal
 │ └── utils.py # Fonctions utilitaires
 ├── data/ # Dossier contenant les données générées
 │ ├── initial/ # Bulletins et images d'origine  
-│ └── (autres fichiers générés)  
-└── images/ # Images utilisées par le projet  
+│ └── (autres fichiers générés dans le projet)  
+└── images/ # Images initiales du projet  
 └── icon.png # Icône pour l'interface  
 
 ## Installation
@@ -50,3 +50,6 @@ Exécutez la commande suivante dans votre terminal :
 
 ```bash
 pip install -r requirements.txt
+
+## Comment utiliser notre interface
+
