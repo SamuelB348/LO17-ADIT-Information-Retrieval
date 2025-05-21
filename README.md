@@ -26,7 +26,7 @@ Il permet d’indexer, traiter et rechercher des articles à partir d’un corpu
 ├── .gitignore # Fichier Git pour ignorer certains fichiers  
 ├── requirements.txt # Dépendances Python nécessaires  
 ├── src/ # Scripts source du projet  
-│ ├── anti_dictionnaire.py # Filtrage des mots vides  
+│ ├── anti_dictionnary.py # Filtrage des mots vides  
 │ ├── data_parser.py # Parsing des données brutes  
 │ ├── interface.py # Interface graphique (Tkinter)  
 │ ├── inverted_index.py # Index inversé pour la recherche  
