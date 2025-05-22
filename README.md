@@ -18,7 +18,7 @@ Il permet d’indexer, traiter et rechercher des articles à partir d’un corpu
 
 Dans le dossier src, on trouve :
 - `images/` : contient les icônes utilisées pour l’interface graphique (notamment `icon.png`).
-- `data/` : contient tous les fichiers générés lors de l’exécution du projet ainsi que le dossier `initial/` avec les bulletins et images sources.
+- `data/` : contient tous les fichiers générés lors de l’exécution du projet ainsi que le dossier `BULLETINS/` avec les bulletins et images sources.
 - les fichiers python du projet
 
 ---
@@ -45,7 +45,7 @@ Dans le dossier src, on trouve :
 │   ├── eval.py                 # Evaluation du moteur de recherche principal    
 │   ├── utils.py                # Fonctions utilitaires  
 │   ├── data/                   # Données générées et sources  
-│   │   ├── BULLETINS            # Bulletins et images d'origine  
+│   │   ├── BULLETINS/            # Bulletins et images d'origine  
 │   │   └── (tous les autres fichiers générés)  
 │   └── images/                 # Images pour l’interface  
 │       └── icon.png            # Icône de l’interface  
