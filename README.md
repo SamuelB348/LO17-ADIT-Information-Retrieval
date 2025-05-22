@@ -25,7 +25,7 @@ Dans le dossier src, on trouve :
 
 ### Structure détaillée du projet
 
-/ (racine)
+/ (racine)  
 ├── BULLETINS.zip          # Archive contenant les bulletins initiaux
 ├── .gitignore             # Fichier Git pour ignorer certains fichiers
 ├── requirements.txt       # Liste des dépendances Python
