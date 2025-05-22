@@ -5,30 +5,29 @@ Fonction principale qui permet la recherche d'information à partir d'une requê
 import re
 import calendar
 from datetime import datetime
+from typing import Tuple
 import pandas as pd
 from queries import clean_query, traitement_requete, replace_soit
 from spellchecker import correcteur_orthographique
 
 
-def get_last_day_of_month(year, month):
+def get_last_day_of_month(year: int, month: int) -> int:
     """
-    Desc.
-    :param year:
-    :param month:
-    :return:
+    Renvoie le dernier numéro de jour d'une mois, pour une année donnée.
+    :param year: L'année.
+    :param month: Le mois.
+    :return: Un numéro.
     """
-    # Pour le mois et l'année donnés, on renvoie le dernier jour du mois
-    # calendar.monthrange renvoie un tuple (numéro du jour de la semaine pour le 1er jour du mois,
-    # nombre de jours dans le mois)
     _, last_day = calendar.monthrange(year, month)
     return last_day
 
 
-def get_min_max_dates(date_str):
+def get_min_max_dates(date_str: str) -> Tuple[str, str]:
     """
-    Description.
-    :param date_str:
-    :return:
+    Renvoie un range de dates à partir d'un pattern de date.
+    Ex : 2012-**-** → {2012-01-01, 2012-12-31}
+    :param date_str: Une date sous forme de chaîne de caractères.
+    :return: Un tuple (date minimale, date maximale)
     """
     # Nettoyage de la chaîne de caractères pour enlever les étoiles
     cleaned_date = date_str.replace("*", "")
@@ -59,9 +58,11 @@ def get_min_max_dates(date_str):
 
 def replace_min_and_max(date_dict):
     """
-    Description.
-    :param date_dict:
-    :return:
+    Permet d'avoir des dates exactes dans un dictionnaire contenant des dates
+    minimales et maximales sous forme de pattern.
+    Ex : {'min' : 2012-**-**} → {'min' : 2012-01-01}
+    :param date_dict: Le dictionnaire de dates.
+    :return: Le dictionnaire modifié
     """
     if "min" in date_dict:
         date_dict["min"] = date_dict["min"].replace("*", "")
@@ -102,15 +103,17 @@ def replace_min_and_max(date_dict):
         date_dict["max"] = date_dict["max"].strftime("%d/%m/%Y")
 
 
-def moteur(requete_langage_naturel):
+def moteur(query):
     """
-    Description.
-    :param requete_langage_naturel:
-    :return:
+    Moteur de recherche de la base d'information de l'ADIT.
+    Il reçoit en entrée une requête, la traite, la transforme en requête structurée
+    puis parcourt l'index inversé intelligemment pour renvoyer les résultats.
+    :param query: La requête à traiter.
+    :return: Un tuple (set de résultats, type de doc à retourner)
     """
 
     liste_required = []
-    composants = traitement_requete(clean_query(replace_soit(requete_langage_naturel)))
+    composants = traitement_requete(clean_query(replace_soit(query)))
     print(composants)
 
     if composants["titre"] is not None:
@@ -139,7 +142,6 @@ def moteur(requete_langage_naturel):
                         word[4:], "data/lemma_stemmer.txt", 1, 12, 54
                     ).strip()
                 )
-        # Etape 3
 
     with open("data/index_inverse.txt", "r", encoding="utf-8") as f:
         lignes = f.readlines()
@@ -218,30 +220,34 @@ def moteur(requete_langage_naturel):
             docs_date.remove(doc)
     docs_date = set(docs_date)
 
-    # Etape 4
     dico_rubriques = {
         "focus": "focus",
-        "au coeur regions" : "au coeur des régions",
-        "evenement" : "evénement",
-        "evénement" : "evénement",
-        "événement" : "événement",
-        "actualité innovation" : "actualité innovation",
-        "actualités innovation" : "actualités innovation",
+        "au coeur regions": "au coeur des régions",
+        "evenement": "evénement",
+        "evénement": "evénement",
+        "événement": "evénement",
+        "actualité innovation": "actualité innovation",
+        "actualités innovation": "actualités innovation",
         "actualités innovations": "actualités innovations",
-        "direct laboratoires" : "en direct des laboratoires",
+        "direct laboratoires": "en direct des laboratoires",
         "direct labos": "en direct des labos",
-        "a lire" : "a lire",
-        "horizon enseignement" : "horizon enseignement",
-        "horizons enseignement" : "horizons enseignement",
+        "a lire": "a lire",
+        "horizon enseignement": "horizon enseignement",
+        "horizons enseignement": "horizons enseignement",
         "horizons formation enseignement": "horizon formation enseignement",
         "horizon formation": "horizon formation",
-        "côté pôles" : "du côté des pôles",
+        "côté pôles": "du côté des pôles",
     }
     docs_rubrique = []
     if composants["rubriques"] is not None and composants["rubriques"]:
         liste_required.append("rubrique")
         for rubrique in composants["rubriques"]:
-            docs_rubrique += df[df[0] == dico_rubriques[rubrique]].iloc[:, 1:].values.flatten().tolist()
+            docs_rubrique += (
+                df[df[0] == dico_rubriques[rubrique]]
+                .iloc[:, 1:]
+                .values.flatten()
+                .tolist()
+            )
         docs_rubrique = [
             doc for doc in docs_rubrique if doc is not None and pd.notna(doc)
         ]
@@ -252,11 +258,14 @@ def moteur(requete_langage_naturel):
         if element_type != "rubrique":
             docs_rubrique.remove(doc)
 
-    docs_titre = set()
+    docs_titre = df.iloc[:, 1:].values.flatten().tolist()
+    docs_titre = [doc for doc in docs_titre if doc is not None and pd.notna(doc)]
+    docs_titre = set(docs_titre)
     if composants["titre"] is not None:
         liste_required.append("titre")
         titre_nettoye = composants["titre"].strip()  # retire les espaces en trop
-        docs_titre = df[df[0] == titre_nettoye].iloc[:, 1:].values.flatten().tolist()
+        for word in titre_nettoye.split(" "):
+            docs_titre &= set(df[df[0] == word].iloc[:, 1:].values.flatten().tolist())
         docs_titre = [doc for doc in docs_titre if doc and pd.notna(doc)]
 
         # Filtrage des docs de type 'titre'
@@ -272,7 +281,6 @@ def moteur(requete_langage_naturel):
         # Extraction des doc_id sans espace
         docs_titre = set(doc.split(":")[0].strip() for doc in docs_titre if ":" in doc)
 
-    docs_contenu = set()
     if composants["contenu"] is not None:
         liste_required.append("contenu")
         contenu_nettoye = composants["contenu"].strip()
@@ -367,16 +375,15 @@ def moteur(requete_langage_naturel):
                 df[df[0] == keyword].iloc[:, 1:].values.flatten().tolist()
             )
 
-    # print(docs_keywords)
-    # print(docs_date)
-    # print(docs_rubrique)
-    # IMAGES
     docs_image = []
     if composants["image"] is not None:
         liste_required.append("images")
-        docs_image += (
-            df[df[0] == "presence_image"].iloc[:, 1:].values.flatten().tolist()
-        )
+        if composants["image"] == 1:
+            docs_image += (
+                df[df[0] == "presence_image"].iloc[:, 1:].values.flatten().tolist()
+            )
+        else:
+            docs_image += df[df[0] == "pas_image"].iloc[:, 1:].values.flatten().tolist()
         docs_image = [doc for doc in docs_image if doc is not None and pd.notna(doc)]
 
     docs_date = set(doc.split(":")[0] for doc in docs_date)
@@ -398,7 +405,7 @@ def moteur(requete_langage_naturel):
             docs_possibles.append(docs_contenu)
         elif required == "keywords":
             docs_possibles.append(docs_keywords)
-        elif required == "image":
+        elif required == "images":
             docs_possibles.append(docs_image)
 
     print(f"Docs sur keywords : {docs_keywords}")

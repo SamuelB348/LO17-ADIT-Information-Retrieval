@@ -5,7 +5,7 @@ Fonctions pour le traitement des requêtes.
 import string
 import re
 from datetime import datetime
-from typing import Tuple, List
+from typing import Tuple, List, Dict
 
 
 def clean_query(query: str) -> str:
@@ -19,6 +19,7 @@ def clean_query(query: str) -> str:
         "je",
         "non",
         "mentionnent",
+        "domaine",
         "propos",
         "fois",
         "d",
@@ -74,13 +75,16 @@ def clean_query(query: str) -> str:
         "sont",
         "la",
         "un",
+        "une",
         "liste",
         "projet",
         "les",
         "afficher",
         "obtenir",
         "voir",
+        "ecole",
         "veux",
+        "ville",
         "donner",
         "chercher",
         "nous",
@@ -91,21 +95,22 @@ def clean_query(query: str) -> str:
         "rechercher",
         "recherches",
         "écrits",
-        "j’aimerais",
+        "aimerais",
         "dans",
         "quelles",
         "tout",
         "tous",
         "l",
+        "j",
         "souhaites",
         "mots",
+        "bi-mot",
         "lister",
         "trouver",
         "quelle",
         "listez-moi",
         "retournez",
         "retourner",
-        "d’",
         "parle",
         "sur",
     ]
@@ -217,7 +222,7 @@ def extract_keywords(query: str) -> List[str]:
     # 1. Normaliser les apostrophes
     query = query.replace("’", "'")
 
-    # 2. Séparer les mots comme d'ingénieurs → d ingénieurs
+    # 2. Séparer les mots avec apostrophes comme d'ingénieurs → d ingénieurs
     query = re.sub(r"\b(d|l|qu|n|s|c|j|t)'", r"\1 ", query, flags=re.IGNORECASE)
 
     words = re.findall(r"\b\w+(?:-\w+)*\b", query)
@@ -242,16 +247,17 @@ def extract_keywords(query: str) -> List[str]:
     return keywords
 
 
-def extract_titre(text):
+def extract_titre(query: str) -> Tuple[str, str]:
     """
-    Description.
-    :param text:
-    :return:
+    Extrait une chaîne de caractère si le titre est mentionné
+    dans la requête.
+    :param query: La requête à analyser.
+    :return: Un tuple (titre, requête sans titre)
     """
     titre = None
 
-    # cas titre avec du contenu entre « » ou " " ou ' '
-    m = re.search(r'\btitre\s+(["«\'])(.+?)["»\']', text)
+    # Cas "titre" + contenu entre « » ou " " ou ' '
+    m = re.search(r'\btitre\s+(["«\'])(.+?)["»\']', query)
     if m:
         titre = m.group(2)
         # Supprimer 'titre «...», titre "...", titre '...'
@@ -264,52 +270,56 @@ def extract_titre(text):
             + ("»" if m.group(1) == "«" else re.escape(m.group(1)))
             + r"]"
         )
-        text = re.sub(pattern, "", text, count=1)
+        query = re.sub(pattern, "", query, count=1)
     else:
-        # cas 'titre mot'
-        m = re.search(r"\btitre\s+(\S+)", text)
+        # Cas "titre" + <mot>
+        m = re.search(r"\btitre\s+(\S+)", query)
         if m:
             titre_candidate = m.group(1)
             titre = titre_candidate
-            text = re.sub(r"\btitre\s+" + re.escape(titre_candidate), "", text, count=1)
+            query = re.sub(
+                r"\btitre\s+" + re.escape(titre_candidate), "", query, count=1
+            )
 
-    # cas mot avant "titre" (si titre est en dernier)
+    # Cas <mot> + "titre" (si titre est en dernier)
     if not titre:
-        m = re.search(r"\b(\w+)\s+titre\b", text)
+        m = re.search(r"\b(\w+)\s+titre\b", query)
         if m:
             titre = m.group(1)
-            text = re.sub(r"\b" + re.escape(titre) + r"\s+titre\b", "", text, count=1)
+            query = re.sub(r"\b" + re.escape(titre) + r"\s+titre\b", "", query, count=1)
 
-    text_clean = re.sub(r"\s+", " ", text).strip()
+    text_clean = re.sub(r"\s+", " ", query).strip()
 
     return titre, text_clean
 
 
-def extract_contenu(text):
+def extract_contenu(query: str) -> Tuple[str, str]:
     """
-    Description.
-    :param text:
+    Extrait un mot en lien avec le contenu si le mot "contenu"
+    est présent explicitement dans la requête.
+    :param query:
     :return:
     """
     contenu = None
-    # Chercher "contenu <mot>"
-    m = re.search(r"\bcontenu\s+(\S+)", text)
+    # Chercher "contenu" + <mot>
+    m = re.search(r"\bcontenu\s+(\S+)", query)
     if m:
         contenu = m.group(1)
         # Supprimer "contenu <mot>" du texte
-        text = re.sub(r"\bcontenu\s+" + re.escape(contenu), "", text, count=1)
-    text_clean = re.sub(r"\s+", " ", text).strip()
+        query = re.sub(r"\bcontenu\s+" + re.escape(contenu), "", query, count=1)
+    text_clean = re.sub(r"\s+", " ", query).strip()
     return contenu, text_clean
 
 
-def extract_date_info(text):
+def extract_date_info(query: str) -> Tuple[Dict[str, str] | None, str]:
     """
-    Description.
-    :param text:
-    :return:
+    Extrait toutes les informations de dates dans une requête pour les convertir
+    en un format standard.
+    :param query: La requête à analyser.
+    :return: Un tuple (dates, requête sans les dates)
     """
-    original_text = text
-    text = text.lower()
+    original_text = query
+    query = query.lower()
     mois_fr = {
         "janvier": "01",
         "février": "02",
@@ -345,14 +355,14 @@ def extract_date_info(text):
             try:
                 d = datetime.strptime(m.group(1), "%d%m%Y")
                 return d.strftime("%Y-%m-%d")
-            except:
+            except ValueError:
                 return None
         m = re.match(r"(19|20)\d{2}", date_text)
         if m:
             return f"{m.group(0)}-**-**"
         return None
 
-    def clean_query_only_keywords(text):
+    def clean_query_from_dates(requete: str) -> str:
         mois_pattern = "|".join(
             [
                 "janvier",
@@ -372,28 +382,30 @@ def extract_date_info(text):
                 "decembre",
             ]
         )
-        text = re.sub(r"\b\d{1,2}\s+(" + mois_pattern + r")\s+\d{4}\b", "", text)
-        text = re.sub(r"\b(" + mois_pattern + r")\s+\d{4}\b", "", text)
-        text = re.sub(
+        requete = re.sub(r"\b\d{1,2}\s+(" + mois_pattern + r")\s+\d{4}\b", "", requete)
+        requete = re.sub(r"\b(" + mois_pattern + r")\s+\d{4}\b", "", requete)
+        requete = re.sub(
             r"\b(au mois de|au mois|en|de|du|dans)\s+(" + mois_pattern + r")\b",
             "",
-            text,
+            requete,
         )
-        text = re.sub(r"\b(19|20)\d{2}\b", "", text)
-        text = re.sub(r"\b\d{8}\b", "", text)  # important pour enlever 14062013 etc.
-        text = re.sub(
-            r"\b(entre|et|avant|après|apres|d’après|d\'apres|depuis|pas au mois de|au mois|mois|à partir)\b",
+        requete = re.sub(r"\b(19|20)\d{2}\b", "", requete)
+        requete = re.sub(
+            r"\b\d{8}\b", "", requete
+        )  # important pour enlever 14062013 etc.
+        requete = re.sub(
+            r"\b(entre|et|avant|après|apres|d’après|d\'apres|année|depuis|pas au mois de|au mois|mois|à partir)\b",
             "",
-            text,
+            requete,
         )
-        text = re.sub(r"\s+", " ", text)
-        return text.strip()
+        requete = re.sub(r"\s+", " ", requete)
+        return requete.strip()
 
     result = {}
 
     # Cas 0 : exclusion avec "pas"
     m = re.search(
-        r"pas\s+(au mois de|au mois|en|de|du)?\s*([a-zéèêç]+)(?:[\s,\.]|$)", text
+        r"pas\s+(au mois de|au mois|en|de|du)?\s*([a-zéèêç]+)(?:[\s,\.]|$)", query
     )
     if m:
         mot = m.group(2)
@@ -401,7 +413,7 @@ def extract_date_info(text):
             result["pas"] = f"****-{mois_fr[mot]}-**"
 
     # Cas 1 : entre ... et ...
-    m = re.search(r"entre\s+(.*?)\s+et\s+(.*)", text)
+    m = re.search(r"entre\s+(.*?)\s+et\s+(.*)", query)
     if m:
         d1 = parse_date_string(m.group(1))
         d2 = parse_date_string(m.group(2))
@@ -410,39 +422,40 @@ def extract_date_info(text):
             result["min"] = d1
         if d2:
             result["max"] = d2
-        cleaned_query = clean_query_only_keywords(original_text)
+        cleaned_query = clean_query_from_dates(original_text)
         return result, cleaned_query
 
     # Cas 2 : à partir / après / depuis / d'après
     m = re.search(
-        r"(à partir de|à partir|après|apres|d’après|d\'apres|depuis)\s+([^\.,;]*)", text
+        r"(à partir de|à partir|après|apres|d’après|d\'apres|depuis)\s+([^\.,;]*)",
+        query,
     )
     if m:
         d = parse_date_string(m.group(2))
         if d:
             result["min"] = d
-            cleaned_query = clean_query_only_keywords(original_text)
+            cleaned_query = clean_query_from_dates(original_text)
             return result, cleaned_query
 
     # Cas 3 : avant
-    m = re.search(r"avant\s+(.+?)(?:[\s,\.]|$)", text)
+    m = re.search(r"avant\s+(.+?)(?:[\s,\.]|$)", query)
     if m:
         d = parse_date_string(m.group(1))
         if d:
             result["max"] = d
-            cleaned_query = clean_query_only_keywords(original_text)
+            cleaned_query = clean_query_from_dates(original_text)
             return result, cleaned_query
 
     # Cas 4 : en / de / du / dans / au mois
-    m = re.search(r"(en|de|du|dans|au mois de|au mois)\s+(.+?)(?:[\s,\.]|$)", text)
+    m = re.search(r"(en|de|du|dans|au mois de|au mois)\s+(.+?)(?:[\s,\.]|$)", query)
     if m:
         d = parse_date_string(m.group(2))
         if d:
             result["exact"] = d
-            cleaned_query = clean_query_only_keywords(original_text)
+            cleaned_query = clean_query_from_dates(original_text)
             return result, cleaned_query
 
-    mots = text.split()
+    mots = query.split()
 
     # Cas 5 : sliding window sur 3 mots (jour mois année)
     for i in range(len(mots) - 2):
@@ -450,7 +463,7 @@ def extract_date_info(text):
         d = parse_date_string(triplet)
         if d:
             result["exact"] = d
-            cleaned_query = clean_query_only_keywords(original_text)
+            cleaned_query = clean_query_from_dates(original_text)
             return result, cleaned_query
 
     # Cas 6 : sliding window sur 2 mots (mois année)
@@ -459,7 +472,7 @@ def extract_date_info(text):
         d = parse_date_string(pair)
         if d:
             result["exact"] = d
-            cleaned_query = clean_query_only_keywords(original_text)
+            cleaned_query = clean_query_from_dates(original_text)
             return result, cleaned_query
 
     # Cas 7 : année seule
@@ -467,50 +480,51 @@ def extract_date_info(text):
         d = parse_date_string(mot)
         if d:
             result["exact"] = d
-            cleaned_query = clean_query_only_keywords(original_text)
+            cleaned_query = clean_query_from_dates(original_text)
             return result, cleaned_query
 
-    cleaned_query = clean_query_only_keywords(original_text)
+    cleaned_query = clean_query_from_dates(original_text)
     return result if result else None, cleaned_query
 
 
-def extract_image(text):
+def extract_image(query: str) -> Tuple[None | int, str]:
     """
-    Description.
-    :param text:
-    :return:
+    Extrait la demande d'image à partir d'une requête.
+    :param query: La requête à analyser.
+    :return: Un tuple (image (oui, non ou None), requête sans images)
     """
-    if "image" in text:
-        if "sans image" in text:
-            text = text.replace("sans image", "")
-            return 0, text
-        text = text.replace("image", "")
-        return 1, text
-    if "images" in text:
-        if "sans images" in text:
-            text = text.replace("sans images", "")
-            return 0, text
-        text = text.replace("images", "")
-        return 1, text
-    else:
-        return None, text
+    if "images" in query:
+        if "sans images" in query:
+            query = query.replace("sans images", "")
+            return 0, query
+        query = query.replace("images", "")
+        return 1, query
+    if "image" in query:
+        if "sans image" in query:
+            query = query.replace("sans image", "")
+            return 0, query
+        query = query.replace("image", "")
+        return 1, query
+
+    return None, query
 
 
-def replace_soit(text):
+def replace_soit(query: str) -> str:
     """
-    Description.
-    :param text:
-    :return:
+    Remplace la structure "soit...soit" par des "ou" pour simplifier le traitement.
+    :param query: La requête à traiter.
+    :return: La nouvelle requête.
     """
     count_soit = 0
-    for mot in text.split():
+    for mot in query.split():
         if mot == "soit":
             count_soit += 1
             print(count_soit)
     if count_soit >= 2:
-        text = text.replace("soit", "", 1)
-        text = text.replace("soit", "ou")
-    return text
+        query = query.replace("soit", "", 1)
+        query = query.replace("soit", "ou")
+
+    return query
 
 
 def traitement_requete(requete_langage_naturel):
@@ -528,7 +542,6 @@ def traitement_requete(requete_langage_naturel):
         - 'rubriques' : Liste des rubriques extraites.
         - 'doc_type' : Le type de document à extraire (ex : article, bulletin).
         - 'image' : Les informations relatives à une image, si mentionnées.
-    return : structure de composants de la requete
     """
     doc_type, texte_liste = extract_doctype(requete_langage_naturel)
 
@@ -574,7 +587,6 @@ def traitement_requete(requete_langage_naturel):
         "rubriques": rubriques,
         "doc_type": doc_type,
         "image": image,
-        "texte_liste": texte_liste,
     }
 
     return structured_query

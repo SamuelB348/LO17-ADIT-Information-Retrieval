@@ -34,6 +34,8 @@ def create_inverted_index(
             if tag == "images":
                 if text:
                     inverted_index["presence_image"][doc_id][tag] += 1
+                else:
+                    inverted_index["pas_image"][doc_id][tag] += 1
                 continue
 
             # Cas spécial : rubrique

@@ -11,229 +11,207 @@ import customtkinter as ctk
 from browser import moteur
 from utils import parse_xml
 
-# Initialisation de CustomTkinter
-ctk.set_appearance_mode("light")
-ctk.set_default_color_theme("blue")
 
-root = ctk.CTk()
-root.title("LO17 : Indexation et Recherche d’information")
-root.geometry("1200x700")
-root.configure(fg_color="#A9D8FF")
-icon = tk.PhotoImage(file="images/icon.png")
-root.wm_iconbitmap("images/icon.ico")
-
-custom_font = ctk.CTkFont(family="Segoe UI")
-
-
-def trier_resultats():
+class RechercheApp:
     """
-    Description.
-    :return:
+    Interface utilisateur.
     """
-    query = search_entry.get()
-    query = query.replace("’", " ' ")
-    query = query.replace("'", " ' ")
-    critere_tri = tri_var.get()
+    def __init__(self):
+        # Initialisation de l'interface
+        ctk.set_appearance_mode("light")
+        ctk.set_default_color_theme("blue")
 
-    # Affiche immédiatement le message d'attente
-    afficher_resultats(["Veuillez patienter..."], "bulletin")
+        self.root = ctk.CTk()
+        self.root.title("LO17 : Indexation et Recherche d’information")
+        self.root.geometry("1200x700")
+        self.root.configure(fg_color="#A9D8FF")
+        self.root.iconphoto(False, tk.PhotoImage(file="images/icon.png"))
+        self.root.wm_iconbitmap("images/icon.ico")
 
-    # Lancer le traitement dans un thread pour ne pas bloquer l'UI
-    threading.Thread(
-        target=trier_resultats_threaded, args=(query, critere_tri), daemon=True
-    ).start()
+        self.tri_var = tk.StringVar(value="Pertinence")
 
+        self.build_interface()
+        self.root.mainloop()
 
-def trier_resultats_threaded(query, critere_tri):
-    """
-    Description.
-    :param query:
-    :param critere_tri:
-    :return:
-    """
-    doc_type = None
-    root_corpus = parse_xml("data/corpus.xml")
+    def build_interface(self):
+        """
+        Construit l'interface graphique.
+        :return: None
+        """
+        # Titre
+        ctk.CTkLabel(
+            self.root,
+            text="Bienvenue sur le moteur de recherche de l'ADIT",
+            font=("Helvetica", 25, "bold"),
+            text_color="navy",
+        ).pack(pady=20)
 
-    if query:
-        resultats, doc_type = moteur(query)
+        # Zone de recherche
+        search_frame = ctk.CTkFrame(self.root, fg_color="#A9D8FF")
+        search_frame.pack(pady=10)
 
-        if doc_type == "article":
-            resultats_structured = []
-            if resultats:
+        self.search_entry = ctk.CTkEntry(search_frame, width=400)
+        self.search_entry.grid(row=0, column=0, padx=(0, 10))
+
+        search_button = ctk.CTkButton(
+            search_frame, text="Rechercher", command=self.trier_resultats
+        )
+        search_button.grid(row=0, column=1)
+
+        # Menu tri
+        tri_frame = ctk.CTkFrame(self.root, fg_color="#A9D8FF")
+        tri_frame.pack(anchor="ne", padx=20, pady=5)
+
+        ctk.CTkLabel(tri_frame, text="Trier par :").grid(row=0, column=0, padx=(0, 10))
+        ctk.CTkComboBox(
+            tri_frame,
+            variable=self.tri_var,
+            values=["Classique", "Date Croissante", "Date Décroissante"],
+            width=200,
+        ).grid(row=0, column=1)
+
+        # Résultats
+        resultats_frame = ctk.CTkFrame(self.root)
+        resultats_frame.pack(fill="both", expand=True, padx=20, pady=10)
+
+        self.scrollable_resultats = ctk.CTkScrollableFrame(resultats_frame, height=450)
+        self.scrollable_resultats.pack(fill="both", expand=True)
+        for col_index in range(7):
+            self.scrollable_resultats.grid_columnconfigure(col_index, weight=1)
+
+    def trier_resultats(self):
+        """
+        Lance la fonction trier_resultats_threaded, ce qui permet
+        d'afficher "Veuillez patienter" en attendant les résultats.
+        :return: None
+        """
+        query = self.search_entry.get().replace("’", " ' ").replace("'", " ' ")
+        critere_tri = self.tri_var.get()
+
+        self.afficher_resultats(["Veuillez patienter..."], "bulletin")
+        threading.Thread(
+            target=self.trier_resultats_threaded,
+            args=(query, critere_tri),
+            daemon=True,
+        ).start()
+
+    def trier_resultats_threaded(self, query, critere_tri):
+        """
+        Lance le moteur et tri les résultats selon le critère choisi par
+        l'utilisateur.
+        :param query: La requête entrée par l'utilisateur.
+        :param critere_tri: Le critère de tri.
+        :return: None
+        """
+        doc_type = None
+        root_corpus = parse_xml("data/corpus.xml")
+        filtered_results = []
+
+        if query:
+            resultats, doc_type = moteur(query)
+            if doc_type == "article":
+                resultats_structured = []
                 for result in resultats:
                     for article in root_corpus.findall(".//article"):
                         fichier = article.find("fichier")
                         if fichier is not None and fichier.text == result:
-                            target_article = article
+                            dico = {
+                                "id": result,
+                                "titre": article.find("titre").text,
+                                "date": article.find("date").text,
+                                "numero": article.find("numero").text,
+                                "rubrique": article.find("rubrique").text,
+                                "extrait": " ".join(
+                                    article.find("texte").text.split()[:50]
+                                ) + "...",
+                            }
+                            resultats_structured.append(dico)
                             break
-                    dico = {
-                        "id": result,
-                        "titre": target_article.find("titre").text,
-                        "date": target_article.find("date").text,
-                        "numero": target_article.find("numero").text,
-                        "rubrique": target_article.find("rubrique").text,
-                        "extrait": " ".join(
-                            target_article.find("texte").text.split()[:50]
-                        )
-                        + "...",
-                    }
-                    resultats_structured.append(dico)
                 filtered_results = resultats_structured
-            else:
-                filtered_results = []
-        elif doc_type in ["bulletin", "rubrique"]:
-            filtered_results = list(resultats)
+            elif doc_type in ["bulletin", "rubrique"]:
+                filtered_results = list(resultats)
+
+            if doc_type == "article":
+                if critere_tri == "Classique":
+                    filtered_results.sort(key=lambda x: x["date"], reverse=True)
+                elif "Croissante" in critere_tri:
+                    filtered_results.sort(
+                        key=lambda x: datetime.datetime.strptime(x["date"], "%d/%m/%Y")
+                    )
+                elif "Décroissante" in critere_tri:
+                    filtered_results.sort(
+                        key=lambda x: datetime.datetime.strptime(x["date"], "%d/%m/%Y"),
+                        reverse=True,
+                    )
         else:
-            filtered_results = []
+            doc_type = "bulletin"
+
+        self.afficher_resultats(filtered_results, doc_type)
+
+    def afficher_resultats(self, filtered_results, doc_type):
+        """
+        Affiche les résultats dans une structure de tableau.
+        :param filtered_results: Les résultats filtrés par la méthode précédente.
+        :param doc_type: Le type de document qui a été renvoyé.
+        :return: None
+        """
+        for widget in self.scrollable_resultats.winfo_children():
+            widget.destroy()
 
         if doc_type == "article":
-            if critere_tri == "Pertinence" and filtered_results:
-                filtered_results.sort(key=lambda x: x["date"], reverse=True)
-            elif critere_tri == "Date Croissante":
-                filtered_results.sort(
-                    key=lambda x: datetime.datetime.strptime(x["date"], "%d/%m/%Y")
+            headers = ["ID", "Titre", "Date", "N° de bulletin", "Rubrique", "Extrait", "Consulter"]
+            for i, header in enumerate(headers):
+                ctk.CTkLabel(
+                    self.scrollable_resultats,
+                    text=header,
+                    font=ctk.CTkFont(weight="bold"),
+                ).grid(row=0, column=i, padx=5, pady=5, sticky="nsew")
+
+            for row_index, resultat in enumerate(filtered_results, start=1):
+                ctk.CTkLabel(self.scrollable_resultats, text=resultat["id"]).grid(
+                    row=row_index, column=0, padx=5, pady=2, sticky="nsew"
                 )
-            elif critere_tri == "Date Décroissante":
-                filtered_results.sort(
-                    key=lambda x: datetime.datetime.strptime(x["date"], "%d/%m/%Y"),
-                    reverse=True,
-                )
-    else:
-        filtered_results = []
-        doc_type = "bulletin"  # fallback type for placeholder
+                ctk.CTkLabel(
+                    self.scrollable_resultats, text=resultat["titre"], wraplength=200
+                ).grid(row=row_index, column=1, padx=5, pady=2, sticky="nsew")
+                ctk.CTkLabel(
+                    self.scrollable_resultats, text=resultat["date"]
+                ).grid(row=row_index, column=2, padx=5, pady=2, sticky="nsew")
+                ctk.CTkLabel(
+                    self.scrollable_resultats, text=resultat["numero"]
+                ).grid(row=row_index, column=3, padx=5, pady=2, sticky="nsew")
+                ctk.CTkLabel(
+                    self.scrollable_resultats, text=resultat["rubrique"]
+                ).grid(row=row_index, column=4, padx=5, pady=2, sticky="nsew")
+                ctk.CTkLabel(
+                    self.scrollable_resultats,
+                    text=resultat["extrait"],
+                    wraplength=400,
+                    anchor="w",
+                    justify="left",
+                ).grid(row=row_index, column=5, padx=5, pady=2, sticky="nsew")
 
-    # Afficher les résultats après traitement
-    afficher_resultats(filtered_results, doc_type)
+                ctk.CTkButton(
+                    self.scrollable_resultats,
+                    text="Ouvrir",
+                    width=60,
+                    height=28,
+                    command=lambda id=resultat["id"]: self.ouvrir_fichier(id),
+                ).grid(row=row_index, column=6, padx=5, pady=2)
+        else:
+            for i, item in enumerate(filtered_results):
+                ctk.CTkLabel(
+                    self.scrollable_resultats, text=item, font=ctk.CTkFont(size=14)
+                ).pack(fill="x", padx=10, pady=4)
 
-
-def afficher_resultats(filtered_results, doc_type):
-    """
-    Description.
-    :param filtered_results:
-    :param doc_type:
-    :return:
-    """
-    # Clear previous widgets
-    for widget in scrollable_resultats.winfo_children():
-        widget.destroy()
-
-    if doc_type == "article":
-        # Header row
-        headers = [
-            "ID",
-            "Titre",
-            "Date",
-            "N° de bulletin",
-            "Rubrique",
-            "Extrait",
-            "Consulter",
-        ]
-        for i, header in enumerate(headers):
-            label = ctk.CTkLabel(
-                scrollable_resultats,
-                text=header,
-                font=ctk.CTkFont(weight="bold"),
-                anchor="center",
-            )
-            label.grid(row=0, column=i, padx=5, pady=5, sticky="nsew")
-
-        for row_index, resultat in enumerate(filtered_results, start=1):
-            ctk.CTkLabel(scrollable_resultats, text=resultat["id"]).grid(
-                row=row_index, column=0, padx=5, pady=2, sticky="nsew"
-            )
-            ctk.CTkLabel(
-                scrollable_resultats, text=resultat["titre"], wraplength=200
-            ).grid(row=row_index, column=1, padx=5, pady=2, sticky="nsew")
-            ctk.CTkLabel(scrollable_resultats, text=resultat["date"]).grid(
-                row=row_index, column=2, padx=5, pady=2, sticky="nsew"
-            )
-            ctk.CTkLabel(scrollable_resultats, text=resultat["numero"]).grid(
-                row=row_index, column=3, padx=5, pady=2, sticky="nsew"
-            )
-            ctk.CTkLabel(scrollable_resultats, text=resultat["rubrique"]).grid(
-                row=row_index, column=4, padx=5, pady=2, sticky="nsew"
-            )
-            ctk.CTkLabel(
-                scrollable_resultats,
-                text=resultat["extrait"],
-                wraplength=400,
-                anchor="w",
-                justify="left",
-            ).grid(row=row_index, column=5, padx=5, pady=2, sticky="nsew")
-
-            ouvrir_button = ctk.CTkButton(
-                scrollable_resultats,
-                text="Ouvrir",
-                width=60,
-                height=28,
-                command=lambda id=resultat["id"]: ouvrir_fichier(id),
-            )
-            ouvrir_button.grid(row=row_index, column=6, padx=5, pady=2)
-
-    elif doc_type in ["rubrique", "bulletin"]:
-        for i, item in enumerate(filtered_results):
-            label = ctk.CTkLabel(
-                scrollable_resultats, text=item, font=ctk.CTkFont(size=14), anchor="w"
-            )
-            label.pack(fill="x", padx=10, pady=4)
-
-
-def ouvrir_fichier(id_value):
-    """
-    Description.
-    :param id_value:
-    :return:
-    """
-    fichier_path = os.path.join("data", "BULLETINS", f"{id_value}.htm")
-    if os.path.exists(fichier_path):
-        webbrowser.open_new_tab(fichier_path)
-    else:
-        print(f"Fichier non trouvé : {fichier_path}")
-
-
-# Titre
-title_label = ctk.CTkLabel(
-    root,
-    text="Bienvenue sur le moteur de recherche de l'ADIT",
-    font=("Helvetica", 25, "bold"),
-    text_color="navy",
-)
-title_label.pack(pady=20)
-
-# Zone de recherche
-search_frame = ctk.CTkFrame(root, fg_color="#A9D8FF")
-search_frame.pack(pady=10, padx=0)
-
-search_entry = ctk.CTkEntry(search_frame, width=400)
-search_entry.grid(row=0, column=0, padx=(0, 10), sticky="w")
-
-search_button = ctk.CTkButton(search_frame, text="Rechercher", command=trier_resultats)
-search_button.grid(row=0, column=1, padx=(10, 0), sticky="w")
-
-# Tri
-tri_frame = ctk.CTkFrame(root, fg_color="#A9D8FF")
-tri_frame.pack(anchor="ne", padx=20, pady=5)
-
-tri_label = ctk.CTkLabel(tri_frame, text="Trier par :")
-tri_label.grid(row=0, column=0, padx=(0, 10), sticky="w")
-
-tri_var = ctk.StringVar(value="Pertinence")
-tri_menu = ctk.CTkComboBox(
-    tri_frame,
-    variable=tri_var,
-    values=["Pertinence", "Date Croissante", "Date Décroissante"],
-    width=200,
-)
-tri_menu.grid(row=0, column=1)
-
-# Résultats
-resultats_frame = ctk.CTkFrame(root)
-resultats_frame.pack(fill="both", expand=True, padx=20, pady=10)
-
-scrollable_resultats = ctk.CTkScrollableFrame(resultats_frame, height=450)
-scrollable_resultats.pack(fill="both", expand=True)
-for col_index in range(7):
-    scrollable_resultats.grid_columnconfigure(col_index, weight=1)
-
-# Lancement
-root.mainloop()
+    def ouvrir_fichier(self, id_value):
+        """
+        Permet d'ouvrir les fichiers .htm sur un navigateur.
+        :param id_value: L'ID du document à ouvrir.
+        :return: None
+        """
+        fichier_path = os.path.join("data", "BULLETINS", f"{id_value}.htm")
+        if os.path.exists(fichier_path):
+            webbrowser.open_new_tab(fichier_path)
+        else:
+            print(f"Fichier non trouvé : {fichier_path}")
