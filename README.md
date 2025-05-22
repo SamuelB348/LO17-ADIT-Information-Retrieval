@@ -90,7 +90,7 @@ L’interface, développée avec Tkinter, est intuitive et facile à prendre en 
 
 - Saisissez votre requête dans la barre de recherche.
 - Sélectionnez le mode de tri souhaité parmi les options suivantes :  
-  - Tri par pertinence  
+  - Tri dit 'classique' : pas de tri (option par défaut) 
   - Tri par date de parution croissante  
   - Tri par date de parution décroissante  
 - Cliquez sur **Rechercher** pour afficher les résultats.
