@@ -17,7 +17,7 @@ Il permet d’indexer, traiter et rechercher des articles à partir d’un corpu
 - `src/` : dossier principal contenant tous les scripts Python, organisés pour faciliter le développement et les tests.
 
 Dans le dossier src, on trouve :
-- `images/` : contient les icônes utilisées pour l’interface graphique (notamment `icon.png`).
+- `images/` : contient les icônes utilisées pour l’interface graphique.
 - `data/` : contient tous les fichiers générés lors de l’exécution du projet ainsi que le dossier `BULLETINS/` avec les bulletins et images sources.
 - les fichiers python du projet
 
@@ -31,7 +31,7 @@ Dans le dossier src, on trouve :
 ├── requirements.txt       # Liste des dépendances Python  
 ├── README.md              # Ce fichier readme  
 ├── src/                   # Dossier principal des scripts et ressources  
-│   ├── anti_dictionnary.py    # Filtrage des mots vides  
+│   ├── anti_dictionnary.py     # Filtrage des mots vides  
 │   ├── data_parser.py          # Parsing des données brutes  
 │   ├── interface.py            # Interface graphique (Tkinter)  
 │   ├── inverted_index.py       # Index inversé pour la recherche  
@@ -41,15 +41,14 @@ Dans le dossier src, on trouve :
 │   ├── substitue.py            # Gestion des synonymes  
 │   ├── queries.py              # Traitement des requêtes utilisateur  
 │   ├── main.py                 # Script principal pour afficher l'interface  
-│   ├── browser.py               # Moteur de recherche principal  
+│   ├── browser.py              # Moteur de recherche principal  
 │   ├── eval.py                 # Evaluation du moteur de recherche principal    
 │   ├── utils.py                # Fonctions utilitaires  
 │   ├── data/                   # Données générées et sources  
-│   │   ├── BULLETINS/            # Bulletins et images d'origine  
+│   │   ├── BULLETINS/          # Bulletins et images d'origine  
 │   │   └── (tous les autres fichiers générés)  
 │   └── images/                 # Images pour l’interface  
-│       └── icon.png            # Icône de l’interface  
-│       └── icon.ico            # Icône de l’interface  
+│       ├── icon.ico            # Icône de l’interface  
 
 Tous les scripts situés dans le dossier src/ peuvent être exécutés séparément.
 Ils fonctionnent chacun de manière autonome, ce qui vous permet de tester et visualiser le traitement étape par étape.
