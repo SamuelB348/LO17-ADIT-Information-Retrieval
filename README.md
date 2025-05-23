@@ -47,7 +47,7 @@ Dans le dossier src, on trouve :
 │   ├── data/                   # Données générées et sources  
 │   │   ├── BULLETINS/          # Bulletins et images d'origine  
 │   │   └── (tous les autres fichiers générés)  
-│   └── images/                 # Images pour l’interface  
+│   ├── images/                 # Images pour l’interface  
 │       ├── icon.ico            # Icône de l’interface  
 
 Tous les scripts situés dans le dossier src/ peuvent être exécutés séparément.
