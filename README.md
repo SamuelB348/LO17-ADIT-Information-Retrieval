@@ -2,7 +2,7 @@
 
 ## Description
 
-Ce projet est un moteur de recherche d’informations développé dans le cadre du cours LO17 à l’ADIT.  
+Ce projet est un moteur de recherche d’informations sur une archive de l'ADIT, développé dans le cadre du cours LO17 à l'UTC.  
 Il permet d’indexer, traiter et rechercher des articles à partir d’un corpus de bulletins, avec une interface graphique intuitive.
 
 ---
