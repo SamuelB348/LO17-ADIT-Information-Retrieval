@@ -113,3 +113,16 @@ Vous pouvez alors consulter chaque article en cliquant sur le bouton **Consulter
 Les temps d’exécution rapportés dans le rapport pour le traitement des requêtes via la fonction moteur.py ont été mesurés sur Google Colab.  
 En local, les temps moyens restent relativement similaires.  
 Il ne faut pas s’inquiéter si l’exécution est légèrement plus longue de votre côté, cela dépend notamment des performances de votre machine.
+
+### Evaluation du code 
+
+### Évaluation du code
+
+Enfin, pour assurer un code propre, lisible et conforme aux bonnes pratiques, nous avons utilisé l’outil `pylint` afin d’analyser l’ensemble de notre base de code. Grâce à ce travail, nous avons obtenu un score global supérieur à **9.92 / 10**, ce qui témoigne d’un code bien structuré, bien documenté et maintenable.
+
+La commande utilisée pour obtenir ce score est la suivante :
+
+```bash
+pylint --disable=C0301 src/*.py
+```
+
