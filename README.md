@@ -31,18 +31,18 @@ Dans le dossier src, on trouve :
 ├── requirements.txt       # Liste des dépendances Python  
 ├── README.md              # Ce fichier readme  
 ├── src/                   # Dossier principal des scripts et ressources  
-│   ├── anti_dictionnary.py     # Filtrage des mots vides  
-│   ├── data_parser.py          # Parsing des données brutes  
+│   ├── anti_dictionnaire.py     # Filtrage des mots vides  
+│   ├── traitement_donnees.py          # Parsing des données brutes  
 │   ├── interface.py            # Interface graphique (Tkinter)  
-│   ├── inverted_index.py       # Index inversé pour la recherche  
-│   ├── lemmatize.py            # Lemmatisation des termes  
+│   ├── index_inverse.py       # Index inversé pour la recherche  
+│   ├── lemmatisation.py            # Lemmatisation des termes  
 │   ├── segmente.py             # Segmentation du texte  
-│   ├── spellchecker.py         # Correction orthographique  
+│   ├── correcteur.py         # Correction orthographique  
 │   ├── substitue.py            # Gestion des synonymes  
-│   ├── queries.py              # Traitement des requêtes utilisateur  
+│   ├── requetes.py              # Traitement des requêtes utilisateur  
 │   ├── main.py                 # Script principal pour afficher l'interface  
-│   ├── browser.py              # Moteur de recherche principal  
-│   ├── eval.py                 # Evaluation du moteur de recherche principal    
+│   ├── moteur.py              # Moteur de recherche principal  
+│   ├── evaluation.py                 # Evaluation du moteur de recherche principal    
 │   ├── utils.py                # Fonctions utilitaires  
 │   ├── data/                   # Données générées et sources  
 │   │   ├── BULLETINS/          # Bulletins et images d'origine  
