@@ -49,6 +49,7 @@ Dans le dossier src, on trouve :
 │   │   └── (tous les autres fichiers générés)  
 │   ├── images/                 # Images pour l’interface  
 │       ├── icon.ico            # Icône de l’interface  
+│       ├── icon.png            # Icône de l’interface  
 
 Tous les scripts situés dans le dossier src/ peuvent être exécutés séparément.
 Ils fonctionnent chacun de manière autonome, ce qui vous permet de tester et visualiser le traitement étape par étape.
