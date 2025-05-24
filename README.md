@@ -114,7 +114,6 @@ Les temps d’exécution rapportés dans le rapport pour le traitement des requ�
 En local, les temps moyens restent relativement similaires.  
 Il ne faut pas s’inquiéter si l’exécution est légèrement plus longue de votre côté, cela dépend notamment des performances de votre machine.
 
-### Evaluation du code 
 
 ### Évaluation du code
 
