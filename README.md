@@ -55,11 +55,11 @@ Ils fonctionnent chacun de manière autonome, ce qui vous permet de tester et vi
 Cela est particulièrement utile si vous souhaitez comprendre ou valider chaque phase du projet avant d’utiliser l’interface graphique.   
 
 Pour générer les fichiers du projet, veuillez suivre les étapes suivantes :
-- Etape 1 : lancer data_parser.py
+- Etape 1 : lancer traitement_donnees.py
 - Etape 2 : lancer segmente.py
-- Etape 3 : lancer anti_dictionnary.py
-- Etape 4 : lancer lemmatize.py
-- Etape 5 : lancer inverted_index.py
+- Etape 3 : lancer anti_dictionnaire.py
+- Etape 4 : lancer lemmatisation.py
+- Etape 5 : lancer index_inverse.py
 ---
 
 ## Installation
