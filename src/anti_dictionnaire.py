@@ -8,158 +8,154 @@ import pandas as pd
 from lxml import etree
 from tqdm import tqdm
 from segmente import tokenize
-from substitue import substitute_texte
+from substitue import substitue_texte
 
 
-def tf_determination(segmentation_file: str, output_tf_file: str) -> None:
+def tf_determination(fichier_segmentation: str, fichier_tf: str) -> None:
     """
     Calcule les valeurs TF (Term Frequency) pour chaque terme du corpus
     et les sauvegarde dans un fichier.
 
-    :param segmentation_file: Le chemin du fichier contenant les paires (tokens/n° de fichier).
-    :param output_tf_file: Le chemin du fichier où les valeurs TF doivent être enregistrées.
+    :param fichier_segmentation: Le chemin du fichier contenant les paires (tokens/n° de fichier).
+    :param fichier_tf: Le chemin du fichier où les valeurs TF doivent être enregistrées.
     :return: None
     """
     segmentation_df = pd.read_csv(
-        segmentation_file, sep="\t", header=None, names=["word", "file_number"]
+        fichier_segmentation, sep="\t", header=None, names=["word", "file_number"]
     )
 
     # Liste des différents numéros fichiers dans le corpus
-    liste_different_files = segmentation_df["file_number"].unique()
+    liste_fichiers_uniques = segmentation_df["file_number"].unique()
 
-    with open(output_tf_file, "w", encoding="utf-8") as file:
-        for file_number in liste_different_files:
+    with open(fichier_tf, "w", encoding="utf-8") as file:
+        for num_fichier in liste_fichiers_uniques:
             # Extraction des mots du fichier actuel
-            file_df = segmentation_df[segmentation_df["file_number"] == file_number]
-            word_counts = file_df[
+            df_fichier = segmentation_df[segmentation_df["file_number"] == num_fichier]
+            compte_mot = df_fichier[
                 "word"
             ].value_counts()  # Comptage des occurrences des mots
-            word_frequency = word_counts / len(
-                file_df
+            frequence_mot = compte_mot / len(
+                df_fichier
             )  # Calcul de la fréquence des mots (TF)
 
             # Enregistrement des résultats au format (numéro de fichier, mot, TF)
-            for word, frequency in word_frequency.items():
-                file.write(f"{file_number}\t{word}\t{frequency}\n")
+            for mot, frequence in frequence_mot.items():
+                file.write(f"{num_fichier}\t{mot}\t{frequence}\n")
 
 
-def idf_determination(input_tf_file: str, output_idf_file: str) -> None:
+def idf_determination(fichier_tf: str, fichier_idf: str) -> None:
     """
     Calcule les valeurs idf (inverse document frequency) pour chaque terme du corpus
     et les sauvegarde dans un fichier.
 
-    :param input_tf_file: Le chemin du fichier contenant les valeurs tf (term frequency)
+    :param fichier_tf: Le chemin du fichier contenant les valeurs tf (term frequency)
     par mot et par fichier.
-    :param output_idf_file: Le chemin du fichier où les valeurs idf doivent être enregistrées.
+    :param fichier_idf: Le chemin du fichier où les valeurs idf doivent être enregistrées.
     :return: None
     """
     tf_dataframe = pd.read_csv(
-        input_tf_file, sep="\t", header=None, names=["file_number", "word", "tf"]
+        fichier_tf, sep="\t", header=None, names=["file_number", "word", "tf"]
     )
 
     # Nombre total de documents dans le corpus
     n = len(tf_dataframe["file_number"].unique())
 
-    with open(output_idf_file, "w", encoding="utf-8") as file:
-        words = tf_dataframe["word"].unique()
+    with open(fichier_idf, "w", encoding="utf-8") as file:
+        mots = tf_dataframe["word"].unique()
         # Calcul du df et idf pour chaque mot
-        for word in words:
+        for mot in mots:
             # Calcul du df (document frequency) : nb de documents contenant le mot
-            df = len(tf_dataframe[tf_dataframe["word"] == word])
+            df = len(tf_dataframe[tf_dataframe["word"] == mot])
             # Calcul du idf
             idf = math.log10(n / df)
             # Écriture du mot et de son idf dans le fichier de sortie
-            file.write(f"{word}\t{idf}\n")
+            file.write(f"{mot}\t{idf}\n")
 
 
-def compute_tf_idf(
-    input_tf_file: str, input_idf_file: str, output_tfidf_file: str
+def calcul_tf_idf(
+    fichier_tf: str, fichier_idf: str, fichier_tfidf: str
 ) -> None:
     """
     Calcule les valeurs tf-idf pour chaque terme du corpus et les sauvegarde dans un fichier.
 
-    :param input_tf_file: Le fichier contenant les valeurs tf pour chaque mot.
-    :param input_idf_file: Le fichier contenant les valeurs idf pour chaque mot.
-    :param output_tfidf_file: Le fichier de sortie pour enregistrer les valeurs tf-idf.
+    :param fichier_tf: Le fichier contenant les valeurs tf pour chaque mot.
+    :param fichier_idf: Le fichier contenant les valeurs idf pour chaque mot.
+    :param fichier_tfidf: Le fichier de sortie pour enregistrer les valeurs tf-idf.
     :return: None
     """
     # Lecture des fichiers tf et idf - format pandas
     tf_dataframe = pd.read_csv(
-        input_tf_file, sep="\t", header=None, names=["file_number", "word", "tf"]
+        fichier_tf, sep="\t", header=None, names=["file_number", "word", "tf"]
     )
     idf_dataframe = pd.read_csv(
-        input_idf_file, sep="\t", header=None, names=["word", "idf"]
+        fichier_idf, sep="\t", header=None, names=["word", "idf"]
     )
 
     # Fusion des deux dataframes sur la colonne 'word'
-    merged_dataframe = pd.merge(tf_dataframe, idf_dataframe, on="word")
+    dataframe_joint = pd.merge(tf_dataframe, idf_dataframe, on="word")
     # Calcul de tf-idf = tf*idf
-    merged_dataframe["tfidf"] = merged_dataframe["tf"] * merged_dataframe["idf"]
+    dataframe_joint["tfidf"] = dataframe_joint["tf"] * dataframe_joint["idf"]
 
     # Tri des résultats par tf-idf (by=['file_number','tfidf', 'word'] si on veut par fichier)
-    tf_idf_dataframe = merged_dataframe.drop(columns=["tf", "idf"])
+    tf_idf_dataframe = dataframe_joint.drop(columns=["tf", "idf"])
     tf_idf_dataframe.sort_values(by=["tfidf", "word"], inplace=True)
 
-    tf_idf_dataframe.to_csv(output_tfidf_file, sep="\t", index=False, header=False)
+    tf_idf_dataframe.to_csv(fichier_tfidf, sep="\t", index=False, header=False)
 
 
-def create_stop_words(
-    input_tfidf_file: str, subs_file: str, seuil_min: float
+def definition_stop_words(
+    fichier_tfidf: str, fichier_subs: str, seuil_min: float
 ) -> List[str]:
     """
     Crée un anti-dictionnaire en supprimant les termes ayant un tf-idf inférieur à un seuil minimum.
 
-    :param input_tfidf_file: Le fichier contenant les valeurs tf-idf.
-    :param subs_file: Le fichier contenant les mots à substituer.
+    :param fichier_tfidf: Le fichier contenant les valeurs tf-idf.
+    :param fichier_subs: Le fichier contenant les mots à substituer.
     :param seuil_min: Le seuil minimum de tf-idf au-dessous duquel les mots sont
     considérés comme non pertinents.
     :return: La liste des mots considérés comme stop words.
     """
     # Lecture des fichiers tf-idf et de substitution
     tfidf_dataframe = pd.read_csv(
-        input_tfidf_file, sep="\t", header=None, names=["file_number", "word", "tfidf"]
+        fichier_tfidf, sep="\t", header=None, names=["file_number", "word", "tfidf"]
     )
 
     # Sélection des mots ayant un tf-idf inférieur au seuil minimum
     stop_words = tfidf_dataframe[tfidf_dataframe["tfidf"] < seuil_min]["word"].unique()
     # Écriture dans le fichier subs_file
-    with open(subs_file, "w", encoding="utf-8") as file:
+    with open(fichier_subs, "w", encoding="utf-8") as file:
         for word in stop_words:
             file.write(f"{word}\t{''}\n")
     return stop_words
 
 
-def create_clean_xml_corpus(
-    input_corpus: str, subs_file: str, output_corpus: str
+def nettoyage_corpus_xml(
+    corpus_entree: str, fichier_subs: str, corpus_sortie: str
 ) -> None:
     """
     Nettoie le corpus XML en appliquant des substitutions de mots sur les titres et textes.
 
-    :param input_corpus: Le chemin du fichier XML d'entrée
-    :param subs_file: Le fichier contenant les substitutions de mots
-    :param output_corpus: Le chemin du fichier XML de sortie
+    :param corpus_entree: Le chemin du fichier XML d'entrée
+    :param fichier_subs: Le fichier contenant les substitutions de mots
+    :param corpus_sortie: Le chemin du fichier XML de sortie
     :return: None
     """
     # Charge le fichier XML d'entrée et crée une copie
-    tree = etree.parse(input_corpus)
+    tree = etree.parse(corpus_entree)
 
     for article in tqdm(tree.xpath("/corpus/article")):
         # Tokenise le titre et applique les substitutions
-        titre = tokenize(article.find("titre").text)
-        titre = substitute_texte(titre, subs_file)
-        titre = "".join(titre)
+        titre = substitue_texte(tokenize(article.find("titre").text), fichier_subs)
         # .split() permet de retirer des espaces consécutifs
         article.find("titre").text = " ".join(titre.split())
 
         # Tokenise le texte et applique les substitutions
-        texte = tokenize(article.find("texte").text)
-        texte = substitute_texte(texte, subs_file)
-        texte = "".join(texte)
-        # .split() permet de retirer des espcaes consécutifs
+        texte = substitue_texte(tokenize(article.find("texte").text), fichier_subs)
+        # .split() permet de retirer des espaces consécutifs
         article.find("texte").text = " ".join(texte.split())
 
     # Enregistre le fichier XML
-    tree.write(output_corpus, pretty_print=True, xml_declaration=True, encoding="UTF-8")
+    tree.write(corpus_sortie, pretty_print=True, xml_declaration=True, encoding="UTF-8")
 
 
 if __name__ == "__main__":
@@ -168,10 +164,10 @@ if __name__ == "__main__":
     print("Calcul du IDF...")
     idf_determination("data/TF_output.txt", "data/idf_output.txt")
     print("Calcul de TF-IDF...")
-    compute_tf_idf("data/TF_output.txt", "data/idf_output.txt", "data/tfidf_output.txt")
+    calcul_tf_idf("data/TF_output.txt", "data/idf_output.txt", "data/tfidf_output.txt")
     print("Génération de l'anti-dictionnaire...")
-    create_stop_words("data/tfidf_output.txt", "data/subs.txt", 0.0006)
+    definition_stop_words("data/tfidf_output.txt", "data/subs.txt", 0.0006)
     print("Nettoyage du corpus...")
-    create_clean_xml_corpus(
+    nettoyage_corpus_xml(
         "data/corpus.xml", "data/subs.txt", "data/corpus_wo_stopwords.xml"
     )

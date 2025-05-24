@@ -3,163 +3,98 @@ Fonction principale qui permet la recherche d'information à partir d'une requê
 """
 
 import re
-import calendar
 from datetime import datetime
-from typing import Tuple
+from typing import Tuple, Optional
 import pandas as pd
-from queries import clean_query, traitement_requete, replace_soit
-from spellchecker import correcteur_orthographique
+from requetes import nettoyage_requete, traitement_requete, replace_soit
+from correcteur import correcteur_orthographique
+from utils import get_min_max_dates, replace_min_and_max
 
 
-def get_last_day_of_month(year: int, month: int) -> int:
+def charger_index(index: str = "data/index_inverse.txt") -> pd.DataFrame:
     """
-    Renvoie le dernier numéro de jour d'une mois, pour une année donnée.
-    :param year: L'année.
-    :param month: Le mois.
-    :return: Un numéro.
+    Charge l'index inversé et le met sous forme de dataframe pandas.
+    :param index: Le chemin vers l'index inversé.
+    :return: Le dataframe pandas.
     """
-    _, last_day = calendar.monthrange(year, month)
-    return last_day
+    with open(index, "r", encoding="utf-8") as f:
+        lines = [line.strip().split(",") for line in f.readlines()]
+
+    return pd.DataFrame(lines)
 
 
-def get_min_max_dates(date_str: str) -> Tuple[str, str]:
+def corriger_texte(texte: str) -> str:
     """
-    Renvoie un range de dates à partir d'un pattern de date.
-    Ex : 2012-**-** → {2012-01-01, 2012-12-31}
-    :param date_str: Une date sous forme de chaîne de caractères.
-    :return: Un tuple (date minimale, date maximale)
+    Applique le correcteur orthographique sur un texte.
+    :param texte: Le texte à corriger.
+    :return: Le texte corrigé.
     """
-    # Nettoyage de la chaîne de caractères pour enlever les étoiles
-    cleaned_date = date_str.replace("*", "")
-    while cleaned_date.endswith("-"):
-        cleaned_date = cleaned_date[:-1]
-
-    print(cleaned_date)
-    # Si la date est juste une année (comme "2012-**-**")
-    if len(cleaned_date) == 4:  # Format "YYYY-**-**"
-        min_date = f"{cleaned_date}-01-01"
-        max_date = f"{cleaned_date}-12-31"
-    elif len(cleaned_date) == 7:  # Format "YYYY-MM-**"
-        year, month = cleaned_date.split("-")
-        year = int(year)
-        month = int(month)
-        min_date = f"{year}-{month:02d}-01"
-        max_day = get_last_day_of_month(year, month)
-        max_date = f"{year}-{month:02d}-{max_day:02d}"
-    elif len(cleaned_date) == 10:  # Format "YYYY-MM-DD"
-        year, month, day = cleaned_date.split("-")
-        min_date = f"{year}-{month}-{day}"
-        max_date = f"{year}-{month}-{day}"
-    else:
-        raise ValueError(f"{date_str} format invalide")
-
-    return min_date, max_date
+    return correcteur_orthographique(texte, "data/lemma_stemmer.txt", 1, 12, 54).strip()
 
 
-def replace_min_and_max(date_dict):
+def filtrer_par(field: str, docs_set: set[str]) -> None:
     """
-    Permet d'avoir des dates exactes dans un dictionnaire contenant des dates
-    minimales et maximales sous forme de pattern.
-    Ex : {'min' : 2012-**-**} → {'min' : 2012-01-01}
-    :param date_dict: Le dictionnaire de dates.
-    :return: Le dictionnaire modifié
+    Modifie un set de docs:champ en ne conservant que ceux pour lesquels champ=field.
+    :param field: Le champ sur lequel filtrer.
+    :param docs_set: Le set à filtrer.
+    :return: None.
     """
-    if "min" in date_dict:
-        date_dict["min"] = date_dict["min"].replace("*", "")
-        while date_dict["min"].endswith("-"):
-            date_dict["min"] = date_dict["min"][:-1]
-        if len(date_dict["min"]) == 4:  # Format "YYYY-**-**"
-            date_dict["min"] = f"{date_dict['min']}-01-01"
-
-        elif len(date_dict["min"]) == 7:  # Format "YYYY-MM-**"
-            year, month = date_dict["min"].split("-")
-            year = int(year)
-            month = int(month)
-            date_dict["min"] = f"{year}-{month:02d}-01"
-        elif len(date_dict["min"]) == 10:  # Format "YYYY-MM-DD"
-            year, month, day = date_dict["min"].split("-")
-            date_dict["min"] = f"{year}-{month}-{day}"
-        # Retourner les dates sous le format jj/mm/yyyy
-        date_dict["min"] = datetime.strptime(date_dict["min"], "%Y-%m-%d")
-        date_dict["min"] = date_dict["min"].strftime("%d/%m/%Y")
-
-    if "max" in date_dict:
-        date_dict["max"] = date_dict["max"].replace("*", "")
-        while date_dict["max"].endswith("-"):
-            date_dict["max"] = date_dict["max"][:-1]
-        if len(date_dict["max"]) == 4:  # Format "YYYY-**-**"
-            date_dict["max"] = f"{date_dict['max']}-12-31"
-        elif len(date_dict["max"]) == 7:  # Format "YYYY-MM-**"
-            year, month = date_dict["max"].split("-")
-            year = int(year)
-            month = int(month)
-            max_day = get_last_day_of_month(year, month)
-            date_dict["max"] = f"{year}-{month:02d}-{max_day:02d}"
-        elif len(date_dict["max"]) == 10:  # Format "YYYY-MM-DD"
-            year, month, day = date_dict["max"].split("-")
-            date_dict["max"] = f"{year}-{month}-{day}"
-        # Retourner les dates sous le format jj/mm/yyyy
-        date_dict["max"] = datetime.strptime(date_dict["max"], "%Y-%m-%d")
-        date_dict["max"] = date_dict["max"].strftime("%d/%m/%Y")
+    docs_set.intersection_update({
+        doc for doc in docs_set
+        if ":" in doc and doc.split(":")[1].strip() == field
+    })
 
 
-def moteur(query):
+def moteur(requete: str) -> Tuple[Optional[set], str]:
     """
     Moteur de recherche de la base d'information de l'ADIT.
     Il reçoit en entrée une requête, la traite, la transforme en requête structurée
     puis parcourt l'index inversé intelligemment pour renvoyer les résultats.
-    :param query: La requête à traiter.
+    :param requete: La requête à traiter.
     :return: Un tuple (set de résultats, type de doc à retourner)
     """
 
-    liste_required = []
-    composants = traitement_requete(clean_query(replace_soit(query)))
-    print(composants)
+    # chargement de l'index inversé sous forme de dataframe
+    df = charger_index()
 
+    liste_champs_requis = []
+
+    tous_docs = df.iloc[:, 1:].values.flatten().tolist()
+    tous_docs = [doc for doc in tous_docs if doc is not None and pd.notna(doc)]
+    tous_docs = set(tous_docs)
+
+    docs_date = set()
+    dates_liste = set()
+    docs_rubrique = set()
+    docs_titre = tous_docs.copy()
+    docs_contenu = set()
+    docs_non_keywords = tous_docs.copy()
+    docs_keywords = tous_docs.copy()
+    docs_image = set()
+
+    # Correction et traitement des requêtes
+    composants = traitement_requete(nettoyage_requete(replace_soit(requete)))
+    print(composants)
     if composants["titre"] is not None:
-        composants["titre"] = correcteur_orthographique(
-            composants["titre"], "data/lemma_stemmer.txt", 1, 12, 54
-        )
+        composants["titre"] = corriger_texte(composants["titre"])
     if composants["contenu"] is not None:
-        composants["contenu"] = correcteur_orthographique(
-            composants["contenu"], "data/lemma_stemmer.txt", 1, 12, 54
-        )
+        composants["contenu"] = corriger_texte(composants["contenu"])
     if composants["keywords"] is not None:
-        print(composants["keywords"])
-        for word in composants["keywords"]:
-            if word == "ou":
+        for mot in composants["keywords"]:
+            if mot == "ou":
                 continue
-            if not word.startswith("pas "):
-                composants["keywords"][composants["keywords"].index(word)] = (
-                    correcteur_orthographique(
-                        word, "data/lemma_stemmer.txt", 1, 12, 54
-                    ).strip()
+            if not mot.startswith("pas "):
+                composants["keywords"][composants["keywords"].index(mot)] = (
+                    corriger_texte(mot)
                 )
             else:
-                composants["keywords"][composants["keywords"].index(word)] = (
-                    "pas "
-                    + correcteur_orthographique(
-                        word[4:], "data/lemma_stemmer.txt", 1, 12, 54
-                    ).strip()
+                composants["keywords"][composants["keywords"].index(mot)] = (
+                    "pas " + corriger_texte(mot[4:])
                 )
 
-    with open("data/index_inverse.txt", "r", encoding="utf-8") as f:
-        lignes = f.readlines()
-
-    # Nettoyage des lignes
-    donnees = []
-    for ligne in lignes:
-        parties = ligne.strip().split(",")
-        # propres = [parties[0].strip()] + [x.strip().split(':')[0] for x in parties[1:]]
-        donnees.append(parties)
-
-    # Création du DataFrame
-    df = pd.DataFrame(donnees)
-
-    docs_date = []
-    dates_liste = []
+    # Docs date
     if composants["date"] is not None:
-        liste_required.append("date")
+        liste_champs_requis.append("date")
         if "exact" in composants["date"]:
             date = composants["date"]["exact"]
             composants["date"]["min"], composants["date"]["max"] = get_min_max_dates(
@@ -167,38 +102,36 @@ def moteur(query):
             )
             del composants["date"]["exact"]
         replace_min_and_max(composants["date"])
-        print(composants["date"])
         if "min" in composants["date"] and "max" in composants["date"]:
-            for value in df[0]:
+            for valeur in df[0]:
                 try:
-                    date_value = datetime.strptime(value, "%d/%m/%Y")
+                    date_valeur = datetime.strptime(valeur, "%d/%m/%Y")
                     date_min = datetime.strptime(composants["date"]["min"], "%d/%m/%Y")
                     date_max = datetime.strptime(composants["date"]["max"], "%d/%m/%Y")
-                    if date_min <= date_value <= date_max:
-                        dates_liste.append(value)
+                    if date_min <= date_valeur <= date_max:
+                        dates_liste.add(valeur)
                 except ValueError:
                     pass
 
         elif "min" in composants["date"]:
-            for value in df[0]:
+            for valeur in df[0]:
                 try:
-                    date_value = datetime.strptime(value, "%d/%m/%Y")
+                    date_valeur = datetime.strptime(valeur, "%d/%m/%Y")
                     date_min = datetime.strptime(composants["date"]["min"], "%d/%m/%Y")
-                    if date_min <= date_value:
-                        dates_liste.append(value)
+                    if date_min <= date_valeur:
+                        dates_liste.add(valeur)
                 except ValueError:
                     pass
         elif "max" in composants["date"]:
-            for value in df[0]:
+            for valeur in df[0]:
                 try:
-                    date_value = datetime.strptime(value, "%d/%m/%Y")
+                    date_valeur = datetime.strptime(valeur, "%d/%m/%Y")
                     date_max = datetime.strptime(composants["date"]["max"], "%d/%m/%Y")
-                    if date_value <= date_max:
-                        dates_liste.append(value)
+                    if date_valeur <= date_max:
+                        dates_liste.add(valeur)
                 except ValueError:
                     pass
         if "pas" in composants["date"]:
-            # dates_liste = [datetime.strptime(d, "%d/%m/%Y") for d in dates_liste]
             pas_pattern = composants["date"]["pas"]
             pas_pattern = pas_pattern.replace("****", ".*")
             pas_pattern = pas_pattern.replace("**", ".*")
@@ -206,20 +139,19 @@ def moteur(query):
             mois = pas_pattern[3:5]
             jour = pas_pattern[6:8]
             pas_pattern = f"{jour}/{mois}/{annee}"
-            dates_filtre = [d for d in dates_liste if not re.fullmatch(pas_pattern, d)]
+            dates_filtre = set(
+                d for d in dates_liste if not re.fullmatch(pas_pattern, d)
+            )
         else:
             dates_filtre = dates_liste
 
         for date in dates_filtre:
-            docs_date += df[df[0] == date].iloc[:, 1:].values.flatten().tolist()
-    docs_date = [doc for doc in docs_date if doc is not None and pd.notna(doc)]
+            docs_date.update(df[df[0] == date].iloc[:, 1:].values.flatten().tolist())
 
-    for doc in docs_date:
-        element_type = doc.split(":")[1]
-        if element_type != "date":
-            docs_date.remove(doc)
-    docs_date = set(docs_date)
+    docs_date = set(doc for doc in docs_date if doc is not None and pd.notna(doc))
+    filtrer_par("date", docs_date)
 
+    # Docs rubrique
     dico_rubriques = {
         "focus": "focus",
         "au coeur regions": "au coeur des régions",
@@ -238,84 +170,47 @@ def moteur(query):
         "horizon formation": "horizon formation",
         "côté pôles": "du côté des pôles",
     }
-    docs_rubrique = []
+
     if composants["rubriques"] is not None and composants["rubriques"]:
-        liste_required.append("rubrique")
+        liste_champs_requis.append("rubrique")
         for rubrique in composants["rubriques"]:
-            docs_rubrique += (
+            docs_rubrique.update(
                 df[df[0] == dico_rubriques[rubrique]]
                 .iloc[:, 1:]
                 .values.flatten()
                 .tolist()
             )
-        docs_rubrique = [
-            doc for doc in docs_rubrique if doc is not None and pd.notna(doc)
-        ]
-        # ou
-        docs_rubrique = list(set(docs_rubrique))
-    for doc in docs_rubrique:
-        element_type = doc.split(":")[1]
-        if element_type != "rubrique":
-            docs_rubrique.remove(doc)
+    docs_rubrique = set(
+        doc for doc in docs_rubrique if doc is not None and pd.notna(doc)
+    )
+    filtrer_par("rubrique", docs_rubrique)
 
-    docs_titre = df.iloc[:, 1:].values.flatten().tolist()
-    docs_titre = [doc for doc in docs_titre if doc is not None and pd.notna(doc)]
-    docs_titre = set(docs_titre)
+    # Docs titre
     if composants["titre"] is not None:
-        liste_required.append("titre")
-        titre_nettoye = composants["titre"].strip()  # retire les espaces en trop
-        for word in titre_nettoye.split(" "):
-            docs_titre &= set(df[df[0] == word].iloc[:, 1:].values.flatten().tolist())
-        docs_titre = [doc for doc in docs_titre if doc and pd.notna(doc)]
+        liste_champs_requis.append("titre")
+        titre_propre = composants["titre"].strip()  # retire les espaces en trop
+        for mot in titre_propre.split(" "):
+            docs_titre &= set(df[df[0] == mot].iloc[:, 1:].values.flatten().tolist())
 
-        # Filtrage des docs de type 'titre'
-        docs_titre_copy = docs_titre.copy()
-        for doc in docs_titre_copy:
-            if ":" not in doc:
-                docs_titre.remove(doc)
-                continue
-            type_element = doc.split(":")[1].strip()
-            if type_element != "titre":
-                docs_titre.remove(doc)
+    docs_titre = set(doc for doc in docs_titre if doc and pd.notna(doc))
+    filtrer_par("titre", docs_titre)
 
-        # Extraction des doc_id sans espace
-        docs_titre = set(doc.split(":")[0].strip() for doc in docs_titre if ":" in doc)
-
+    # Docs contenu
     if composants["contenu"] is not None:
-        liste_required.append("contenu")
-        contenu_nettoye = composants["contenu"].strip()
+        liste_champs_requis.append("contenu")
+        contenu_propre = composants["contenu"].strip()
         docs_contenu = (
-            df[df[0] == contenu_nettoye].iloc[:, 1:].values.flatten().tolist()
+            df[df[0] == contenu_propre].iloc[:, 1:].values.flatten().tolist()
         )
-        docs_contenu = [doc for doc in docs_contenu if doc and pd.notna(doc)]
 
-        # Filtrage par type 'texte'
-        docs_contenu_copy = docs_contenu.copy()
-        for doc in docs_contenu_copy:
-            if doc is None or ":" not in doc:
-                docs_contenu.remove(doc)
-                continue
-            element_type = doc.split(":")[1].strip()
-            if element_type != "texte":
-                docs_contenu.remove(doc)
+    docs_contenu = set(doc for doc in docs_contenu if doc and pd.notna(doc))
+    filtrer_par("texte", docs_contenu)
 
-        # Extraction des doc_id propres
-        docs_contenu = set(
-            doc.split(":")[0].strip() for doc in docs_contenu if doc and ":" in doc
-        )
-    else:
-        docs_contenu = set()
-
-    docs_non_keywords = df.iloc[:, 1:].values.flatten().tolist()
-    docs_non_keywords = [
-        doc for doc in docs_non_keywords if doc is not None and pd.notna(doc)
-    ]
-    docs_non_keywords = set(docs_non_keywords)
-
+    # Docs keywords négatifs
     pas_keywords_remove = None
-    if composants["keywords"] is not None and composants["keywords"]:
-        liste_required.append("keywords")
-        for _, keyword in enumerate(composants["keywords"]):
+    if composants["keywords"]:
+        liste_champs_requis.append("keywords")
+        for keyword in composants["keywords"]:
             if keyword.startswith("pas "):
                 pas_keywords_remove = keyword
                 pas_keywords = keyword.split()
@@ -326,37 +221,30 @@ def moteur(query):
                         df[df[0] == pas_keyword].iloc[:, 1:].values.flatten().tolist()
                     )
 
-                docs_non_keywords_copy = docs_non_keywords.copy()
-
-                for doc in docs_non_keywords_copy:
-                    element_type = doc.split(":")[1]
-                    if element_type not in ("texte", "titre"):
-                        docs_non_keywords.remove(doc)
+    docs_non_keywords = set(
+        doc for doc in docs_non_keywords
+        if doc.split(":")[1] in ("texte", "titre")
+    )
 
     if pas_keywords_remove is not None:
         composants["keywords"].remove(pas_keywords_remove)
     else:
         docs_non_keywords = set()
 
-    # le ou
-    docs_keywords = df.iloc[:, 1:].values.flatten().tolist()
-    docs_keywords = [doc for doc in docs_keywords if doc is not None and pd.notna(doc)]
-    docs_keywords = set(docs_keywords)
-
+    # Si le mot 'ou' est resté seul dans les keywords, on renvoie un OU
+    # sur le titre et le contenu
     if len(composants["keywords"]) == 1 and composants["keywords"][0] == "ou":
         doc_retourne = set(docs_titre) | set(docs_contenu)
         return doc_retourne, composants["doc_type"]
 
+    # S'il y a un OU dans les keywords, on prend tout ce qu'il y a avant
+    # et l'on fait la disjonction avec ce qu'il y a après
     if "ou" in composants["keywords"]:
         liste_ou = composants["keywords"].index("ou")
         liste_ou1 = composants["keywords"][:liste_ou]
         liste_ou2 = composants["keywords"][liste_ou + 1 :]
-        docs_liste1 = df.iloc[:, 1:].values.flatten().tolist()
-        docs_liste1 = [doc for doc in docs_liste1 if doc is not None and pd.notna(doc)]
-        docs_liste1 = set(docs_liste1)
-        docs_liste2 = df.iloc[:, 1:].values.flatten().tolist()
-        docs_liste2 = [doc for doc in docs_liste2 if doc is not None and pd.notna(doc)]
-        docs_liste2 = set(docs_liste2)
+        docs_liste1 = tous_docs.copy()
+        docs_liste2 = tous_docs.copy()
 
         for keyword in liste_ou1:
             docs_liste1 &= set(
@@ -369,43 +257,46 @@ def moteur(query):
             )
         docs_keywords = docs_liste1 | docs_liste2
     else:
-        print(composants["keywords"])
         for keyword in composants["keywords"]:
             docs_keywords &= set(
                 df[df[0] == keyword].iloc[:, 1:].values.flatten().tolist()
             )
 
-    docs_image = []
     if composants["image"] is not None:
-        liste_required.append("images")
+        liste_champs_requis.append("images")
         if composants["image"] == 1:
-            docs_image += (
+            docs_image.update(
                 df[df[0] == "presence_image"].iloc[:, 1:].values.flatten().tolist()
             )
         else:
-            docs_image += df[df[0] == "pas_image"].iloc[:, 1:].values.flatten().tolist()
-        docs_image = [doc for doc in docs_image if doc is not None and pd.notna(doc)]
+            docs_image.update(df[df[0] == "pas_image"].iloc[:, 1:].values.flatten().tolist())
+    docs_image = set(doc for doc in docs_image if doc is not None and pd.notna(doc))
 
+    # On récupère seulement les n° de fichiers et pas le champ associé
     docs_date = set(doc.split(":")[0] for doc in docs_date)
     docs_rubrique = set(doc.split(":")[0] for doc in docs_rubrique)
     docs_titre = set(doc.split(":")[0] for doc in docs_titre)
     docs_contenu = set(doc.split(":")[0] for doc in docs_contenu)
     docs_keywords = set(doc.split(":")[0] for doc in docs_keywords)
+    docs_non_keywords = set(doc.split(":")[0] for doc in docs_non_keywords)
     docs_image = set(doc.split(":")[0] for doc in docs_image)
 
+    # On prépare l'intersection des documents seulement sur les champs qui étaient requis
+    # (sinon on renverrait tout le temps des sets vides
+    # car l'intersection avec un set vide est un set vide)
     docs_possibles = []
-    for required in liste_required:
-        if required == "date":
+    for champ_requis in liste_champs_requis:
+        if champ_requis == "date":
             docs_possibles.append(docs_date)
-        elif required == "rubrique":
+        elif champ_requis == "rubrique":
             docs_possibles.append(docs_rubrique)
-        elif required == "titre":
+        elif champ_requis == "titre":
             docs_possibles.append(docs_titre)
-        elif required == "contenu":
+        elif champ_requis == "contenu":
             docs_possibles.append(docs_contenu)
-        elif required == "keywords":
+        elif champ_requis == "keywords":
             docs_possibles.append(docs_keywords)
-        elif required == "images":
+        elif champ_requis == "images":
             docs_possibles.append(docs_image)
 
     print(f"Docs sur keywords : {docs_keywords}")
@@ -415,50 +306,34 @@ def moteur(query):
     print(f"Docs sur date : {docs_date}")
     print(f"Docs sur rubrique : {docs_rubrique}")
     print(f"Docs sur image : {docs_image}")
-    print(docs_possibles)
+
     if not docs_possibles:
         return None, composants["doc_type"]
     intersect = set.intersection(*docs_possibles)
 
-    docs_non_keywords_ids = set()
-    for doc in docs_non_keywords:
-        if doc and ":" in doc:
-            doc_id = doc.split(":")[0].strip()
-            docs_non_keywords_ids.add(doc_id)
-
     # Nettoyer et filtrer l'intersection
+    # On enlève les docs correspondant aux "pas keywords"
     intersect = {doc.strip() for doc in intersect}
-    intersect -= docs_non_keywords_ids
+    intersect -= docs_non_keywords
 
-    final_intersect = intersect
-
+    # Traitement des différents cas de retour (article ou bulletin ou rubrique)
     if composants["doc_type"] == "article":
-        return final_intersect, composants["doc_type"]
+        return intersect, composants["doc_type"]
 
+    df_str = df.astype(str).map(str.strip)
+    col0 = df_str.iloc[:, 0]
     if composants["doc_type"] == "rubrique":
-        resultat = []
-        for article in final_intersect:
-            mask = df.apply(
-                lambda ligne: f"{article}:rubrique"
-                in map(lambda v: str(v).strip(), ligne.values),
-                axis=1,
-            )
-            match = df.loc[mask, 0]
-            if not match.empty:
-                resultat.append(match.iloc[0].strip())
-
+        motifs = [f"{article}:rubrique" for article in intersect]
+        mask = df_str.apply(lambda row: any(motif in row.values for motif in motifs), axis=1)
+        resultat = col0[mask].str.strip().unique()
         return set(resultat), composants["doc_type"]
 
     if composants["doc_type"] == "bulletin":
-        resultat = []
-        for article in final_intersect:
-            mask = df.apply(
-                lambda ligne: f"{article}:numero" in map(str, ligne.values), axis=1
-            )
-            match = df.loc[mask, 0]
-            if not match.empty:
-                resultat.append(match.iloc[0])
+        motifs = [f"{article}:numero" for article in intersect]
+        mask = df_str.apply(lambda row: any(motif in row.values for motif in motifs), axis=1)
+        resultat = col0[mask].unique()
         return set(resultat), composants["doc_type"]
+
     return set(), "article"
 
 

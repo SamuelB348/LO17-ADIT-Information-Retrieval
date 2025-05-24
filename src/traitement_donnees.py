@@ -17,95 +17,95 @@ from tqdm import tqdm
 from utils import open_file, unzip_data
 
 
-def extract_file_name(soup_content: BeautifulSoup) -> Optional[str]:
+def extract_nom_fichier(contenu_soup: BeautifulSoup) -> Optional[str]:
     """
     Extrait le nom du fichier à partir du contenu HTML.
 
-    :param soup_content: L'objet Beautifulsoup représentant le contenu HTML.
+    :param contenu_soup: L'objet Beautifulsoup représentant le contenu HTML.
     :return: Le nom du fichier ou None si non trouvé.
     """
-    if not isinstance(soup_content, BeautifulSoup):
+    if not isinstance(contenu_soup, BeautifulSoup):
         raise ValueError("L'argument entré doit être une instance de BeautifulSoup.")
 
     a_tags: List[Tag] = [
         a
-        for a in soup_content.find_all("a", attrs={"data-url": True})
+        for a in contenu_soup.find_all("a", attrs={"data-url": True})
         if isinstance(a, Tag)
     ]
     for a in a_tags:
         # Extraire le nom du fichier sans son extension
         # Le nom est après le dernier "/" et avant le ".htm"
-        file_name = str(a["data-url"]).rsplit("/", maxsplit=1)[-1].split(".")[0]
+        nom_fichier = str(a["data-url"]).rsplit("/", maxsplit=1)[-1].split(".")[0]
 
-        if file_name.isdigit():  # Vérification qu'il s'agit d'un numéro
-            return file_name
+        if nom_fichier.isdigit():  # Vérification qu'il s'agit d'un numéro
+            return nom_fichier
     return None
 
 
-def extract_bulletin_number(soup_content: BeautifulSoup) -> Optional[str]:
+def extract_numero_bulletin(contenu_soup: BeautifulSoup) -> Optional[str]:
     """
     Extrait le numéro du bulletin à partir du contenu HTML.
 
-    :param soup_content: L'objet BeautifulSoup représentant le contenu HTML.
+    :param contenu_soup: L'objet BeautifulSoup représentant le contenu HTML.
     :return: Le numéro du bulletin ou None si non trouvé.
     """
-    if not isinstance(soup_content, BeautifulSoup):
+    if not isinstance(contenu_soup, BeautifulSoup):
         raise ValueError("L'argument entré doit être une instance de BeautifulSoup.")
 
-    full_title = soup_content.find("title")
-    if full_title:
-        title_text = full_title.get_text(strip=True)
-        if ">" in title_text:
+    titre_complet = contenu_soup.find("title")
+    if titre_complet:
+        texte_titre = titre_complet.get_text(strip=True)
+        if ">" in texte_titre:
             # Récupération du texte après le premier '>' dans la balise <title>
-            full_bulletin_number = title_text.split(">")[1]
+            numero_bulletin_complet = texte_titre.split(">")[1]
             # Extraction du dernier élément (numéro seulement)
-            bulletin_number = full_bulletin_number.split()[-1].strip()
+            numero_bulletin = numero_bulletin_complet.split()[-1].strip()
 
-            if bulletin_number.isdigit():  # Vérification qu'il s'agit d'un numéro
-                return bulletin_number
+            if numero_bulletin.isdigit():  # Vérification qu'il s'agit d'un numéro
+                return numero_bulletin
     return None
 
 
-def extract_date(soup_content: BeautifulSoup) -> Optional[str]:
+def extract_date(contenu_soup: BeautifulSoup) -> Optional[str]:
     """
     Extrait la date de l'article à partir du contenu HTML.
 
-    :param soup_content: L'objet BeautifulSoup représentant le contenu HTML.
+    :param contenu_soup: L'objet BeautifulSoup représentant le contenu HTML.
     :return: La date de l'article ou None si non trouvée.
     """
-    if not isinstance(soup_content, BeautifulSoup):
+    if not isinstance(contenu_soup, BeautifulSoup):
         raise ValueError("L'argument entré doit être une instance de BeautifulSoup.")
 
-    full_title = soup_content.find("title")
-    if full_title:
+    titre_complet = contenu_soup.find("title")
+    if titre_complet:
         # Récupération du texte avant ">" dans la balise <title>
-        title_text = full_title.get_text(strip=True)
-        if ">" in title_text:
-            date_str = title_text.split(">")[0].strip()
+        texte_titre = titre_complet.get_text(strip=True)
+        if ">" in texte_titre:
+            date_str = texte_titre.split(">")[0].strip()
             try:
                 # Date sous le format attendu
-                formatted_date = datetime.strptime(date_str, "%Y/%m/%d").strftime(
+                date_formate = datetime.strptime(date_str, "%Y/%m/%d").strftime(
                     "%d/%m/%Y"
                 )
-                return formatted_date
+                return date_formate
             except ValueError:
                 return None
     return None
 
 
-def extract_section(soup_content: BeautifulSoup) -> Optional[str]:
+def extract_rubrique(contenu_soup: BeautifulSoup) -> Optional[str]:
     """
     Extrait la rubrique de l'article à partir du contenu HTML.
 
-    :param soup_content: L'objet BeautifulSoup représentant le contenu HTML.
+    :param contenu_soup: L'objet BeautifulSoup représentant le contenu HTML.
     :return: La rubrique de l'article ou None si non trouvée.
     """
-    if not isinstance(soup_content, BeautifulSoup):
+    if not isinstance(contenu_soup, BeautifulSoup):
         raise ValueError("L'argument entré doit être une instance de BeautifulSoup.")
 
     span42_tags: List[Tag] = [
         tag
-        for tag in soup_content.find_all("span", {"class": "style42"})
+        for tag in contenu_soup.find_all("span", {"class": "style42"})
         if isinstance(tag, Tag)
     ]
 
@@ -121,37 +121,37 @@ def extract_section(soup_content: BeautifulSoup) -> Optional[str]:
     return None
 
 
-def extract_title(soup_content: BeautifulSoup) -> Optional[str]:
+def extract_titre(contenu_soup: BeautifulSoup) -> Optional[str]:
     """
     Extrait le titre de l'article à partir du contenu HTML.
 
-    :param soup_content: L'objet BeautifulSoup représentant le contenu HTML.
+    :param contenu_soup: L'objet BeautifulSoup représentant le contenu HTML.
     :return: Le titre de l'article ou None si non trouvé.
     """
-    if not isinstance(soup_content, BeautifulSoup):
+    if not isinstance(contenu_soup, BeautifulSoup):
         raise ValueError("L'argument entré doit être une instance de BeautifulSoup.")
 
-    full_title = soup_content.find("title")
-    if full_title:
+    titre_complet = contenu_soup.find("title")
+    if titre_complet:
         # Récupération de la troisième partie après le deuxième ">" dans la balise <title>
-        return full_title.text.split(">")[2].strip()
+        return titre_complet.text.split(">")[2].strip()
     return None
 
 
-def extract_author(soup_content: BeautifulSoup) -> Optional[str]:
+def extract_auteur(contenu_soup: BeautifulSoup) -> Optional[str]:
     """
     Extrait le nom du rédacteur à partir du contenu HTML.
 
-    :param soup_content: L'objet BeautifulSoup représentant le contenu HTML.
+    :param contenu_soup: L'objet BeautifulSoup représentant le contenu HTML.
     :return: Le nom du rédacteur ou None si non trouvé.
     """
-    if not isinstance(soup_content, BeautifulSoup):
+    if not isinstance(contenu_soup, BeautifulSoup):
         raise ValueError("L'argument entré doit être une instance de BeautifulSoup.")
 
     tr_parent = None
     # Recherche du tableau <tr> contenant le nom du rédacteur
     tr_tags: List[Tag] = [
-        tag for tag in soup_content.find_all("tr") if isinstance(tag, Tag)
+        tag for tag in contenu_soup.find_all("tr") if isinstance(tag, Tag)
     ]
     for tr in tr_tags:
         span = tr.find("span", {"class": "style28"})
@@ -167,58 +167,58 @@ def extract_author(soup_content: BeautifulSoup) -> Optional[str]:
         span_95 = tr_parent.find("span", {"class": "style95"})
         if span_95:
             # Extraction du texte du rédacteur
-            author_text = span_95.get_text(strip=True)
+            texte_auteur = span_95.get_text(strip=True)
             match = re.search(
                 r"ADIT\s*-\s*([A-Za-zÀ-ÿ0-9]+(?:[-'\s][A-Za-zÀ-ÿ0-9]+)*)\s*-.*",
-                author_text,
+                texte_auteur,
             )
             if match:
                 return match.group(1).strip()  # Retourne le nom du rédacteur
     return None
 
 
-def extract_text(soup_content: BeautifulSoup) -> Optional[str]:
+def extract_texte(contenu_soup: BeautifulSoup) -> Optional[str]:
     """
     Extrait le texte à partir du contenu HTML.
 
-    :param soup_content: L'objet beautifulsoup représentant le contenu HTML.
+    :param contenu_soup: L'objet beautifulsoup représentant le contenu HTML.
     :return: Une liste contenant le texte extrait ou none si non trouvé.
     """
-    if not isinstance(soup_content, BeautifulSoup):
+    if not isinstance(contenu_soup, BeautifulSoup):
         raise ValueError("L'argument entré doit être une instance de BeautifulSoup.")
 
     parent: List[Tag] = [
         tag
-        for tag in soup_content.find_all(
+        for tag in contenu_soup.find_all(
             "td", {"class": "FWExtra2", "bgcolor": "#f3f5f8"}
         )
         if isinstance(tag, Tag)
     ]
-    text = parent[0].find_all("span", {"class": "style95"})
-    content = ""
-    if text:
-        for txt in text:
-            cleaned_text = txt.get_text().replace("\n", "")
-            content += " " + cleaned_text
-        return content.strip()
+    texte = parent[0].find_all("span", {"class": "style95"})
+    contenu = ""
+    if texte:
+        for txt in texte:
+            texte_clean = txt.get_text().replace("\n", "")
+            contenu += " " + texte_clean
+        return contenu.strip()
     return None
 
 
-def extract_images(soup_content: BeautifulSoup) -> List[Tuple[str, str]]:
+def extract_images(contenu_soup: BeautifulSoup) -> List[Tuple[str, str]]:
     """
     Extrait les images (sources et légendes) à partir du contenu HTML.
 
-    :param soup_content: L'objet BeautifulSoup représentant le contenu HTML.
+    :param contenu_soup: L'objet BeautifulSoup représentant le contenu HTML.
     :return: Une liste contenant les tuples (lien, légende) des images.
     """
 
-    if not isinstance(soup_content, BeautifulSoup):
+    if not isinstance(contenu_soup, BeautifulSoup):
         raise ValueError("L'argument entré doit être une instance de BeautifulSoup.")
 
     images = []
     parents: List[Tag] = [
         tag
-        for tag in soup_content.find_all(
+        for tag in contenu_soup.find_all(
             "td", {"class": "FWExtra2", "bgcolor": "#f3f5f8"}
         )
         if isinstance(tag, Tag)
@@ -230,30 +230,30 @@ def extract_images(soup_content: BeautifulSoup) -> List[Tuple[str, str]]:
         img = div.find("img")
         if img and isinstance(img, Tag):
             img_src = str(img.get("src"))
-            caption = ""
+            legende = ""
             span = div.find("span", {"class": "style21"})
             if span:
-                caption = span.get_text(strip=True)
-            images.append((img_src, caption))
+                legende = span.get_text(strip=True)
+            images.append((img_src, legende))
 
     return images
 
 
-def extract_contacts(soup_content: BeautifulSoup) -> Optional[str]:
+def extract_contacts(contenu_soup: BeautifulSoup) -> Optional[str]:
     """
     Extrait les contacts à partir du contenu HTML.
 
-    :param soup_content: L'objet BeautifulSoup représentant le contenu HTML.
+    :param contenu_soup: L'objet BeautifulSoup représentant le contenu HTML.
     :return: Une liste de contacts extraits ou une liste vide si aucun contact n'est trouvé.
     """
-    if not isinstance(soup_content, BeautifulSoup):
+    if not isinstance(contenu_soup, BeautifulSoup):
         raise ValueError("L'argument entré doit être une instance de BeautifulSoup.")
 
     td_parent = None
     # On récupère le <td> qui précède celui qu'on cherche
     spans: List[Tag] = [
         tag
-        for tag in soup_content.find_all("span", {"class": "style28"})
+        for tag in contenu_soup.find_all("span", {"class": "style28"})
         if isinstance(tag, Tag)
     ]
     for span in spans:
@@ -271,184 +271,184 @@ def extract_contacts(soup_content: BeautifulSoup) -> Optional[str]:
     return None
 
 
-def check_all(verbose=False) -> bool:
+def check_global(verbose=False) -> bool:
     """
     Fonction pour vérifier toutes les étapes de l'extraction.
     :param verbose: Affiche tout le contenu extrait si mis à True.
     :return: Un booléen indiquant si tout s'est bien passé.
     """
-    is_ok = True
-    folder = unzip_data("../BULLETINS.zip", "data")
-    files = [
-        os.path.join(folder, f)
-        for f in os.listdir(folder)
-        if os.path.isfile(os.path.join(folder, f))
+    est_ok = True
+    dossier = unzip_data("../BULLETINS.zip", "data")
+    fichiers = [
+        os.path.join(dossier, f)
+        for f in os.listdir(dossier)
+        if os.path.isfile(os.path.join(dossier, f))
     ]
 
-    for file_path in tqdm(files, desc="Vérification des n° de fichier"):
-        soup = open_file(file_path)
-        file_name = extract_file_name(soup)
-        if not file_name:
+    for chemin_fichier in tqdm(fichiers, desc="Vérification des n° de fichier"):
+        soup = open_file(chemin_fichier)
+        nom_fichier = extract_nom_fichier(soup)
+        if not nom_fichier:
             print(
-                f"Erreur: {os.path.basename(file_path)} ne contient pas de nom valide."
+                f"Erreur: {os.path.basename(chemin_fichier)} ne contient pas de nom valide."
             )
-            is_ok = False
+            est_ok = False
         elif verbose:
-            print(file_name)
+            print(nom_fichier)
 
-    for file_path in tqdm(files, desc="Vérification des n° de bulletin"):
-        soup = open_file(file_path)
-        bulletin_number = extract_bulletin_number(soup)
-        if not bulletin_number:
+    for chemin_fichier in tqdm(fichiers, desc="Vérification des n° de bulletin"):
+        soup = open_file(chemin_fichier)
+        numero_bulletin = extract_numero_bulletin(soup)
+        if not numero_bulletin:
             print(
-                f"Erreur: {os.path.basename(file_path)} ne contient pas "
+                f"Erreur: {os.path.basename(chemin_fichier)} ne contient pas "
                 f"de n° de bulletin valide."
             )
-            is_ok = False
+            est_ok = False
         elif verbose:
-            print(bulletin_number)
+            print(numero_bulletin)
 
-    for file_path in tqdm(files, desc="Vérification des dates"):
-        soup = open_file(file_path)
+    for chemin_fichier in tqdm(fichiers, desc="Vérification des dates"):
+        soup = open_file(chemin_fichier)
         date = extract_date(soup)
         if not date:
             print(
-                f"Erreur: {os.path.basename(file_path)} ne contient pas de date valide."
+                f"Erreur: {os.path.basename(chemin_fichier)} ne contient pas de date valide."
             )
-            is_ok = False
+            est_ok = False
         elif verbose:
             print(date)
 
-    for file_path in tqdm(files, desc="Vérification des rubriques"):
-        soup = open_file(file_path)
-        rubrique = extract_section(soup)
+    for chemin_fichier in tqdm(fichiers, desc="Vérification des rubriques"):
+        soup = open_file(chemin_fichier)
+        rubrique = extract_rubrique(soup)
         if not rubrique:
             print(
-                f"Erreur: {os.path.basename(file_path)} ne contient pas de rubrique valide."
+                f"Erreur: {os.path.basename(chemin_fichier)} ne contient pas de rubrique valide."
             )
-            is_ok = False
+            est_ok = False
         elif verbose:
             print(rubrique)
 
-    for file_path in tqdm(files, desc="Vérification des titres"):
-        soup = open_file(file_path)
-        title = extract_title(soup)
-        if not title:
-            print(f"Erreur: {os.path.basename(file_path)} ne contient pas de titre.")
-            is_ok = False
+    for chemin_fichier in tqdm(fichiers, desc="Vérification des titres"):
+        soup = open_file(chemin_fichier)
+        titre = extract_titre(soup)
+        if not titre:
+            print(f"Erreur: {os.path.basename(chemin_fichier)} ne contient pas de titre.")
+            est_ok = False
         elif verbose:
-            print(title)
+            print(titre)
 
-    for file_path in tqdm(files, desc="Vérification des auteurs"):
-        soup = open_file(file_path)
-        author = extract_author(soup)
-        if not author:
+    for chemin_fichier in tqdm(fichiers, desc="Vérification des auteurs"):
+        soup = open_file(chemin_fichier)
+        auteur = extract_auteur(soup)
+        if not auteur:
             print(
-                f"Erreur: {os.path.basename(file_path)} ne contient "
+                f"Erreur: {os.path.basename(chemin_fichier)} ne contient "
                 f"pas de nom de rédacteur valide."
             )
-            is_ok = False
+            est_ok = False
         elif verbose:
-            print(author)
+            print(auteur)
 
-    for file_path in tqdm(files, desc="Vérification des contenus"):
-        soup = open_file(file_path)
-        text = extract_text(soup)
-        if not text:
+    for chemin_fichier in tqdm(fichiers, desc="Vérification des contenus"):
+        soup = open_file(chemin_fichier)
+        texte = extract_texte(soup)
+        if not texte:
             print(
-                f"Erreur: {os.path.basename(file_path)} ne contient pas de texte valide."
+                f"Erreur: {os.path.basename(chemin_fichier)} ne contient pas de texte valide."
             )
-            is_ok = False
+            est_ok = False
         elif verbose:
-            print(text)
+            print(texte)
 
-    for file_path in tqdm(files, desc="Vérification des images"):
-        soup = open_file(file_path)
+    for chemin_fichier in tqdm(fichiers, desc="Vérification des images"):
+        soup = open_file(chemin_fichier)
         images = extract_images(soup)
         if verbose:
             pprint.pprint(images)
 
-    for file_path in tqdm(files, desc="Vérification des contacts"):
-        soup = open_file(file_path)
+    for chemin_fichier in tqdm(fichiers, desc="Vérification des contacts"):
+        soup = open_file(chemin_fichier)
         contacts = extract_contacts(soup)
         if not contacts:
-            print(f"Erreur: {os.path.basename(file_path)} ne contient pas de contact.")
-            is_ok = False
+            print(f"Erreur: {os.path.basename(chemin_fichier)} ne contient pas de contact.")
+            est_ok = False
         elif verbose:
             print(contacts)
 
-    return is_ok
+    return est_ok
 
 
-def generate_article(file_name: str) -> Optional[Element]:
+def genere_article(fichier: str) -> Optional[Element]:
     """
     Génère un article au format XML
 
-    :param file_name: Le fichier HTML à traiter.
+    :param fichier: Le fichier HTML à traiter.
     :return: Une chaîne XML représentant l'article.
     """
     try:
-        soup = open_file(file_name)
+        soup = open_file(fichier)
 
         # Création de l'élément XML principal
         article = ET.Element("article")
 
         # Ajout des sous-éléments à l'article en utilisant les fonctions d'extraction
-        ET.SubElement(article, "fichier").text = extract_file_name(soup)
-        ET.SubElement(article, "numero").text = extract_bulletin_number(soup)
+        ET.SubElement(article, "fichier").text = extract_nom_fichier(soup)
+        ET.SubElement(article, "numero").text = extract_numero_bulletin(soup)
         ET.SubElement(article, "date").text = extract_date(soup)
-        ET.SubElement(article, "rubrique").text = extract_section(soup)
-        ET.SubElement(article, "titre").text = extract_title(soup)
-        ET.SubElement(article, "auteur").text = extract_author(soup)
-        ET.SubElement(article, "texte").text = extract_text(soup)
+        ET.SubElement(article, "rubrique").text = extract_rubrique(soup)
+        ET.SubElement(article, "titre").text = extract_titre(soup)
+        ET.SubElement(article, "auteur").text = extract_auteur(soup)
+        ET.SubElement(article, "texte").text = extract_texte(soup)
 
         images = extract_images(soup)
         images_elem = ET.SubElement(article, "images")
         # 'images' est une liste dont chaque élément devient une image
-        for url, caption in images:
+        for url, legende in images:
             image_elem = ET.SubElement(images_elem, "image")
             ET.SubElement(image_elem, "urlImage").text = url.strip()
-            ET.SubElement(image_elem, "legendeImage").text = caption.strip()
+            ET.SubElement(image_elem, "legendeImage").text = legende.strip()
 
         ET.SubElement(article, "contact").text = extract_contacts(soup)
 
         return article
 
     except Exception as e:
-        print(f"Erreur lors de la génération de l'article avec {file_name} : {e}")
+        print(f"Erreur lors de la génération de l'article avec {fichier} : {e}")
         return None
 
 
-def generate_corpus(zip_directory: str, output_file: str) -> None:
+def genere_corpus(dossier_zip: str, fichier_sortie: str) -> None:
     """
     Génère un corpus au format XML et l'enregistre dans un fichier.
 
-    :param zip_directory: Le répertoire contenant le fichier ZIP à traiter.
-    :param output_file: Le fichier où le corpus XML sera sauvegardé.
+    :param dossier_zip: Le répertoire contenant le fichier ZIP à traiter.
+    :param fichier_sortie: Le fichier où le corpus XML sera sauvegardé.
     :return: None.
     """
     try:
-        workdir = unzip_data(zip_directory, "/..")
+        repertoire = unzip_data(dossier_zip, "/..")
         corpus = ET.Element("corpus")
 
-        for element in tqdm(os.listdir(workdir), desc="Genération du corpus"):
-            file_path = os.path.join(workdir, element)
-            if os.path.isfile(file_path):
-                article = generate_article(file_path)
+        for element in tqdm(os.listdir(repertoire), desc="Genération du corpus"):
+            chemin_fichier = os.path.join(repertoire, element)
+            if os.path.isfile(chemin_fichier):
+                article = genere_article(chemin_fichier)
                 if article is not None:
                     corpus.append(article)
                 else:
                     raise ValueError(
-                        f"Impossible de générer l'article pour {file_path}"
+                        f"Impossible de générer l'article pour {chemin_fichier}"
                     )
 
         # Utilisation de minidom pour avoir des indentations
         xml_str = minidom.parseString(ET.tostring(corpus)).toprettyxml(indent="  ")
 
         # Sauvegarde du contenu dans un fichier
-        with open(output_file, "w", encoding="utf-8") as file:
+        with open(fichier_sortie, "w", encoding="utf-8") as file:
             file.write(xml_str)
-            print(f"Corpus généré avec succès dans: {output_file}")
+            print(f"Corpus généré avec succès dans: {fichier_sortie}")
 
     except FileNotFoundError as fnf_error:
         print(
@@ -459,7 +459,7 @@ def generate_corpus(zip_directory: str, output_file: str) -> None:
 
 
 if __name__ == "__main__":
-    if check_all():
-        generate_corpus("../BULLETINS.zip", "data/corpus.xml")
+    if check_global():
+        genere_corpus("../BULLETINS.zip", "data/corpus.xml")
     else:
         print("Problème durant la vérification des fichiers !")

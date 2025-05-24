@@ -1,3 +1,7 @@
+"""
+Main
+"""
+
 from interface import RechercheApp
 
 if __name__ == "__main__":

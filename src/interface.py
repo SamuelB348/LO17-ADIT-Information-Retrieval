@@ -8,7 +8,7 @@ import datetime
 import webbrowser
 import tkinter as tk
 import customtkinter as ctk
-from browser import moteur
+from moteur import moteur
 from utils import parse_xml
 
 
@@ -28,7 +28,7 @@ class RechercheApp:
         self.root.iconphoto(False, tk.PhotoImage(file="images/icon.png"))
         self.root.wm_iconbitmap("images/icon.ico")
 
-        self.tri_var = tk.StringVar(value="Pertinence")
+        self.tri_var = tk.StringVar(value="Classique")
 
         self.build_interface()
         self.root.mainloop()

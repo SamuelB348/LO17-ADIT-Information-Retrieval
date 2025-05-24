@@ -115,8 +115,8 @@ def correcteur_orthographique(
         lexique, sep="→", header=None, names=["mot", "lemme"], engine="python"
     )
 
-    for word in tokenize(input_texte):
-        match = lexique_dataframe[lexique_dataframe["mot"] == word]
+    for mot in tokenize(input_texte):
+        match = lexique_dataframe[lexique_dataframe["mot"] == mot]
 
         # Si le mot existe dans le lexique, ajoute son lemme
         if not match.empty:
@@ -126,37 +126,37 @@ def correcteur_orthographique(
         else:
             candidats = []
             for mot in lexique_dataframe["mot"]:
-                proximity = recherche_prefixe(
-                    word, mot, seuil_min, seuil_max, seuil_proximite
+                proximite = recherche_prefixe(
+                    mot, mot, seuil_min, seuil_max, seuil_proximite
                 )
-                if proximity != 0:
-                    candidats.append((mot, proximity))
+                if proximite != 0:
+                    candidats.append((mot, proximite))
 
             # Si aucun candidat trouvé, ajouter None
             if len(candidats) == 0:
-                output_liste.append(word)
-                print(f"Aucun candidat trouvé pour le mot '{word}'")
+                output_liste.append(mot)
+                print(f"Aucun candidat trouvé pour le mot '{mot}'")
             else:
                 # Trouver le candidat avec la meilleure proximité
-                max_proximity = max(c[1] for c in candidats)
-                best_candidates = [c for c in candidats if c[1] == max_proximity]
+                max_proximite = max(c[1] for c in candidats)
+                meilleur_candidats = [c for c in candidats if c[1] == max_proximite]
 
                 # Si plusieurs candidats ont la même proximité,
                 # choisir celui avec la distance de Levenshtein la plus faible
-                if len(best_candidates) == 1:
+                if len(meilleur_candidats) == 1:
                     output_liste.append(
                         lexique_dataframe[
-                            lexique_dataframe["mot"] == best_candidates[0][0]
+                            lexique_dataframe["mot"] == meilleur_candidats[0][0]
                         ].iloc[0]["lemme"]
                     )
                 else:
                     # Utilisation de la distance de Levenshtein pour choisir le meilleur candidat
-                    best_candidate_lev = min(
-                        best_candidates, key=lambda x: levenshtein(word, x[0])
+                    meilleur_candidat_lev = min(
+                        meilleur_candidats, key=lambda x: levenshtein(mot, x[0])
                     )
                     output_liste.append(
                         lexique_dataframe[
-                            lexique_dataframe["mot"] == best_candidate_lev[0]
+                            lexique_dataframe["mot"] == meilleur_candidat_lev[0]
                         ].iloc[0]["lemme"]
                     )
     # Retour du texte corrigé
