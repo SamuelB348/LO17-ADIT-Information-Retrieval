@@ -31,35 +31,36 @@ Dans le dossier src, on trouve :
 ├── requirements.txt       # Liste des dépendances Python  
 ├── README.md              # Ce fichier readme  
 ├── src/                   # Dossier principal des scripts et ressources  
-│   ├── anti_dictionnary.py     # Filtrage des mots vides  
-│   ├── data_parser.py          # Parsing des données brutes  
+│   ├── anti_dictionnaire.py     # Filtrage des mots vides  
+│   ├── traitement_donnees.py          # Parsing des données brutes  
 │   ├── interface.py            # Interface graphique (Tkinter)  
-│   ├── inverted_index.py       # Index inversé pour la recherche  
-│   ├── lemmatize.py            # Lemmatisation des termes  
+│   ├── index_inverse.py       # Index inversé pour la recherche  
+│   ├── lemmatisation.py            # Lemmatisation des termes  
 │   ├── segmente.py             # Segmentation du texte  
-│   ├── spellchecker.py         # Correction orthographique  
+│   ├── correcteur.py         # Correction orthographique  
 │   ├── substitue.py            # Gestion des synonymes  
-│   ├── queries.py              # Traitement des requêtes utilisateur  
+│   ├── requetes.py              # Traitement des requêtes utilisateur  
 │   ├── main.py                 # Script principal pour afficher l'interface  
-│   ├── browser.py              # Moteur de recherche principal  
-│   ├── eval.py                 # Evaluation du moteur de recherche principal    
+│   ├── moteur.py              # Moteur de recherche principal  
+│   ├── evaluation.py                 # Evaluation du moteur de recherche principal    
 │   ├── utils.py                # Fonctions utilitaires  
 │   ├── data/                   # Données générées et sources  
 │   │   ├── BULLETINS/          # Bulletins et images d'origine  
 │   │   └── (tous les autres fichiers générés)  
 │   ├── images/                 # Images pour l’interface  
 │       ├── icon.ico            # Icône de l’interface  
+│       ├── icon.png            # Icône de l’interface  
 
 Tous les scripts situés dans le dossier src/ peuvent être exécutés séparément.
 Ils fonctionnent chacun de manière autonome, ce qui vous permet de tester et visualiser le traitement étape par étape.
 Cela est particulièrement utile si vous souhaitez comprendre ou valider chaque phase du projet avant d’utiliser l’interface graphique.   
 
 Pour générer les fichiers du projet, veuillez suivre les étapes suivantes :
-- Etape 1 : lancer data_parser.py
+- Etape 1 : lancer traitement_donnees.py
 - Etape 2 : lancer segmente.py
-- Etape 3 : lancer anti_dictionnary.py
-- Etape 4 : lancer lemmatize.py
-- Etape 5 : lancer inverted_index.py
+- Etape 3 : lancer anti_dictionnaire.py
+- Etape 4 : lancer lemmatisation.py
+- Etape 5 : lancer index_inverse.py
 ---
 
 ## Installation
@@ -112,3 +113,15 @@ Vous pouvez alors consulter chaque article en cliquant sur le bouton **Consulter
 Les temps d’exécution rapportés dans le rapport pour le traitement des requêtes via la fonction moteur.py ont été mesurés sur Google Colab.  
 En local, les temps moyens restent relativement similaires.  
 Il ne faut pas s’inquiéter si l’exécution est légèrement plus longue de votre côté, cela dépend notamment des performances de votre machine.
+
+
+### Évaluation du code
+
+Enfin, pour assurer un code propre, lisible et conforme aux bonnes pratiques, nous avons utilisé l’outil `pylint` afin d’analyser l’ensemble de notre base de code. Grâce à ce travail, nous avons obtenu un score global supérieur à **9.92 / 10**, ce qui témoigne d’un code bien structuré, bien documenté et maintenable.
+
+La commande utilisée pour obtenir ce score est la suivante :
+
+```bash
+pylint --disable=C0301 src/*.py
+```
+
