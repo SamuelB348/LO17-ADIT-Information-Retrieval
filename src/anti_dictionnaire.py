@@ -72,9 +72,7 @@ def idf_determination(fichier_tf: str, fichier_idf: str) -> None:
             file.write(f"{mot}\t{idf}\n")
 
 
-def calcul_tf_idf(
-    fichier_tf: str, fichier_idf: str, fichier_tfidf: str
-) -> None:
+def calcul_tf_idf(fichier_tf: str, fichier_idf: str, fichier_tfidf: str) -> None:
     """
     Calcule les valeurs tf-idf pour chaque terme du corpus et les sauvegarde dans un fichier.
 
@@ -120,12 +118,15 @@ def definition_stop_words(
         fichier_tfidf, sep="\t", header=None, names=["file_number", "word", "tfidf"]
     )
 
-    # Sélection des mots ayant un tf-idf inférieur au seuil minimum
-    stop_words = tfidf_dataframe[tfidf_dataframe["tfidf"] < seuil_min]["word"].unique()
-    # Écriture dans le fichier subs_file
+    # Calcul de la moyenne du tf-idf pour chaque mot
+    moyenne_tfidf = tfidf_dataframe.groupby("word")["tfidf"].mean()
+    # Sélection des mots ayant une moyenne de tf-idf inférieure au seuil
+    stop_words = moyenne_tfidf[moyenne_tfidf < seuil_min].index.tolist()
+    # Écriture des stop words dans le fichier de substitution
     with open(fichier_subs, "w", encoding="utf-8") as file:
         for word in stop_words:
-            file.write(f"{word}\t{''}\n")
+            file.write(f"{word}\t\n")
+
     return stop_words
 
 

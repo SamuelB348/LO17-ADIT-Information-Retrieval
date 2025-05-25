@@ -35,6 +35,7 @@ def fichiers_rubrique_focus_avec_images(xml_path):
 
     return fichiers
 
+
 def extraire_fichiers_filtres(xml_path):
     """
     Renvoie les valeurs <fichier> des articles datés entre 2013 et 2014,
@@ -78,7 +79,6 @@ if __name__ == "__main__":
         "Je veux les articles de 2014 et de la rubrique Focus et parlant de la santé.",
     ]
 
-
     for requete in REQUETES_TEST:
         print("#####################################################")
         print(f"Requête : {requete}")
@@ -88,7 +88,15 @@ if __name__ == "__main__":
     docs_pertinents = {
         REQUETES_TEST[0]: {"74752"},
         REQUETES_TEST[1]: {"70421", "70162", "74168", "75064"},
-        REQUETES_TEST[2]: {"72933", "67797", "74745", "72636", "71617", "68383", "70920"},
+        REQUETES_TEST[2]: {
+            "72933",
+            "67797",
+            "74745",
+            "72636",
+            "71617",
+            "68383",
+            "70920",
+        },
         REQUETES_TEST[3]: {
             "272",
             "284",
@@ -348,7 +356,9 @@ if __name__ == "__main__":
     print(df)
 
     df_plot = df[["requête", "precision", "rappel", "f_mesure"]].set_index("requête")
-    df_plot.plot(kind="bar", figsize=(12, 6), title="Évaluation du moteur (10 requêtes)")
+    df_plot.plot(
+        kind="bar", figsize=(12, 6), title="Évaluation du moteur (10 requêtes)"
+    )
     plt.ylabel("Score")
     plt.xticks(rotation=45, ha="right")
     plt.tight_layout()
@@ -359,7 +369,7 @@ if __name__ == "__main__":
         "Je voudrais les articles qui parlent de cuisine moléculaire.",
         "Quels sont les articles sur la réalité virtuelle?",
         "Je voudrais les articles qui parlent d’airbus ou du projet Taxibot.",
-        #"Je voudrais tous les bulletins écrits entre 2012 et 2013 mais pas au mois de juin.", Trop lent
+        # "Je voudrais tous les bulletins écrits entre 2012 et 2013 mais pas au mois de juin.", Trop lent
         "Quels sont les articles dont le titre contient biocarburant ou le contenu parle des bioénergies ?",
         "Je souhaite les rubriques des articles parlant de nutrition ou de vins.",
         "Articles dont la rubrique est 'Horizon Enseignement' mais qui ne parlent pas d’ingénieurs.",
@@ -397,9 +407,7 @@ if __name__ == "__main__":
     for i, (req, t) in enumerate(temps_moyens.items()):
         print(f"Q{i+1} : {t:.4f} sec — {req}")
 
-    REQUETE_LENTE = (
-        "Je voudrais tous les bulletins écrits entre 2012 et 2013 mais pas au mois de juin."
-    )
+    REQUETE_LENTE = "Je voudrais tous les bulletins écrits entre 2012 et 2013 mais pas au mois de juin."
 
     temps_execution = []
     for _ in range(4):

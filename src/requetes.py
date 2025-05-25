@@ -80,6 +80,7 @@ def extract_rubriques(requete: str) -> Tuple[List[str], str]:
         "evenement",
         "événement",
         "evénement",
+        "évènement",
         "direct laboratoires",
         "direct labos",
         "a lire",

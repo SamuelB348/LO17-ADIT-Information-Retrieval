@@ -16,6 +16,7 @@ class RechercheApp:
     """
     Interface utilisateur.
     """
+
     def __init__(self):
         # Initialisation de l'interface
         ctk.set_appearance_mode("light")
@@ -123,7 +124,8 @@ class RechercheApp:
                                 "rubrique": article.find("rubrique").text,
                                 "extrait": " ".join(
                                     article.find("texte").text.split()[:50]
-                                ) + "...",
+                                )
+                                + "...",
                             }
                             resultats_structured.append(dico)
                             break
@@ -159,7 +161,15 @@ class RechercheApp:
             widget.destroy()
 
         if doc_type == "article":
-            headers = ["ID", "Titre", "Date", "N° de bulletin", "Rubrique", "Extrait", "Consulter"]
+            headers = [
+                "ID",
+                "Titre",
+                "Date",
+                "N° de bulletin",
+                "Rubrique",
+                "Extrait",
+                "Consulter",
+            ]
             for i, header in enumerate(headers):
                 ctk.CTkLabel(
                     self.scrollable_resultats,
@@ -174,15 +184,15 @@ class RechercheApp:
                 ctk.CTkLabel(
                     self.scrollable_resultats, text=resultat["titre"], wraplength=200
                 ).grid(row=row_index, column=1, padx=5, pady=2, sticky="nsew")
-                ctk.CTkLabel(
-                    self.scrollable_resultats, text=resultat["date"]
-                ).grid(row=row_index, column=2, padx=5, pady=2, sticky="nsew")
-                ctk.CTkLabel(
-                    self.scrollable_resultats, text=resultat["numero"]
-                ).grid(row=row_index, column=3, padx=5, pady=2, sticky="nsew")
-                ctk.CTkLabel(
-                    self.scrollable_resultats, text=resultat["rubrique"]
-                ).grid(row=row_index, column=4, padx=5, pady=2, sticky="nsew")
+                ctk.CTkLabel(self.scrollable_resultats, text=resultat["date"]).grid(
+                    row=row_index, column=2, padx=5, pady=2, sticky="nsew"
+                )
+                ctk.CTkLabel(self.scrollable_resultats, text=resultat["numero"]).grid(
+                    row=row_index, column=3, padx=5, pady=2, sticky="nsew"
+                )
+                ctk.CTkLabel(self.scrollable_resultats, text=resultat["rubrique"]).grid(
+                    row=row_index, column=4, padx=5, pady=2, sticky="nsew"
+                )
                 ctk.CTkLabel(
                     self.scrollable_resultats,
                     text=resultat["extrait"],

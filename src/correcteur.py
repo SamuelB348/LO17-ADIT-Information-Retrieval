@@ -117,7 +117,6 @@ def correcteur_orthographique(
 
     for mot in tokenize(input_texte):
         match = lexique_dataframe[lexique_dataframe["mot"] == mot]
-
         # Si le mot existe dans le lexique, ajoute son lemme
         if not match.empty:
             output_liste.append(match.iloc[0]["lemme"])
@@ -125,12 +124,12 @@ def correcteur_orthographique(
         # Si le mot n'est pas dans le lexique, recherche de candidats proches
         else:
             candidats = []
-            for mot in lexique_dataframe["mot"]:
+            for candidat_potentiel in lexique_dataframe["mot"]:
                 proximite = recherche_prefixe(
-                    mot, mot, seuil_min, seuil_max, seuil_proximite
+                    mot, candidat_potentiel, seuil_min, seuil_max, seuil_proximite
                 )
                 if proximite != 0:
-                    candidats.append((mot, proximite))
+                    candidats.append((candidat_potentiel, proximite))
 
             # Si aucun candidat trouvé, ajouter None
             if len(candidats) == 0:

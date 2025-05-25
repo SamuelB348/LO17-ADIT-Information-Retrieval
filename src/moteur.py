@@ -39,10 +39,9 @@ def filtrer_par(field: str, docs_set: set[str]) -> None:
     :param docs_set: Le set à filtrer.
     :return: None.
     """
-    docs_set.intersection_update({
-        doc for doc in docs_set
-        if ":" in doc and doc.split(":")[1].strip() == field
-    })
+    docs_set.intersection_update(
+        {doc for doc in docs_set if ":" in doc and doc.split(":")[1].strip() == field}
+    )
 
 
 def moteur(requete: str) -> Tuple[Optional[set], str]:
@@ -91,7 +90,7 @@ def moteur(requete: str) -> Tuple[Optional[set], str]:
                 composants["keywords"][composants["keywords"].index(mot)] = (
                     "pas " + corriger_texte(mot[4:])
                 )
-
+    print(composants)
     # Docs date
     if composants["date"] is not None:
         liste_champs_requis.append("date")
@@ -158,6 +157,7 @@ def moteur(requete: str) -> Tuple[Optional[set], str]:
         "evenement": "evénement",
         "evénement": "evénement",
         "événement": "evénement",
+        "évènement": "evénement",
         "actualité innovation": "actualité innovation",
         "actualités innovation": "actualités innovation",
         "actualités innovations": "actualités innovations",
@@ -199,9 +199,7 @@ def moteur(requete: str) -> Tuple[Optional[set], str]:
     if composants["contenu"] is not None:
         liste_champs_requis.append("contenu")
         contenu_propre = composants["contenu"].strip()
-        docs_contenu = (
-            df[df[0] == contenu_propre].iloc[:, 1:].values.flatten().tolist()
-        )
+        docs_contenu = df[df[0] == contenu_propre].iloc[:, 1:].values.flatten().tolist()
 
     docs_contenu = set(doc for doc in docs_contenu if doc and pd.notna(doc))
     filtrer_par("texte", docs_contenu)
@@ -222,8 +220,7 @@ def moteur(requete: str) -> Tuple[Optional[set], str]:
                     )
 
     docs_non_keywords = set(
-        doc for doc in docs_non_keywords
-        if doc.split(":")[1] in ("texte", "titre")
+        doc for doc in docs_non_keywords if doc.split(":")[1] in ("texte", "titre")
     )
 
     if pas_keywords_remove is not None:
@@ -234,7 +231,9 @@ def moteur(requete: str) -> Tuple[Optional[set], str]:
     # Si le mot 'ou' est resté seul dans les keywords, on renvoie un OU
     # sur le titre et le contenu
     if len(composants["keywords"]) == 1 and composants["keywords"][0] == "ou":
+        print(docs_titre, docs_contenu)
         doc_retourne = set(docs_titre) | set(docs_contenu)
+        doc_retourne = set(doc.split(":")[0] for doc in doc_retourne)
         return doc_retourne, composants["doc_type"]
 
     # S'il y a un OU dans les keywords, on prend tout ce qu'il y a avant
@@ -269,7 +268,9 @@ def moteur(requete: str) -> Tuple[Optional[set], str]:
                 df[df[0] == "presence_image"].iloc[:, 1:].values.flatten().tolist()
             )
         else:
-            docs_image.update(df[df[0] == "pas_image"].iloc[:, 1:].values.flatten().tolist())
+            docs_image.update(
+                df[df[0] == "pas_image"].iloc[:, 1:].values.flatten().tolist()
+            )
     docs_image = set(doc for doc in docs_image if doc is not None and pd.notna(doc))
 
     # On récupère seulement les n° de fichiers et pas le champ associé
@@ -324,13 +325,17 @@ def moteur(requete: str) -> Tuple[Optional[set], str]:
     col0 = df_str.iloc[:, 0]
     if composants["doc_type"] == "rubrique":
         motifs = [f"{article}:rubrique" for article in intersect]
-        mask = df_str.apply(lambda row: any(motif in row.values for motif in motifs), axis=1)
+        mask = df_str.apply(
+            lambda row: any(motif in row.values for motif in motifs), axis=1
+        )
         resultat = col0[mask].str.strip().unique()
         return set(resultat), composants["doc_type"]
 
     if composants["doc_type"] == "bulletin":
         motifs = [f"{article}:numero" for article in intersect]
-        mask = df_str.apply(lambda row: any(motif in row.values for motif in motifs), axis=1)
+        mask = df_str.apply(
+            lambda row: any(motif in row.values for motif in motifs), axis=1
+        )
         resultat = col0[mask].unique()
         return set(resultat), composants["doc_type"]
 

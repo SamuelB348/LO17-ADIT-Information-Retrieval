@@ -1,5 +1,8 @@
 0→0
 00→00
+000→000
+1→1
+10→10
 10-15→10-15
 100→100
 1000→1000
@@ -93,6 +96,7 @@
 1b→1b
 1er→1er
 1ère→1er
+2→2
 2-1a→2-1a
 2-1b→2-1b
 2-h→2-h
@@ -173,6 +177,7 @@
 2kg→2kg
 2è→2è
 2ème→2em
+3→3
 30→30
 300→300
 3000→3000
@@ -194,6 +199,7 @@
 3dau→3dau
 3e→3e
 3ème→3em
+4→4
 40→40
 400→400
 410→410
@@ -208,6 +214,7 @@
 48→48
 4i→4i
 4ème→4em
+5→5
 50→50
 500→500
 5000→5000
@@ -222,6 +229,7 @@
 576→576
 58→58
 5ème→5em
+6→6
 60→60
 600→600
 606→606
@@ -275,6 +283,7 @@
 970→970
 98→98
 9ème→9em
+a→a
 a-t-elle→a-t-el
 a-t-il→a-t-il
 a-t-on→a-t-on
@@ -451,6 +460,7 @@ active→activ
 activement→activ
 actives→activ
 activité→activ
+activités→activ
 activée→activ
 activées→activ
 activés→activ
@@ -575,6 +585,7 @@ affluent→affluent
 affranchir→affranch
 affronter→affront
 affût→affût
+afin→afin
 afis→afis
 afni→afni
 afnor→afnor
@@ -603,6 +614,7 @@ agissaient→agiss
 agissait→agiss
 agisse→agiss
 agissent→agissent
+agit→agit
 agit-il→agit-il
 agitation→agit
 agon→agon
@@ -667,6 +679,7 @@ aimara→aimar
 aime→aim
 aimerait→aim
 ain→ain
+ainsi→ains
 air→air
 airbus→airbus
 aircore→aircor
@@ -775,6 +788,7 @@ alléger→alleg
 allés→allé
 almasat-1→almasat-1
 along→along
+alors→alor
 alpes→alpe
 alpes-de-haute-provence→alpes-de-haute-provent
 alpespace→alpespac
@@ -963,6 +977,8 @@ annuelle→annuel
 annuelles→annuel
 annuels→annuel
 annulation→annul
+année→anné
+années→anné
 anomalie→anomal
 anomalies→anomal
 anonyme→anonym
@@ -971,6 +987,7 @@ anormale→anormal
 anormaux→anormal
 anr→anr
 anru2→anru2
+ans→an
 ansdepuis→ansdepuis
 anses→anse
 anta-diop→anta-diop
@@ -1068,6 +1085,7 @@ applicable→applic
 applicables→applic
 applicatifs→appliqu
 application→appliqu
+applications→appliqu
 applicationsrestait→applicationsrest
 applied→applied
 appliquant→appliqu
@@ -1136,6 +1154,7 @@ appuyé→appui
 appuyée→appui
 appétence→appétent
 appétit→appet
+après→apres
 après-kyoto→après-kyoto
 après-midi→après-mid
 apte→apte
@@ -1450,6 +1469,7 @@ augmenté→augment
 augmentée→augment
 augsburg→augsburg
 auguste→august
+aujourd→aujourd
 auo-assemblage→auo-assemblag
 aupalesens→aupalesen
 auparavant→auparav
@@ -1467,10 +1487,12 @@ aurons→auron
 auront→auront
 auroy→auroy
 ausculter→auscult
+aussi→auss
 aussitôt→aussitôt
 australe→austral
 australie→austral
 austère→auster
+autant→aut
 auteur→auteur
 auteurs→auteur
 authenticité→authent
@@ -1516,12 +1538,16 @@ autorités→autor
 autoroute→autorout
 autoroutes→autorout
 autoréparable→autorépar
+autour→autour
+autre→autr
 autrefois→autrefois
 autrement→autr
+autres→autr
 autresavec→autresavec
 autresdepuis→autresdepuis
 autriche→autrich
 auvergne→auvergn
+aux→aux
 auxerre→auxerr
 auxiliaires→auxiliair
 auxquelles→auxquel
@@ -1539,6 +1565,7 @@ avanciez→avanc
 avancée→avanc
 avancées→avanc
 avancés→avanc
+avant→avant
 avant-coureur→avant-coureur
 avant-postes→avant-post
 avant-projet→avant-projet
@@ -1547,6 +1574,7 @@ avantage→avantag
 avantages→avantag
 avantageuses→avantag
 avatar→avatar
+avec→avec
 avenir→aven
 avenirs→avenir
 aventure→aventur
@@ -1565,6 +1593,7 @@ avionneur→avionneur
 avionneurs→avionneur
 avions→avion
 avis→avis
+avoir→avoir
 avons→avon
 avons-nous→avons-nous
 avoue→avou
@@ -1722,6 +1751,7 @@ battre→battr
 bauce→bauc
 be→be
 beau→beau
+beaucoup→beaucoup
 beaujolais→beaujol
 beauvais→beauv
 beaux→beau
@@ -1761,6 +1791,7 @@ biausser→biauss
 bibliographie→bibliograph
 bibliothèque→bibliothequ
 bic→bic
+bien→bien
 bien-être→bien-êtr
 biene→bien
 biennal→biennal
@@ -2108,6 +2139,7 @@ bêta→bêt
 bêta-amyloïde→bêta-amyloïd
 bêta-bloquant→bêta-bloqu
 bêtes→bêt
+c→c
 c02→c02
 c1→c1
 c2ma→c2ma
@@ -2124,6 +2156,7 @@ cadence→cadenc
 cadences→cadenc
 cadmium→cadmium
 cadoret→cadoret
+cadre→cadr
 cadres→cadr
 caen→caen
 caffarel→caffarel
@@ -2344,9 +2377,11 @@ cecalait→cecal
 ceci→cec
 ceinture→ceintur
 ceintures→ceintur
+cela→cel
 celia→celi
 cell→cel
 celle→cel
+celle-ci→celle-c
 celles→cel
 celles-ci→celles-c
 celllules→celllul
@@ -2356,6 +2391,7 @@ cellule→cellul
 cellules→cellul
 cellulose→cellulos
 celui→celui
+celui-ci→celui-c
 celuii→celui
 cemafroid→cemafroid
 cemagref→cemagref
@@ -2379,6 +2415,7 @@ centrales→central
 centralien→centralien
 centralienne→centralien
 centraliens→centralien
+centre→centr
 centres→centr
 centrifugation→centrifug
 centré→centr
@@ -2398,11 +2435,14 @@ cerna→cern
 certain→certain
 certaine→certain
 certainement→certain
+certaines→certain
+certains→certain
 certes→cert
 certification→certif
 certifié→certifi
 certifiés→certifi
 cerveau→cerveau
+ces→ce
 cessait→cess
 cessant→cess
 cesse→cess
@@ -2410,6 +2450,7 @@ cessent→cessent
 cesser→cess
 cession→cession
 cessé→cess
+cet→cet
 ceti→cet
 cetilab→cetilab
 cetp→cetp
@@ -2456,6 +2497,7 @@ chaotique→chaotiqu
 chapdaniel→chapdaniel
 chapitre→chapitr
 chapitres→chapitr
+chaque→chaqu
 charbon→charbon
 charcuterie→charcuter
 charcutiers→charcuti
@@ -2506,6 +2548,8 @@ cherche→cherch
 cherchent→cherchent
 cherchent-ils→cherchent-il
 chercher→cherch
+chercheur→chercheur
+chercheurs→chercheur
 chercheuse→chercheux
 chercheuses→chercheux
 cherchez→cherch
@@ -2518,6 +2562,7 @@ chevelure→chevelur
 cheveu→cheveu
 cheveux→cheveux
 chevilles→chevill
+chez→chez
 chiens→chien
 chiffre→chiffr
 chiffres→chiffr
@@ -2707,6 +2752,7 @@ cnes→cne
 cniel→cniel
 cnr→cnr
 cnrm-game→cnrm-gam
+cnrs→cnr
 cnrs-académie→cnrs-academ
 cnrst→cnrst
 co-concepteur→co-concepteur
@@ -2749,6 +2795,7 @@ code→cod
 codes→cod
 codée→cod
 coefficient→coefficient
+coeur→coeur
 cofinancés→cofinanc
 cogitation→cogit
 cogiter→cogit
@@ -2781,6 +2828,7 @@ collaborateur→collabor
 collaborateurs→collabor
 collaboratif→collabor
 collaboratifs→collabor
+collaboration→collabor
 collaborations→collabor
 collaborative→collabor
 collabore→collabor
@@ -2854,6 +2902,7 @@ commandement→command
 commandes→command
 commandé→command
 commandées→command
+comme→comm
 commelin→commelin
 commence→commenc
 commencent→commencent
@@ -2976,6 +3025,7 @@ comptabilité→comptabl
 comptable→comptabl
 comptait→compt
 comptant→compt
+compte→compt
 comptent→comptent
 compter→compt
 comptera→compt
@@ -2991,6 +3041,7 @@ compétent→compétent
 compétitifs→compétit
 compétition→compétit
 compétitives→compétit
+compétitivité→compétit
 comte→comt
 comtois→comtois
 comté→comt
@@ -3287,6 +3338,7 @@ contenus→contenus
 contest→contest
 conteste→contest
 contester→contest
+contexte→context
 contiennent→contiennent
 contient→contient
 continent→continent
@@ -3472,6 +3524,7 @@ coureaud→coureaud
 couronne→couron
 courons→couron
 courrons→courron
+cours→cour
 course→cours
 courses→cours
 courspierre→courspierr
@@ -3581,6 +3634,7 @@ crédibles→crédibl
 crédit→cred
 crée→cré
 créent→créent
+créer→cré
 créneaux→créneau
 créteil→créteil
 créé→cré
@@ -3785,11 +3839,14 @@ department→department
 depaulis→depaul
 depe→dep
 depos→depos
+depuis→depuis
 derepas→derep
 dermatologie→dermatolog
 dermatologues→dermatologu
+dernier→derni
 derniers→derni
 dernière→derni
+dernières→derni
 derrière→derri
 desbarats→desbarat
 descartes→descart
@@ -3821,6 +3878,7 @@ desy→desy
 detection→detect
 deutsches→deutsch
 deutérium→deutérium
+deux→deux
 deuxième→deuxiem
 devaient→dev
 devait→dev
@@ -3847,6 +3905,7 @@ devons-nous→devons-nous
 devra→devr
 devraient→devr
 devraient-elles→devraient-el
+devrait→devr
 devrait-on→devrait-on
 devront→devront
 devront-ils→devront-il
@@ -3901,6 +3960,8 @@ différences→différent
 différenciation→différenci
 différent→différent
 différente→différent
+différentes→différent
+différents→différent
 digestif→digest
 digestion→digest
 digestive→digest
@@ -3940,6 +4001,7 @@ direct→direct
 directe→direct
 directement→direct
 directes→direct
+directeur→directeur
 directeurs→directeur
 direction→direct
 directions→direct
@@ -4036,6 +4098,7 @@ distributeurs→distributeur
 distributing→distributing
 distribution→distribu
 distribué→distribu
+dit→dit
 dit-elle→dit-el
 dit-il→dit-il
 dite→dit
@@ -4078,6 +4141,8 @@ doigté→doigt
 doit→doit
 doivent→doivent
 dollars→dollar
+domaine→domain
+domaines→domain
 domicile→domicil
 domiciles→domicil
 dominantes→domin
@@ -4085,6 +4150,7 @@ dominique→domin
 dommages→dommag
 domomédecine→domomédecin
 domotique→domot
+donc→donc
 donnait→don
 donnant→don
 donne→don
@@ -4097,6 +4163,7 @@ donné→don
 donnée→don
 données→don
 donnés→don
+dont→dont
 dopage→dopag
 dopamine→dopamin
 doper→dop
@@ -4183,6 +4250,7 @@ durablecette→durablecet
 durablement→durabl
 durables→durabl
 durait→dur
+durant→dur
 durcir→durc
 durcissement→durc
 durcisseurs→durcisseur
@@ -4365,6 +4433,7 @@ dégâts→dégât
 dégénérativesl→dégénérativesl
 dégénérescence→dégénérescent
 dégénérescences→dégénérescent
+déjà→déjà
 délais→del
 délaissé→délaiss
 délibérée→déliber
@@ -4503,6 +4572,7 @@ désole→désol
 désorbitation→désorbit
 désordre→désordr
 désorganisation→désorganis
+désormais→désorm
 désorption→désorpt
 déstabiliser→déstabilis
 déstructuration→déstructur
@@ -4545,12 +4615,15 @@ détruire→détruir
 dévasté→dévast
 développant→développ
 développe→développ
+développement→développ
 développements→développ
 développent→développent
+développer→développ
 développera→développ
 développerait→développ
 développeurs→développeur
 développons→développon
+développé→développ
 développée→développ
 développées→développ
 développés→développ
@@ -4581,6 +4654,7 @@ eco-climb→eco-climb
 eco-efficient→eco-efficient
 eco-extraction→eco-extract
 ecolab→ecolab
+ecole→ecol
 ecoles→ecol
 ecologie→ecolog
 ecology→ecology
@@ -4620,6 +4694,7 @@ effectué→effectu
 effectuées→effectu
 effectués→effectu
 effervescence→effervescent
+effet→effet
 effets→effet
 efficace→efficac
 efficacement→efficac
@@ -4665,6 +4740,7 @@ elements→element
 elevator→elevator
 elisa→elis
 elisabeth→elisabeth
+elle→elle
 elle-même→elle-mêm
 elles→elle
 elles-mêmes→elles-mêm
@@ -4743,6 +4819,7 @@ enchaîner→enchaîn
 enclavées→enclav
 enclin→enclin
 encombrante→encombr
+encore→encor
 encourageants→encourag
 encouragent→encouragent
 encourager→encourag
@@ -4777,6 +4854,7 @@ enfants→enfant
 enfantsdu→enfantsdu
 enfermer→enferm
 enfilage→enfilag
+enfin→enfin
 enflamme→enflamm
 engage→engag
 engageant→engag
@@ -4830,6 +4908,7 @@ enseignement→enseign
 enseignements→enseign
 enseignementthéorème→enseignementthéorem
 enseigner→enseign
+ensemble→ensembl
 ensembliers→ensembli
 ensg→ensg
 ensia→ensi
@@ -4840,6 +4919,7 @@ ensmm→ensmm
 ensoleillement→ensoleil
 ensoleillés→ensoleil
 ensta→ensta
+ensuite→ensuit
 entamant→entam
 entame→entam
 entament→entament
@@ -4881,6 +4961,7 @@ entraînera→entraîn
 entraîné→entraîn
 entraînée→entraîn
 entraînés→entraîn
+entre→entre
 entrecoupe→entrecoup
 entrent→entrent
 entreprendre→entreprendr
@@ -4889,6 +4970,8 @@ entrepreneuriale→entrepreneurial
 entrepreneuriat→entrepreneuriat
 entrepreneurs→entrepreneur
 entrepris→entrepr
+entreprise→entrepris
+entreprises→entrepris
 entreprisesaujourd→entreprisesaujourd
 entrer→entrer
 entrera→entrer
@@ -4914,6 +4997,7 @@ environment→environment
 environmental→environmental
 environnant→environ
 environnants→environ
+environnement→environ
 environnement-climat-santé→environnement-climat-sant
 environnemental→environnemental
 environnementale→environnemental
@@ -5141,6 +5225,7 @@ excès→exces
 executive→execut
 exemplaire→exemplair
 exemplaires→exemplair
+exemple→exempl
 exemples→exempl
 exenuc→exenuc
 exercent→exercent
@@ -5191,6 +5276,7 @@ experts-partenaires→experts-partenair
 expiration→expir
 explication→expliqu
 explicites→explicit
+explique→expliqu
 explique-t-elle→explique-t-el
 explique-t-il→explique-t-il
 explique-t-on→explique-t-on
@@ -5327,6 +5413,7 @@ faiblit→faibl
 failles→faill
 failli→faill
 faim→faim
+faire→fair
 faisabilité→faisabl
 faisaient→fais
 faisait→fais
@@ -5334,6 +5421,7 @@ faisant→fais
 faisceau→faisceau
 faisions→faision
 faisons→faison
+fait→fait
 faite→fait
 faites→fait
 faits→fait
@@ -5371,6 +5459,7 @@ faunes→faun
 faupel→faupel
 faurre→faurr
 fausse→fauss
+faut→faut
 faut-il→faut-il
 faute→faut
 fauteuil→fauteuil
@@ -5565,6 +5654,7 @@ focalisés→focalis
 focus→focus
 foetal→foetal
 foie→foi
+fois→fois
 fois-ci→fois-c
 foix→foix
 foliaire→foliair
@@ -5627,9 +5717,11 @@ formalisera→formalis
 formalisé→formalis
 formant→form
 formateur→formateur
+formation→format
 formationon→formationon
 formations→format
 formats→format
+forme→form
 formellement→formel
 forment→forment
 former→form
@@ -5712,6 +5804,7 @@ framatome→framatom
 franc-comtois→franc-comtois
 franc-comtoise→franc-comtois
 franc-comtoises→franc-comtois
+france→franc
 france-unesco-académie→france-unesco-academ
 francfort→francfort
 franche-comté→franche-comt
@@ -5735,6 +5828,7 @@ franco-russe→franco-russ
 francophone→francophon
 francophones→francophon
 francs-comtois→francs-comtois
+français→franc
 française→français
 françaises→français
 françois→françois
@@ -6045,10 +6139,13 @@ grains→grain
 gram→gram
 grameen→grameen
 grammes→gramm
+grand→grand
 grand-mère→grand-mer
 grand-témoin→grand-témoin
+grande→grand
 grande-bretagne→grande-bretagn
 grandement→grand
+grandes→grand
 grandeur→grandeur
 grandir→grand
 grandissant→grand
@@ -6108,9 +6205,11 @@ grosses→gross
 grossir→gross
 grosso→grosso
 group→group
+groupe→group
 groupement→group
 groupements→group
 groupes→group
+grâce→grâc
 grèce→grec
 grêle→grêl
 gsi→gsi
@@ -6375,6 +6474,7 @@ hubble→hubbl
 hubert→hubert
 hugo→hugo
 hugues→hugu
+hui→hui
 huile→huil
 huiles→huil
 huilier→huili
@@ -6514,6 +6614,7 @@ idé→idé
 idéal→idéal
 idéale→idéal
 idéalisés→idéalis
+idée→idé
 idées→idé
 ieh→ieh
 iesf→iesf
@@ -6544,6 +6645,7 @@ iil→iil
 iir→iir
 iisb→iisb
 ijcci→ijcci
+il→il
 ile→ile
 ile-de-france→ile-de-fr
 ile-et-vilaine→ile-et-vilain
@@ -6562,6 +6664,7 @@ illustré→illustr
 illustrée→illustr
 illustrés→illustr
 illégales→illégal
+ils→il
 ilsa→ilsa
 image→imag
 imager→imag
@@ -6650,6 +6753,7 @@ impliquée→impliqu
 impliquées→impliqu
 impliqués→impliqu
 importance→import
+important→import
 importante→import
 importantes→import
 importants→import
@@ -6753,6 +6857,7 @@ indifférents→indifférent
 indigo→indigo
 indiquait→indiqu
 indiquant→indiqu
+indique→indiqu
 indique-t-elle→indique-t-el
 indique-t-il→indique-t-il
 indique-t-on→indique-t-on
@@ -6786,11 +6891,13 @@ industrialisation→industrialis
 industrialiser→industrialis
 industrialisé→industrialis
 industrialisés→industrialis
+industrie→industr
 industrieaussi→industrieauss
 industriel→industriel
 industrielle→industriel
 industriellement→industriel
 industrielles→industriel
+industriels→industriel
 industries→industr
 indéniables→indéni
 indépendamment→indépend
@@ -6906,6 +7013,7 @@ innovante→innov
 innovantes→innov
 innovants→innov
 innovateurs→innov
+innovation→innov
 innovations→innov
 innovatives→innov
 innove→innov
@@ -6982,6 +7090,7 @@ instar→instar
 instationnaires→instationnair
 instauration→instaur
 insticc→insticc
+institut→institut
 institute→institut
 instituteurs→instituteur
 institution→institu
@@ -7061,6 +7170,7 @@ interministérielle→interministériel
 intermittentes→intermittent
 intermédiaire→intermédiair
 intermédiaires→intermédiair
+international→international
 internationale→international
 internationales→international
 internationaux→international
@@ -7382,6 +7492,7 @@ juridiques→jurid
 juristes→jurist
 jury→jury
 jus→jus
+jusqu→jusqu
 jusque→jusqu
 juste→just
 justement→just
@@ -7444,6 +7555,7 @@ labellisé→labellis
 labellisée→labellis
 labellisés→labellis
 labex→labex
+laboratoire→laboratoir
 laboratoires→laboratoir
 laboratory→laboratory
 labri→labr
@@ -7514,6 +7626,7 @@ lao→lao
 laos→laos
 lapines→lapin
 laplace→laplac
+laquelle→laquel
 lara→lar
 lara-spiral→lara-spiral
 larchey→larchey
@@ -7609,9 +7722,11 @@ lettre→lettr
 lettres→lettr
 leucocytes→leucocyt
 leucodystrophies→leucodystroph
+leur→leur
 leurre→leurr
 leurrer→leurr
 leurrées→leurr
+leurs→leur
 levage→levag
 levallois-perret→levallois-perret
 levang→levang
@@ -7795,6 +7910,7 @@ lorenceau→lorenceau
 lorgnette→lorgnet
 lorient→lorient
 lorraine→lorrain
+lors→lor
 lorsqu→lorsqu
 lorsque→lorsqu
 lot→lot
@@ -7822,6 +7938,7 @@ lucratif→lucrat
 ludwik→ludwik
 lueur→lueur
 lufthansa→lufthans
+lui→lui
 lui-même→lui-mêm
 luminance→lumin
 luminescentes→luminescent
@@ -7844,6 +7961,7 @@ lyon→lyon
 lyonbiopôle→lyonbiopôl
 lyonnais→lyon
 lyonnaise→lyonnais
+là→là
 là-bas→là-b
 lâche→lâch
 lâche-t-elle→lâche-t-el
@@ -7914,6 +8032,7 @@ maintien→maintien
 maintient→maintient
 maire→mair
 mairie→mair
+mais→mais
 maison→maison
 maisondelasimulation→maisondelasimul
 maisonnier→maisonni
@@ -7999,6 +8118,7 @@ marchais→march
 marchand→marchand
 marchandises→marchandis
 marche→march
+marché→march
 marchés→march
 marcoule→marcoul
 mardi→mard
@@ -8084,6 +8204,7 @@ mathématique→mathémat
 mathématiques→mathémat
 matin→matin
 matinée→matin
+matière→mati
 matières→mati
 mato→mato
 matri→matr
@@ -8213,6 +8334,7 @@ mettent→mettent
 mettez→met
 mettra→mettr
 mettra-t-elle→mettra-t-el
+mettre→mettr
 mettrons→mettron
 metz→metz
 meurent→meurent
@@ -8289,6 +8411,7 @@ midi→mid
 midi-pyréenes→midi-pyréen
 midi-pyrénées→midi-pyren
 midinnov→midinnov
+mieux→mieux
 migrateur→migrateur
 migration→migrat
 migrer→migr
@@ -8359,6 +8482,7 @@ mirim→mirim
 miroir→miroir
 miroirs→miroir
 mis→mis
+mise→mis
 miser→mis
 mises→mis
 missiles→missil
@@ -8425,6 +8549,8 @@ moho→moho
 moi→moi
 moindre→moindr
 moindres→moindr
+moins→moin
+mois→mois
 mois-ci→mois-c
 moisson→moisson
 moitié→moiti
@@ -8443,6 +8569,7 @@ moments→moment
 mon→mon
 monaco→monaco
 monate→monat
+monde→mond
 mondes→mond
 mondial→mondial
 mondiale→mondial
@@ -8734,8 +8861,10 @@ météorologie→météorolog
 météorologique→météorolog
 météorologiques→météorolog
 mêlent→mêlent
+même→mêm
 mêmes→mêm
 mûrir→mûr
+n→n
 nacl→nacl
 naco-caractérisation→naco-caractéris
 nacre→nacr
@@ -8845,6 +8974,7 @@ naît→naît
 naître→naîtr
 naïo→naïo
 ncbir→ncbir
+ne→ne
 necker→neck
 necker-enfants→necker-enf
 neige→neig
@@ -8924,6 +9054,7 @@ nist→nist
 nitroglycérine→nitroglycérin
 nitrure→nitrur
 nitry→nitry
+niveau→niveau
 niveaux→niveau
 nizo→nizo
 niçoise→niçois
@@ -8939,6 +9070,7 @@ noire→noir
 noires→noir
 noisy-le-grand→noisy-le-grand
 nom→nom
+nombre→nombr
 nombreuses→nombreux
 nombreux→nombreux
 nominal→nominal
@@ -8947,6 +9079,7 @@ nommer→nomm
 nommé→nomm
 nommée→nomm
 noms→nom
+non→non
 non-circulantes→non-circul
 non-destructifs→non-destruct
 non-invasifs→non-invas
@@ -8969,6 +9102,7 @@ norvège→norveg
 nos→nos
 nota→not
 notable→notabl
+notamment→not
 note→not
 note-t-il→note-t-il
 noter→not
@@ -8976,6 +9110,7 @@ notion→notion
 notoires→notoir
 notons→noton
 notoriété→notoriet
+notre→notr
 notz→notz
 noté→not
 nouer→nou
@@ -8989,8 +9124,12 @@ nourrisson→nourrisson
 nourrissons→nourr
 nourrit→nourr
 nourriture→nourritur
+nous→nous
+nouveau→nouveau
 nouveautés→nouveaut
+nouveaux→nouveau
 nouvel→nouvel
+nouvelle→nouvel
 nouvelle-zélande→nouvelle-zéland
 nouvellement→nouvel
 nouvelles→nouvel
@@ -9038,6 +9177,7 @@ né→né
 néanmoins→néanmoin
 nécessaire→nécessair
 nécessairement→nécessair
+nécessaires→nécessair
 nécessitant→nécessit
 nécessite→nécessit
 nécessitent→nécessitent
@@ -9070,6 +9210,7 @@ nés→né
 nîmes→nîm
 nôtre→nôtr
 obasanjo→obasanjo
+objectif→object
 objectifs→object
 objective→object
 objet→objet
@@ -9121,6 +9262,7 @@ obtient→obtient
 obèses→obes
 obésité→obes
 ocari→ocar
+occasion→occas
 occasionnant→occasion
 occident→occident
 occidentale→occidental
@@ -9215,6 +9357,7 @@ ombre→ombre
 omnt→omnt
 omp→omp
 oms→om
+on→on
 onde→onde
 ondes→onde
 ondimba→ondimb
@@ -9223,6 +9366,7 @@ onera→oner
 ong→ong
 oniris→onir
 online→onlin
+ont→ont
 ont-il→ont-il
 ont-ils→ont-il
 ontario→ontario
@@ -9283,6 +9427,7 @@ opérationnels→opérationnel
 opérations→oper
 opératoire→opératoir
 opérer→oper
+or→or
 orageuse→orag
 orageux→orag
 orale→oral
@@ -9385,6 +9530,7 @@ osé→osé
 oséo→oséo
 otc→otc
 oto-rhino-laryngologie→oto-rhino-laryngolog
+ou→ou
 ouagadougou→ouagadougou
 oublier→oubli
 oublions→oublion
@@ -9433,6 +9579,7 @@ oxygène→oxygen
 oz→oz
 ozone→ozon
 oïdium→oïdium
+où→où
 p→p
 p-g→p-g
 p80→p80
@@ -9492,6 +9639,7 @@ parachevant→parachev
 parade→parad
 paraissait→paraiss
 parallèle→parallel
+parallèlement→parallel
 paralyse→paralys
 paralysie→paralys
 paramètres→parametr
@@ -9530,6 +9678,7 @@ parfums→parfum
 pari→pari
 parietal→parietal
 parieurs→parieur
+paris→paris
 paris-diderot→paris-diderot
 paris-est→paris-est
 paris-saclay-ile-de-france→paris-saclay-ile-de-fr
@@ -9549,6 +9698,7 @@ parler→parl
 parlera→parl
 parlez→parl
 parlé→parl
+parmi→parm
 paroi→paroi
 parois→parois
 parole→parol
@@ -9566,6 +9716,7 @@ partagées→partag
 partagés→partag
 partant→part
 partenaire→partenair
+partenaires→partenair
 partenariale→partenarial
 partenariales→partenarial
 partenariat→partenariat
@@ -9587,6 +9738,7 @@ participé→particip
 particularité→particular
 particule→particul
 particules→particul
+particulier→particuli
 particuliers→particuli
 particulière→particuli
 particulièrement→particuli
@@ -9606,6 +9758,7 @@ parvenons→parvenon
 parvenu→parvenu
 parvenus→parvenus
 parvient→parvient
+pas→pas
 pas-de-calais→pas-de-cal
 pasadena→pasaden
 pasadéna→pasaden
@@ -9740,6 +9893,7 @@ permanence→permanent
 permanent→permanent
 permanente→permanent
 permanents→permanent
+permet→permet
 permet-elle→permet-el
 permettait→permet
 permettant→permet
@@ -9748,6 +9902,7 @@ permettent→permettent
 permettra→permettr
 permettraient→permettr
 permettrait→permettr
+permettre→permettr
 permettront→permettront
 permettront-elles→permettront-el
 permis→perm
@@ -9771,6 +9926,7 @@ personne→person
 personnel→personnel
 personnelle→personnel
 personnels→personnel
+personnes→person
 perspective→perspect
 perspectives→perspect
 persuadé→persuad
@@ -9802,6 +9958,7 @@ petit→pet
 petite→petit
 petites→petit
 petits→petit
+peu→peu
 peugeot→peugeot
 peuple→peupl
 peuplent→peuplent
@@ -9809,10 +9966,12 @@ peupler→peupl
 peuples→peupl
 peuplé→peupl
 peur→peur
+peut→peut
 peut-elle→peut-el
 peut-il→peut-il
 peut-on→peut-on
 peut-être→peut-êtr
+peuvent→peuvent
 peuvent-ils→peuvent-il
 peyne→peyn
 ph→ph
@@ -9952,6 +10111,7 @@ piégé→pieg
 piétiné→piétin
 piézométriques→piézometr
 pla→pla
+place→plac
 placebo→placebo
 placer→plac
 placera→plac
@@ -10041,6 +10201,8 @@ pluriannuelle→pluriannuel
 pluridisciplinaire→pluridisciplinair
 pluridisciplinarité→pluridisciplinar
 plurielle→pluriel
+plus→plus
+plusieurs→plusieur
 plutonium→plutonium
 plutôt→plutôt
 pluviométrie→pluviometr
@@ -10062,6 +10224,7 @@ poche→poch
 poids→poid
 poignée→poign
 poincaré→poincar
+point→point
 point-clé→point-cl
 pointe→point
 pointes→point
@@ -10232,6 +10395,7 @@ pourcentage→pourcentag
 pourquoi→pourquoi
 pourra→pourr
 pourraient→pourr
+pourrait→pourr
 pourrait-elle→pourrait-el
 pourrait-on→pourrait-on
 pourrions→pourrion
@@ -10268,6 +10432,7 @@ pouvait→pouv
 pouvait-il→pouvait-il
 pouvant→pouv
 pouvez→pouv
+pouvoir→pouvoir
 pouvoirs→pouvoir
 pouvons→pouvon
 ppb→ppb
@@ -10292,7 +10457,9 @@ pratiqués→pratiqu
 precisio→precisio
 prefalc→prefalc
 premice→premic
+premier→premi
 premiers→premi
+première→premi
 premières→premi
 prenant→pren
 prenante→pren
@@ -10402,6 +10569,7 @@ procédés→proced
 producteur→producteur
 producteurs→producteur
 productif→product
+production→product
 productions→product
 productive→product
 productives→product
@@ -10410,8 +10578,10 @@ productrice→productric
 productrices→productric
 products→product
 produiraient→produir
+produire→produir
 produisant→produis
 produisent→produisent
+produit→produit
 produite→produit
 produites→produit
 produits→produit
@@ -10446,6 +10616,7 @@ profondément→profond
 programmable→programm
 programmables→programm
 programmation→programm
+programme→programm
 programmer→programm
 programmes→programm
 programmée→programm
@@ -10462,7 +10633,9 @@ project→project
 projecteurs→projecteur
 projectile→projectil
 projections→project
+projet→projet
 projeter→projet
+projets→projet
 projette→projet
 projeté→projet
 prolactine→prolactin
@@ -10583,6 +10756,7 @@ provoquera→provoqu
 provoquée→provoqu
 proximité→proxim
 proximités→proxim
+près→pres
 pré-assemblage→pré-assemblag
 pré-clinique→pré-clin
 pré-cliniques→pré-clin
@@ -10602,6 +10776,7 @@ précipitation→précipit
 précipitations→précipit
 précis→prec
 précisant→précis
+précise→précis
 précise-t-elle→précise-t-el
 précise-t-elleune→précise-t-elleun
 précise-t-il→précise-t-il
@@ -10685,6 +10860,7 @@ préparons-nous→préparons-nous
 préparé→prépar
 préparées→prépar
 présence→présenc
+présent→présent
 présentaient→présent
 présentait→présent
 présentant→présent
@@ -10710,6 +10886,7 @@ préserver→préserv
 préservées→préserv
 préside→présid
 présidence→président
+président→président
 président-directeur→président-directeur
 présidente→président
 présidents→président
@@ -10758,6 +10935,7 @@ psychologues→psychologu
 psychosocial→psychosocial
 pti→pti
 ptychographie→ptychograph
+pu→pu
 public→public
 public-privé→public-priv
 publication→publiqu
@@ -10862,8 +11040,10 @@ pétrolière→pétroli
 pêche→pêch
 pêches→pêch
 pêché→pêch
+pôle→pôl
 pôles→pôl
 qdiv→qdiv
+qu→qu
 quadrillent→quadrillent
 quadrillion→quadrillion
 quae→qua
@@ -10882,7 +11062,9 @@ qualiment→qual
 qualitatif→qualit
 qualitative→qualit
 quality→quality
+qualité→qualit
 qualités→qualit
+quand→quand
 quant→quant
 quantifier→quantifi
 quantique→quantiqu
@@ -10908,6 +11090,7 @@ quel→quel
 quelle→quel
 quelles→quel
 quelque→quelqu
+quelques→quelqu
 quelques-unes→quelques-un
 quelques-uns→quelques-un
 quels→quel
@@ -11009,9 +11192,11 @@ rapides→rapid
 rapidité→rapid
 rappelant→rappel
 rappeler→rappel
+rappelle→rappel
 rappelle-t-elle→rappelle-t-el
 rappelle-t-il→rappelle-t-il
 rappellent→rappellent
+rappelons→rappelon
 rappelons-le→rappelons-l
 rappels→rappel
 rappelé→rappel
@@ -11079,9 +11264,11 @@ recevait→recev
 recevoir→recevoir
 recevront→recevront
 rechargement→recharg
+recherche→recherch
 recherche-industrie→recherche-industr
 recherchent→recherchent
 rechercher→recherch
+recherches→recherch
 recherché→recherch
 recherchée→recherch
 recherchées→recherch
@@ -11846,6 +12033,7 @@ résorber→résorb
 résoudre→résoudr
 résultant→résult
 résultat→résultat
+résultats→résultat
 résultent→résultent
 résumant→résum
 résume→résum
@@ -11906,8 +12094,10 @@ rêvons→rêvon
 rêvé→rêv
 rôdé→rôd
 rôle→rôl
+s→s
 s-100b→s-100b
 s-seb→s-seb
+sa→sa
 sabatier→sabati
 sable→sabl
 sables→sabl
@@ -11976,6 +12166,7 @@ sanguins→sanguin
 sanitaire→sanitair
 sanitaires→sanitair
 sanofi→sanof
+sans→san
 santa→sant
 santé→sant
 santé-environnement-handicap→santé-environnement-handicap
@@ -12061,6 +12252,8 @@ schémas→schem
 sciatique→sciatiqu
 scid→scid
 science→scienc
+sciences→scienc
+scientifique→scientif
 scientifiquement→scientif
 scientifiques→scientif
 sck-cen→sck-cen
@@ -12080,18 +12273,21 @@ scénario→scénario
 scénarios→scénarios
 sds-nice→sds-nic
 sdsc→sdsc
+se→se
 sea→se
 seb→seb
 sec→sec
 second→second
 secondaire→secondair
 secondaires→secondair
+seconde→second
 secondes→second
 seconds→second
 secours→secour
 secrets→secret
 secrétaire→secrétair
 secrétariat→secrétariat
+secteur→secteur
 secteurs→secteur
 section→section
 sectionner→section
@@ -12100,6 +12296,7 @@ seee→see
 segalen→segalen
 segard→segard
 segment→segment
+sein→sein
 seine→sein
 seine-et-marne→seine-et-marn
 seine-saint-denis→seine-saint-den
@@ -12159,6 +12356,7 @@ sentir→sent
 sept→sept
 septembre→septembr
 septentrionaux→septentrional
+sera→ser
 sera-t-il→sera-t-il
 seraient→ser
 serait→ser
@@ -12173,6 +12371,7 @@ series→ser
 serions→serion
 serono→serono
 serons→seron
+seront→seront
 seront-elles→seront-el
 serpents→serpent
 serrage→serrag
@@ -12189,12 +12388,14 @@ services→servic
 servir→serv
 serviront→serv
 servizi→serviz
+ses→se
 sessile→sessil
 session→session
 sessions→session
 seuil→seuil
 seul→seul
 seule→seul
+seulement→seul
 seules→seul
 seuls→seul
 seurin-sur-l→seurin-sur-l
@@ -12212,6 +12413,7 @@ shna→shna
 shom→shom
 show→show
 shs→sh
+si→si
 sicard→sicard
 sicoval→sicoval
 sidérurgique→sidérurg
@@ -12342,6 +12544,7 @@ soigner→soign
 soin→soin
 soins→soin
 soirée→soir
+soit→soit
 soit-elle→soit-el
 soixantaine→soixantain
 soixante→soix
@@ -12379,6 +12582,7 @@ sommes→somm
 sommes-nous→sommes-nous
 sommet→sommet
 sommets→sommet
+son→son
 sonde→sond
 sonder→sond
 sondes→sond
@@ -12386,6 +12590,7 @@ sondeur→sondeur
 sonne→son
 sonore→sonor
 sonores→sonor
+sont→sont
 sont-elles→sont-el
 sont-ils→sont-il
 sophia→sophi
@@ -12462,6 +12667,7 @@ soupçonnais→soupçon
 source→sourc
 sources→sourc
 souris→sour
+sous→sous
 sous-critique→sous-crit
 sous-critiques→sous-crit
 sous-disciplines→sous-disciplin
@@ -12782,6 +12988,7 @@ supélec→supélec
 supérieur→supérieur
 supérieure→supérieur
 supérieures→supérieur
+sur→sur
 surclasse→surcl
 surexploitation→surexploit
 surface→surfac
@@ -12863,6 +13070,8 @@ systematic→systematic
 systeme→system
 systems→system
 systerra→systerr
+système→system
+systèmes→system
 systèmess→systèmess
 systématique→systémat
 systémiques→system
@@ -12988,10 +13197,13 @@ techniciens→technicien
 technicité→techniqu
 technico-économie→technico-économ
 technique→techniqu
+techniques→techniqu
 technocampus→technocampus
 technolac→technolac
 technolgique→technolg
 technolgy→technolgy
+technologie→technolog
+technologies→technolog
 technologique→technolog
 technologiques→technolog
 technologue→technologu
@@ -13019,6 +13231,7 @@ tels→tel
 temporaire→temporair
 temporel→temporel
 temporelle→temporel
+temps→temp
 température→températur
 températures→températur
 tempéré→temper
@@ -13052,6 +13265,7 @@ tera-octets→tera-octet
 teractec→teractec
 teratec→teratec
 terifiq→terifiq
+terme→term
 termes→term
 terminait→termin
 terminale→terminal
@@ -13246,9 +13460,12 @@ tourné→tourn
 tournés→tourn
 tours→tour
 tourte→tourt
+tous→tous
 tousse→touss
+tout→tout
 toute→tout
 toutefois→toutefois
+toutes→tout
 toxicité→toxiqu
 toxicological→toxicological
 toxicologie→toxicolog
@@ -13373,6 +13590,7 @@ traumatisme→traumat
 traumatismes→traumat
 traumatisé→traumatis
 traumatisés→traumatis
+travail→travail
 travaillaient→travaill
 travaillait→travaill
 travaillant→travaill
@@ -13382,6 +13600,7 @@ travailler→travaill
 travailleront→travaill
 travaillons→travaillon
 travaillé→travaill
+travaux→traval
 travers→traver
 traversant→travers
 traversants→travers
@@ -13417,6 +13636,7 @@ tritium→tritium
 triturer→tritur
 triées→tri
 troie→troi
+trois→trois
 troisième→troisiem
 trompe→tromp
 tromper→tromp
@@ -13450,6 +13670,7 @@ trouvés→trouv
 trustinsoft→trustinsoft
 try→try
 trystram→trystram
+très→tres
 trésorerie→trésorer
 trésorier→trésori
 tseu→tseu
@@ -13488,6 +13709,7 @@ tutelle→tutel
 tutelles→tutel
 tuyau→tuyau
 tué→tu
+type→typ
 types→typ
 typhimurium→typhimurium
 typique→typiqu
@@ -13560,6 +13782,7 @@ unir→unir
 unitaire→unitair
 unitaires→unitair
 united→united
+unité→unit
 unités→unit
 univers→univer
 universel→universel
@@ -13569,6 +13792,7 @@ universitaires→universitair
 universite→universit
 universiteit→universiteit
 university→university
+université→univers
 universités→univers
 unmanned→unmanned
 unrpa→unrpa
@@ -13617,6 +13841,7 @@ utilisait→utilis
 utilisant→utilis
 utilisateur→utilis
 utilisateurs→utilis
+utilisation→utilis
 utilise→utilis
 utilisent→utilisent
 utiliser→utilis
@@ -13630,6 +13855,7 @@ utérus→utérus
 uv→uv
 uvsq→uvsq
 v→v
+va→va
 va-t-elle→va-t-el
 va-t-il→va-t-il
 vacccin→vacccin
@@ -13757,6 +13983,7 @@ verres→verr
 verront→verront
 verrou→verrou
 verrous→verrous
+vers→ver
 versailles→versaill
 version→version
 versions→version
@@ -13809,6 +14036,7 @@ viendra→viendr
 viendront→viendront
 vienne→vien
 viennent→viennent
+vient→vient
 vies→vi
 vigne→vign
 vigneron→vigneron
@@ -13936,6 +14164,7 @@ voiliers→voili
 voilure→voilur
 voilà→voilà
 voir→voir
+voire→voir
 voiron→voiron
 voisine→voisin
 voit→voit
@@ -13964,6 +14193,7 @@ volumes→volum
 volumineux→volumin
 volée→vol
 von→von
+vont→vont
 vos→vos
 votre→votr
 voulais→voul
@@ -14074,6 +14304,7 @@ xixème→xixem
 xvième→xviem
 xxième→xxiem
 xxème→xxem
+y→y
 yachts→yacht
 yannick→yannick
 yaourts→yaourt
@@ -14181,6 +14412,7 @@ zérodur→zérodur
 écroule→écroul
 éditeur→éditeur
 éditeurs→éditeur
+édition→édit
 éditions→édit
 éducateurs→éduc
 éducation→éduc
@@ -14188,6 +14420,7 @@ zérodur→zérodur
 éduquer→éduqu
 éduquées→éduqu
 égale→égal
+également→égal
 égales→égal
 égalité→égal
 égalé→égal
@@ -14289,6 +14522,7 @@ zérodur→zérodur
 émulsionne→émulsion
 émérite→émérit
 émérites→émérit
+énergie→énerg
 énergies→énerg
 énergivores→énergivor
 énergétique→énerget
@@ -14334,11 +14568,13 @@ zérodur→zérodur
 équilibrés→équilibr
 équine→équin
 équipage→équipag
+équipe→équip
 équipe-projet→équipe-projet
 équipement→équip
 équipements→équip
 équipent→équipent
 équiper→équip
+équipes→équip
 équipé→équip
 équipée→équip
 équipés→équip
@@ -14363,11 +14599,13 @@ zérodur→zérodur
 étaient→étaient
 étaient-elles→étaient-el
 étais→étais
+était→était
 étalant→étal
 étalonnage→étalonnag
 étalés→étal
 étanche→étanch
 étanchéité→étanché
+étant→étant
 étape→étap
 étapes→étap
 état→état
@@ -14417,6 +14655,7 @@ zérodur→zérodur
 étudié→étudi
 étudiée→étudi
 étuver→étuv
+été→été
 évacuation→évacu
 évacuer→évacu
 évaluation→évalu
@@ -14431,6 +14670,7 @@ zérodur→zérodur
 éventuelle→éventuel
 éventuellement→éventuel
 éventuels→éventuel
+évidemment→évident
 évidence→évident
 évident→évident
 évitant→évit
@@ -14462,6 +14702,7 @@ zérodur→zérodur
 événementielle→événementiel
 événements→éven
 êtes→ête
+être→être
 êtres→être
 île→île
 îles→île

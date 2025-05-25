@@ -334,7 +334,9 @@ def check_global(verbose=False) -> bool:
         soup = open_file(chemin_fichier)
         titre = extract_titre(soup)
         if not titre:
-            print(f"Erreur: {os.path.basename(chemin_fichier)} ne contient pas de titre.")
+            print(
+                f"Erreur: {os.path.basename(chemin_fichier)} ne contient pas de titre."
+            )
             est_ok = False
         elif verbose:
             print(titre)
@@ -372,7 +374,9 @@ def check_global(verbose=False) -> bool:
         soup = open_file(chemin_fichier)
         contacts = extract_contacts(soup)
         if not contacts:
-            print(f"Erreur: {os.path.basename(chemin_fichier)} ne contient pas de contact.")
+            print(
+                f"Erreur: {os.path.basename(chemin_fichier)} ne contient pas de contact."
+            )
             est_ok = False
         elif verbose:
             print(contacts)

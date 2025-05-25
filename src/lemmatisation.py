@@ -4,6 +4,8 @@ Fonctions pour lemmatiser le corpus selon différentes approches.
 
 import spacy
 import pandas as pd
+from matplotlib import pyplot as plt
+from matplotlib_venn import venn2
 from nltk.stem.snowball import FrenchStemmer
 from lxml import etree
 from anti_dictionnaire import nettoyage_corpus_xml
@@ -43,7 +45,7 @@ def extract_mots_xml(fichier_xml: str, fichier_sortie: str) -> None:
     df_mots_tries.to_csv(fichier_sortie, index=False, header=False)
 
 
-def lemmes_spacy(fichier_entree: str, fichier_sortie: str) -> None:
+def lemmatisation_spacy(fichier_entree: str, fichier_sortie: str) -> None:
     """
     Crée des lemmes à partir des mots d'un fichier en utilisant spaCy,
     puis les enregistre dans un fichier de sortie.
@@ -71,7 +73,7 @@ def lemmes_spacy(fichier_entree: str, fichier_sortie: str) -> None:
             file.write(f"{doc.text}→{doc.lemma_}\n")
 
 
-def lemmes_stemmer(fichier_entree: str, fichier_sortie: str) -> None:
+def lemmatisation_stemmer(fichier_entree: str, fichier_sortie: str) -> None:
     """
     Crée des lemmes à partir des mots d'un fichier en utilisant le stemming,
     puis les enregistre dans un fichier de sortie.
@@ -93,45 +95,156 @@ def lemmes_stemmer(fichier_entree: str, fichier_sortie: str) -> None:
             file.write(f"{mot}→{stemmer.stem(mot)}\n")
 
 
-def calcul_stats_lemmes(algo: str, input_file: str) -> None:
+def calcul_stats_lemmes(fichier_spacy: str, fichier_stemmer: str) -> None:
     """
     Calcule le nombre de lemmes uniques et le taux de compression lexicale
+    et donne des représentations graphiques.
 
-    :param algo: Le nom de l'algorithme utilisé ('spacy' ou 'stemmer').
-    :param input_file: Le fichier contenant les mots segmentés.
+    :param fichier_spacy: Le fichier des lemmes Spacy.
+    :param fichier_stemmer: Le fichier des lemmes stemmer.
     :return: None
     """
-    # TODO: compléter ça avec toutes les stats du colab
-    if algo == "spacy":
-        lemmes_spacy(input_file, "data/lemma_spacy.txt")
-        lemma_dataframe = pd.read_csv(
-            "data/lemma_spacy.txt",
-            sep="→",
-            header=None,
-            names=["word", "lemma"],
-            engine="python",
-        )
-    elif algo == "stemmer":
-        lemmes_stemmer(input_file, "data/lemma_stemmer.txt")
-        lemma_dataframe = pd.read_csv(
-            "data/lemma_stemmer.txt",
-            sep="→",
-            header=None,
-            names=["word", "lemma"],
-            engine="python",
-        )
-    else:
-        raise ValueError(f"Algorithme '{algo}' n'existe pas.")
-
-    # Calcul du nombre de lemmes uniques et du taux de compression lexicale
-    unique_lemma = lemma_dataframe.nunique(axis=0).iloc[1]
-    words = lemma_dataframe.nunique(axis=0).iloc[0]
-    taux_compression_lexicale = (unique_lemma / words) * 100
-    taux_compression_lexicale = round(taux_compression_lexicale, 2)
-    print(
-        f"Avec l'algorithme {algo}, nous avons {unique_lemma} lemmes uniques sur {words} mots "
-        f"(un taux de compression lexicale de {taux_compression_lexicale}%)."
+    spacy_df = pd.read_csv(
+        fichier_spacy,
+        sep="→",
+        header=None,
+        names=["word", "lemma"],
+        engine="python",
     )
+    stemmer_df = pd.read_csv(
+        fichier_stemmer,
+        sep="→",
+        header=None,
+        names=["word", "lemma"],
+        engine="python",
+    )
+
+    ###########################################
+    # Quelques stats générales
+    ###########################################
+
+    # Fonction pour calculer et afficher le taux de compression lexicale
+    def compression_lexicale(dataframe, nom_methode):
+        mots_uniques = dataframe.nunique().iloc[0]
+        lemmes_uniques = dataframe.nunique().iloc[1]
+        taux = round((lemmes_uniques / mots_uniques) * 100, 2)
+        print(
+            f"Avec {nom_methode}, {lemmes_uniques} lemmes uniques sur {mots_uniques} mots "
+            f"(taux de compression lexicale : {taux}%)."
+        )
+
+    # Fonction pour calculer les 20 lemmes les plus présents
+    def plot_lemma_distribution(df_spacy, df_stemmer):
+        top_spacy = df_spacy["lemma"].value_counts().head(20)
+        top_stemmer = df_stemmer["lemma"].value_counts().head(20)
+
+        plt.figure(figsize=(14, 5))
+
+        plt.subplot(1, 2, 1)
+        top_spacy.plot(kind="bar")
+        plt.title("Top 20 lemmes (SpaCy)")
+        plt.xticks(rotation=45)
+
+        plt.subplot(1, 2, 2)
+        top_stemmer.plot(kind="bar", color="orange")
+        plt.title("Top 20 lemmes (Snowball Stemmer)")
+        plt.xticks(rotation=45)
+
+        plt.tight_layout()
+        plt.show()
+
+    compression_lexicale(spacy_df, "Spacy")
+    compression_lexicale(stemmer_df, "Stemmer")
+    plot_lemma_distribution(spacy_df, stemmer_df)
+
+    lemmes_uniques_spacy = set(spacy_df["lemma"].astype(str).str.strip().str.lower())
+    lemmes_uniques_stemmer = set(
+        stemmer_df["lemma"].astype(str).str.strip().str.lower()
+    )
+
+    plt.figure(figsize=(6, 6))
+    venn2(
+        (lemmes_uniques_spacy, lemmes_uniques_stemmer), set_labels=("SpaCy", "Stemmer")
+    )
+    plt.title("Diagramme de Venn des lemmes uniques")
+    plt.show()
+
+    ###########################################
+    # Quelques stats sur un échantillon de mots
+    ###########################################
+
+    mots = [
+        "électromagnétique",
+        "atome",
+        "moléculaire",
+        "molécules",
+        "réaction",
+        "réactifs",
+        "cellules",
+        "cellulaire",
+        "bactérie",
+        "bactérienne",
+        "électrons",
+        "électronique",
+        "photosynthèse",
+        "équation",
+        "équations",
+        "intégrale",
+        "intégration",
+        "différentielle",
+        "différentiels",
+        "gènes",
+        "génomique",
+        "mutation",
+        "mutagène",
+        "neurones",
+        "neuronale",
+        "synapse",
+    ]
+
+    nlp = spacy.load("fr_core_news_sm")
+    doc = nlp(" ".join(mots))
+    lemmes_spacy = [token.lemma_ for token in doc]
+
+    stemmer = FrenchStemmer()
+    stems_snowball = [stemmer.stem(mot) for mot in mots]
+
+    # Tableau comparatif
+    df = pd.DataFrame(
+        {
+            "mot_original": mots,
+            "lemmatisation_spacy": lemmes_spacy,
+            "stem_snowball": stems_snowball,
+        }
+    )
+
+    nb_lemmes = len(set(lemmes_spacy))
+    nb_stems = len(set(stems_snowball))
+
+    print(df)
+    print("\nNombre de lemmes uniques (SpaCy) :", nb_lemmes)
+    print("Nombre de stems uniques (Snowball) :", nb_stems)
+
+    # Nombre de lemmes identiques au mot de base
+    nb_lemmes_identiques = sum(
+        1 for mot, lemme in zip(mots, lemmes_spacy) if mot == lemme
+    )
+    nb_stems_identiques = sum(
+        1 for mot, stem in zip(mots, stems_snowball) if mot == stem
+    )
+    print("\nNombre de lemmes identiques au terme (SpaCy) :", nb_lemmes_identiques)
+    print("Nombre de stems identiques au terme (Snowball) :", nb_stems_identiques)
+
+    # Longueur des lemmes
+    long_spacy = [len(lemme) for lemme in lemmes_spacy]
+    long_stem = [len(stem) for stem in stems_snowball]
+
+    plt.figure(figsize=(6, 5))
+    plt.boxplot([long_spacy, long_stem], labels=["SpaCy", "Stemmer"])
+    plt.title("Boxplot des longueurs de lemmes")
+    plt.ylabel("Longueur des lemmes")
+    plt.grid(True)
+    plt.show()
 
 
 def ajout_fichier_subs(fichier_lemmes: str, fichier_subs: str) -> None:
@@ -160,12 +273,11 @@ if __name__ == "__main__":
         "data/corpus_wo_stopwords.xml", "data/words_segmentation_clean.txt"
     )
     print("Lemmatisation avec Spacy...")
-    lemmes_spacy("data/words_segmentation_clean.txt", "data/lemma_spacy.txt")
+    lemmatisation_spacy("data/words_segmentation_clean.txt", "data/lemma_spacy.txt")
     print("Lemmatisation avec SnowBall...")
-    lemmes_stemmer("data/words_segmentation_clean.txt", "data/lemma_stemmer.txt")
+    lemmatisation_stemmer("data/words_segmentation_clean.txt", "data/lemma_stemmer.txt")
     print("Calcul de statistiques...")
-    calcul_stats_lemmes("spacy", "data/words_segmentation_clean.txt")
-    calcul_stats_lemmes("stemmer", "data/words_segmentation_clean.txt")
+    calcul_stats_lemmes("data/lemma_spacy.txt", "data/lemma_stemmer.txt")
     print("Mis-à-jour du fichier de substitution...")
     ajout_fichier_subs("data/lemma_stemmer.txt", "data/subs.txt")
     print("Nettoyage du corpus...")

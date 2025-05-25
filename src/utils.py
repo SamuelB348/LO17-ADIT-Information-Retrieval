@@ -92,9 +92,9 @@ def get_min_max_dates(date_str: str) -> Tuple[str, str]:
         max_date = f"{cleaned_date}-12-31"
     elif len(cleaned_date) == 7:  # Format "YYYY-MM-**"
         annee, mois = cleaned_date.split("-")
-        min_date = f"{annee}-{mois:02d}-01"
+        min_date = f"{int(annee)}-{int(mois):02d}-01"
         max_day = get_last_day_of_month(int(annee), int(mois))
-        max_date = f"{annee}-{mois:02d}-{max_day:02d}"
+        max_date = f"{annee}-{int(mois):02d}-{max_day:02d}"
     elif len(cleaned_date) == 10:  # Format "YYYY-MM-DD"
         annee, mois, day = cleaned_date.split("-")
         min_date = f"{annee}-{mois}-{day}"
