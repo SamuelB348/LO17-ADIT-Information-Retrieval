@@ -71,7 +71,6 @@ Exécutez la commande suivante dans votre terminal :
 
 ```bash
 pip install -r requirements.txt
-
 ```
 
 ## Utilisation de l'interface
@@ -80,11 +79,6 @@ Pour lancer l’interface graphique, exécutez la commande suivante dans le term
 
 ```bash
 python src/main.py
-```
-ou 
-
-```bash
-python src/interface.py
 ```
 
 L’interface, développée avec Tkinter, est intuitive et facile à prendre en main :
